@@ -19,8 +19,14 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    width: 20%;
  }
-
+.form_register, .image, ._form{
+    width: 40%;
+}
+.image{
+    margin: auto;
+}
 .header{
     width: 90%;
     margin:auto;
