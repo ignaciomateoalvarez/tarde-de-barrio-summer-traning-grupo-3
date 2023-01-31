@@ -1,25 +1,29 @@
 <%= render "header" %>
 
-<div>
-    <%= image_tag 'logo.jpg' %>
-</div>
-
-
-
-<div class="login_form">
-    <%= form_with  do |form| %>
-        <div>
-        <%= form.label :email %><br>
-        <%= form.text_field :email %><br>
+<div class="container">
+    <div class="image">
+        <%= image_tag 'Frame.jpg' %>
+    </div>
+    <div class="_form">
+        <h2> Ingresar a mi cuenta </h2>
+        <%= form_with  do |form| %>
+            <div>
+                <%= form.label :email %><br>
+                <%= form.text_field :email , placeholder: "Ingresa tu email" %><br>
+            </div>
+            <div>
+                <%= form.label :password %><br>
+                <%= form.password_field :password, placeholder: "Contraseña" %><br>
+            </div>
+            <div>
+                <%= form.check_box :remember %>
+                <%= label_tag(:remember, "Recordarme") %>
+            </div>
+            <div>
+            <%= form.submit "Registrarme" %> 
         </div>
-        <div>
-        <%= form.label :password %><br>
-        <%= form.password_field :password %><br>
-        </div>
-        <div>
-        <%= form.submit  %> 
-        </div>
-    <% end %> 
-
+        <% end %> 
+        <%= button_to "Registrarme con Google" %> 
+    </div>
 </div>
 
