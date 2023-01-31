@@ -1,22 +1,28 @@
-<%= form_with model:user do |form| %>
-    <div>
-      <%= form.label :name %><br>
-      <%= form.text_field :name %>
-    </div>
-    <div>
-      <%= form.label :email %><br>
-      <%= form.text_field :email %><br>
-    </div>
-    <div>
-      <%= form.label :password %><br>
-      <%= form.password_field :password %><br>
-    </div>
-    <div>
-      <%= form.label :password_confirmation %><br>
-      <%= form.password_field :password_confirmation%><br>
-    </div>
-    <div>
-      <%= form.submit  %> 
-    </div>
-  
-  <% end %> 
+
+<div class="_form">
+    <%= form_with model:user do |form| %>
+        <div>
+        <%= form.label :name %><br>
+        <%= form.text_field :name %>
+        </div>
+        <div>
+        <%= form.label :email %><br>
+        <%= form.text_field :email %><br>
+        </div>
+        <div>
+        <%= form.label :password %><br>
+        <%= form.password_field :password %><br>
+        </div>
+        <div>
+        <%= form.label :password_confirmation %><br>
+        <%= form.password_field :password_confirmation%><br>
+        </div>
+        <div>
+        <%= form.submit "Registrarme" %> 
+        <%= form.submit "Registrarme con Google" %> 
+        </div>
+    
+    <% end %> 
+
+</div>
+

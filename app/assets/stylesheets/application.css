@@ -13,3 +13,41 @@
  *= require_tree .
  *= require_self
  */
+
+ /*** REGISTRO ***/
+ .form{
+    display: flex;
+    justify-content: space-around;
+ }
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+.sesion-header{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 29px;
+    /* or 163% */
+
+    text-align: center;
+
+    color: #000000;
+}
+.registro-header{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 29px;
+    /* or 163% */
+
+    text-align: center;
+
+    color: #0090AF;
+
+}

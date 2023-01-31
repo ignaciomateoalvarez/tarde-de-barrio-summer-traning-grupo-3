@@ -1,14 +1,25 @@
-<%= form_with  do |form| %>
-    <div>
-      <%= form.label :email %><br>
-      <%= form.text_field :email %><br>
-    </div>
-    <div>
-      <%= form.label :password %><br>
-      <%= form.password_field :password %><br>
-    </div>
-    <div>
-      <%= form.submit  %> 
-    </div>
-  
-  <% end %> 
+<%= render "header" %>
+
+<div>
+    <%= image_tag 'logo.jpg' %>
+</div>
+
+
+
+<div class="login_form">
+    <%= form_with  do |form| %>
+        <div>
+        <%= form.label :email %><br>
+        <%= form.text_field :email %><br>
+        </div>
+        <div>
+        <%= form.label :password %><br>
+        <%= form.password_field :password %><br>
+        </div>
+        <div>
+        <%= form.submit  %> 
+        </div>
+    <% end %> 
+
+</div>
+
