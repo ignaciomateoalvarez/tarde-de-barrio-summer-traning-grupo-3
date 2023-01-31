@@ -1,12 +1,13 @@
-<%= render "header" %>
-
-<div class="container"> 
-    <div class = "image">
-        <%= image_tag 'Frame.jpg' %>
-    </div>
-    <div class = "form_register">
-        <h1 class="title_register" >Registro</h1>
-        <%= render "form", user: @user %>
+<div class="container-father"> 
+    <%= render "header" %>
+    <div class="container">
+        <div class = "image">
+            <%= image_tag 'Frame.jpg' %>
+        </div>
+        <div class = "form_register">
+            <h1 class="title_register" >Registro</h1>
+            <%= render "form", user: @user %>
+        </div>
     </div>
 </div> 
 
