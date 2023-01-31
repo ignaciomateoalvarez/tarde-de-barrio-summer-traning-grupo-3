@@ -2,20 +2,20 @@
 <div class="_form">
     <%= form_with model:user do |form| %>
         <div>
-        <%= form.label :name %><br>
+        <%= form.label :name %>
         <%= form.text_field :name %>
         </div>
         <div>
-        <%= form.label :email %><br>
-        <%= form.text_field :email %><br>
+        <%= form.label :email %>
+        <%= form.text_field :email %>
         </div>
         <div>
-        <%= form.label :password %><br>
-        <%= form.password_field :password %><br>
+        <%= form.label :password %>
+        <%= form.password_field :password %>
         </div>
         <div>
-        <%= form.label :password_confirmation %><br>
-        <%= form.password_field :password_confirmation%><br>
+        <%= form.label :password_confirmation %>
+        <%= form.password_field :password_confirmation%>
         </div>
         <div>
         <%= form.submit "Registrarme" , class: "submit-button" %> 
