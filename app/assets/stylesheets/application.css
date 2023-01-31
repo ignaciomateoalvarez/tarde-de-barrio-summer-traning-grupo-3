@@ -14,7 +14,14 @@
  *= require_self
  */
 
+
  /*** REGISTRO ***/
+
+ *{
+    font-family: 'Roboto';
+    font-style: normal;
+ }
+
  body{
     background: #0090AF;
  }
@@ -68,8 +75,6 @@
 } /* ARREGLAR LINEAS */
 
 .session-button{
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 300;
     font-size: 18px;
     line-height: 29px;
@@ -113,4 +118,12 @@
 .log_in_form{
     display:flex;
     flex-direction: column;
+}
+
+.forgot_password a{
+    text-decoration: none;
+    color: #0090AF;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 29px;
 }

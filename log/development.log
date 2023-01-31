@@ -4194,6 +4194,7 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 24ms (Views: 23.1ms | Allocations: 5012)
 
 
+<<<<<<< HEAD
 Started GET "/users/new" for ::1 at 2023-01-31 14:39:45 -0300
   [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by UsersController#new as HTML
@@ -4249,10 +4250,25 @@ Completed 200 OK in 15ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 624
 
 
 Started GET "/users/new" for ::1 at 2023-01-31 14:39:51 -0300
+=======
+Started GET "/users/new" for 127.0.0.1 at 2023-01-31 14:15:29 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 1.3ms | Allocations: 223)
+  Rendered users/_form.html.erb (Duration: 4.6ms | Allocations: 1868)
+  Rendered users/new.html.erb within layouts/application (Duration: 9.5ms | Allocations: 3218)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 5781)
+Completed 200 OK in 27ms (Views: 24.2ms | Allocations: 6500)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2023-01-31 14:15:48 -0300
+>>>>>>> 4f0296380f30f58515445f6f9a17f539948df244
 Processing by UsersController#new as HTML
   Rendering layout layouts/application.html.erb
   Rendering users/new.html.erb within layouts/application
   Rendered users/_header.html.erb (Duration: 0.2ms | Allocations: 73)
+<<<<<<< HEAD
   Rendered users/_form.html.erb (Duration: 2.7ms | Allocations: 1538)
   Rendered users/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2281)
   Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 4289)
@@ -4281,10 +4297,20 @@ Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 457
 
 
 Started GET "/log_in" for ::1 at 2023-01-31 14:39:52 -0300
+=======
+  Rendered users/_form.html.erb (Duration: 60.4ms | Allocations: 1509)
+  Rendered users/new.html.erb within layouts/application (Duration: 66.0ms | Allocations: 2408)
+  Rendered layout layouts/application.html.erb (Duration: 81.4ms | Allocations: 4768)
+Completed 200 OK in 96ms (Views: 95.1ms | Allocations: 5042)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2023-01-31 14:15:49 -0300
+>>>>>>> 4f0296380f30f58515445f6f9a17f539948df244
 Processing by UsersController#log_in as HTML
   Rendering layout layouts/application.html.erb
   Rendering users/log_in.html.erb within layouts/application
   Rendered users/_header.html.erb (Duration: 0.2ms | Allocations: 73)
+<<<<<<< HEAD
   Rendered users/log_in.html.erb within layouts/application (Duration: 4.4ms | Allocations: 3976)
   Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 5983)
 Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 6239)
@@ -4604,10 +4630,40 @@ Completed 200 OK in 10ms (Views: 9.4ms | Allocations: 6238)
 
 
 Started GET "/users/new" for ::1 at 2023-01-31 15:19:31 -0300
+=======
+  Rendered users/log_in.html.erb within layouts/application (Duration: 14.1ms | Allocations: 4449)
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 6807)
+Completed 200 OK in 29ms (Views: 26.6ms | Allocations: 7118)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2023-01-31 14:16:16 -0300
+Processing by UsersController#log_in as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/log_in.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 0.7ms | Allocations: 223)
+  Rendered users/log_in.html.erb within layouts/application (Duration: 10.8ms | Allocations: 4753)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 7323)
+Completed 200 OK in 22ms (Views: 20.5ms | Allocations: 8028)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2023-01-31 14:16:18 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 0.6ms | Allocations: 73)
+  Rendered users/_form.html.erb (Duration: 10.4ms | Allocations: 1835)
+  Rendered users/new.html.erb within layouts/application (Duration: 15.4ms | Allocations: 2938)
+  Rendered layout layouts/application.html.erb (Duration: 24.4ms | Allocations: 5275)
+Completed 200 OK in 27ms (Views: 25.3ms | Allocations: 5603)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2023-01-31 14:16:20 -0300
+>>>>>>> 4f0296380f30f58515445f6f9a17f539948df244
 Processing by UsersController#new as HTML
   Rendering layout layouts/application.html.erb
   Rendering users/new.html.erb within layouts/application
   Rendered users/_header.html.erb (Duration: 0.2ms | Allocations: 73)
+<<<<<<< HEAD
   Rendered users/_form.html.erb (Duration: 12.4ms | Allocations: 1571)
   Rendered users/new.html.erb within layouts/application (Duration: 14.5ms | Allocations: 2313)
   Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 4320)
@@ -4615,10 +4671,51 @@ Completed 200 OK in 20ms (Views: 19.7ms | Allocations: 4592)
 
 
 Started GET "/users/new" for ::1 at 2023-01-31 15:19:37 -0300
+=======
+  Rendered users/_form.html.erb (Duration: 7.5ms | Allocations: 1525)
+  Rendered users/new.html.erb within layouts/application (Duration: 11.4ms | Allocations: 2420)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 4757)
+Completed 200 OK in 19ms (Views: 18.7ms | Allocations: 5027)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2023-01-31 14:16:37 -0300
+Processing by UsersController#log_in as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/log_in.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 0.6ms | Allocations: 223)
+  Rendered users/log_in.html.erb within layouts/application (Duration: 11.4ms | Allocations: 4714)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 7277)
+Completed 200 OK in 27ms (Views: 22.4ms | Allocations: 7983)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2023-01-31 14:16:38 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered users/_form.html.erb (Duration: 5.5ms | Allocations: 1812)
+  Rendered users/new.html.erb within layouts/application (Duration: 7.9ms | Allocations: 2915)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 5252)
+Completed 200 OK in 15ms (Views: 14.2ms | Allocations: 5580)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2023-01-31 14:16:52 -0300
+Processing by UsersController#log_in as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/log_in.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered users/log_in.html.erb within layouts/application (Duration: 4.6ms | Allocations: 4066)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 6403)
+Completed 200 OK in 21ms (Views: 20.6ms | Allocations: 6659)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2023-01-31 14:17:36 -0300
+>>>>>>> 4f0296380f30f58515445f6f9a17f539948df244
 Processing by UsersController#new as HTML
   Rendering layout layouts/application.html.erb
   Rendering users/new.html.erb within layouts/application
   Rendered users/_header.html.erb (Duration: 0.3ms | Allocations: 73)
+<<<<<<< HEAD
   Rendered users/_form.html.erb (Duration: 3.6ms | Allocations: 1562)
   Rendered users/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 2304)
   Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 4311)
@@ -4626,10 +4723,58 @@ Completed 200 OK in 15ms (Views: 14.0ms | Allocations: 4583)
 
 
 Started GET "/log_in" for ::1 at 2023-01-31 15:19:38 -0300
+=======
+  Rendered users/_form.html.erb (Duration: 3.3ms | Allocations: 1524)
+  Rendered users/new.html.erb within layouts/application (Duration: 10.0ms | Allocations: 2419)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 4756)
+Completed 200 OK in 16ms (Views: 15.1ms | Allocations: 5028)
+
+
+Started GET "/" for 127.0.0.1 at 2023-01-31 14:52:55 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 19.7ms | Allocations: 1114)
+  Rendered layout layouts/application.html.erb (Duration: 43.4ms | Allocations: 3827)
+Completed 200 OK in 53ms (Views: 49.2ms | Allocations: 4532)
+
+
+Started GET "/" for 127.0.0.1 at 2023-01-31 14:52:59 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 878)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 3379)
+Completed 200 OK in 20ms (Views: 19.5ms | Allocations: 3634)
+
+
+Started GET "/" for 127.0.0.1 at 2023-01-31 14:53:17 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 542.3ms | Allocations: 32278)
+  Rendered layout layouts/application.html.erb (Duration: 579.1ms | Allocations: 48273)
+Completed 200 OK in 653ms (Views: 602.8ms | ActiveRecord: 0.0ms | Allocations: 51146)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2023-01-31 14:53:22 -0300
+Processing by UsersController#log_in as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/log_in.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 3.5ms | Allocations: 239)
+  Rendered users/log_in.html.erb within layouts/application (Duration: 50.1ms | Allocations: 5965)
+  Rendered layout layouts/application.html.erb (Duration: 56.6ms | Allocations: 8348)
+Completed 200 OK in 60ms (Views: 58.6ms | ActiveRecord: 0.0ms | Allocations: 8959)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2023-01-31 14:53:23 -0300
+>>>>>>> 4f0296380f30f58515445f6f9a17f539948df244
 Processing by UsersController#log_in as HTML
   Rendering layout layouts/application.html.erb
   Rendering users/log_in.html.erb within layouts/application
   Rendered users/_header.html.erb (Duration: 0.2ms | Allocations: 73)
+<<<<<<< HEAD
   Rendered users/log_in.html.erb within layouts/application (Duration: 5.9ms | Allocations: 3981)
   Rendered layout layouts/application.html.erb (Duration: 25.4ms | Allocations: 5988)
 Completed 200 OK in 27ms (Views: 26.7ms | Allocations: 6244)
@@ -4645,10 +4790,19 @@ Completed 200 OK in 16ms (Views: 14.9ms | Allocations: 3191)
 
 
 Started GET "/users/new" for ::1 at 2023-01-31 15:20:39 -0300
+=======
+  Rendered users/log_in.html.erb within layouts/application (Duration: 5.0ms | Allocations: 4085)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 6423)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.0ms | Allocations: 6681)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2023-01-31 14:53:24 -0300
+>>>>>>> 4f0296380f30f58515445f6f9a17f539948df244
 Processing by UsersController#new as HTML
   Rendering layout layouts/application.html.erb
   Rendering users/new.html.erb within layouts/application
   Rendered users/_header.html.erb (Duration: 0.4ms | Allocations: 73)
+<<<<<<< HEAD
   Rendered users/_form.html.erb (Duration: 2.3ms | Allocations: 1565)
   Rendered users/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2307)
   Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 4314)
@@ -4667,10 +4821,20 @@ Completed 200 OK in 8ms (Views: 7.5ms | Allocations: 4616)
 
 
 Started GET "/log_in" for ::1 at 2023-01-31 15:20:59 -0300
+=======
+  Rendered users/_form.html.erb (Duration: 6.2ms | Allocations: 2109)
+  Rendered users/new.html.erb within layouts/application (Duration: 11.5ms | Allocations: 3218)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 5557)
+Completed 200 OK in 107ms (Views: 17.2ms | ActiveRecord: 55.3ms | Allocations: 11289)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2023-01-31 14:53:29 -0300
+>>>>>>> 4f0296380f30f58515445f6f9a17f539948df244
 Processing by UsersController#log_in as HTML
   Rendering layout layouts/application.html.erb
   Rendering users/log_in.html.erb within layouts/application
   Rendered users/_header.html.erb (Duration: 0.2ms | Allocations: 73)
+<<<<<<< HEAD
   Rendered users/log_in.html.erb within layouts/application (Duration: 6.1ms | Allocations: 3961)
   Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 5988)
 Completed 200 OK in 11ms (Views: 10.3ms | Allocations: 6245)
@@ -4688,12 +4852,469 @@ Completed 200 OK in 27ms (Views: 24.3ms | Allocations: 4566)
 
 
 Started GET "/log_in" for ::1 at 2023-01-31 15:28:09 -0300
+=======
+  Rendered users/log_in.html.erb within layouts/application (Duration: 4.5ms | Allocations: 4067)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 6405)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 6663)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2023-01-31 14:53:31 -0300
+Processing by UsersController#log_in as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/log_in.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered users/log_in.html.erb within layouts/application (Duration: 7.3ms | Allocations: 4088)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 6425)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.0ms | Allocations: 6682)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2023-01-31 14:53:32 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 0.6ms | Allocations: 73)
+  Rendered users/_form.html.erb (Duration: 2.8ms | Allocations: 1503)
+  Rendered users/new.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2398)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 4735)
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 0.0ms | Allocations: 5011)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2023-01-31 14:53:34 -0300
+Processing by UsersController#log_in as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/log_in.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered users/log_in.html.erb within layouts/application (Duration: 5.1ms | Allocations: 4069)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 6406)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 6662)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2023-01-31 14:53:35 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered users/_form.html.erb (Duration: 4.0ms | Allocations: 1500)
+  Rendered users/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 2395)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 4732)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 5004)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2023-01-31 14:53:36 -0300
+>>>>>>> 4f0296380f30f58515445f6f9a17f539948df244
 Processing by UsersController#log_in as HTML
   Rendering layout layouts/application.html.erb
   Rendering users/log_in.html.erb within layouts/application
   Rendered users/_header.html.erb (Duration: 0.3ms | Allocations: 73)
+<<<<<<< HEAD
   Rendered users/log_in.html.erb within layouts/application (Duration: 22.8ms | Allocations: 3984)
   Rendered layout layouts/application.html.erb (Duration: 30.0ms | Allocations: 5992)
 Completed 200 OK in 33ms (Views: 31.1ms | Allocations: 6249)
+=======
+  Rendered users/log_in.html.erb within layouts/application (Duration: 8.7ms | Allocations: 4088)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 6439)
+Completed 200 OK in 24ms (Views: 19.9ms | ActiveRecord: 0.0ms | Allocations: 6697)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2023-01-31 14:53:38 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 0.5ms | Allocations: 73)
+  Rendered users/_form.html.erb (Duration: 2.5ms | Allocations: 1497)
+  Rendered users/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 2396)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 4733)
+Completed 200 OK in 19ms (Views: 14.2ms | ActiveRecord: 0.0ms | Allocations: 5006)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2023-01-31 14:53:39 -0300
+Processing by UsersController#log_in as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/log_in.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered users/log_in.html.erb within layouts/application (Duration: 41.7ms | Allocations: 4072)
+  Rendered layout layouts/application.html.erb (Duration: 54.2ms | Allocations: 6410)
+Completed 200 OK in 56ms (Views: 55.6ms | ActiveRecord: 0.0ms | Allocations: 6666)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2023-01-31 14:53:40 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered users/_form.html.erb (Duration: 5.8ms | Allocations: 1500)
+  Rendered users/new.html.erb within layouts/application (Duration: 8.6ms | Allocations: 2395)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 4732)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.0ms | Allocations: 5008)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2023-01-31 14:53:41 -0300
+Processing by UsersController#log_in as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/log_in.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 0.5ms | Allocations: 73)
+  Rendered users/log_in.html.erb within layouts/application (Duration: 7.5ms | Allocations: 4073)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 6410)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 6666)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2023-01-31 14:53:41 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 0.3ms | Allocations: 73)
+  Rendered users/_form.html.erb (Duration: 5.8ms | Allocations: 1518)
+  Rendered users/new.html.erb within layouts/application (Duration: 8.5ms | Allocations: 2413)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 4750)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.0ms | Allocations: 5026)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2023-01-31 14:53:42 -0300
+Processing by UsersController#log_in as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/log_in.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 0.3ms | Allocations: 73)
+  Rendered users/log_in.html.erb within layouts/application (Duration: 7.4ms | Allocations: 4094)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 6431)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.0ms | Allocations: 6687)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2023-01-31 14:53:43 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered users/_form.html.erb (Duration: 2.8ms | Allocations: 1515)
+  Rendered users/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 2410)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 4747)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms | Allocations: 5019)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2023-01-31 14:53:43 -0300
+Processing by UsersController#log_in as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/log_in.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered users/log_in.html.erb within layouts/application (Duration: 8.2ms | Allocations: 4069)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 6406)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.0ms | Allocations: 6662)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2023-01-31 14:53:44 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered users/_form.html.erb (Duration: 2.6ms | Allocations: 1509)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2404)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 4741)
+Completed 200 OK in 18ms (Views: 14.3ms | ActiveRecord: 0.0ms | Allocations: 5013)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2023-01-31 14:53:45 -0300
+Processing by UsersController#log_in as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/log_in.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 14.8ms | Allocations: 73)
+  Rendered users/log_in.html.erb within layouts/application (Duration: 19.3ms | Allocations: 4081)
+  Rendered layout layouts/application.html.erb (Duration: 35.1ms | Allocations: 6418)
+Completed 200 OK in 63ms (Views: 62.7ms | ActiveRecord: 0.0ms | Allocations: 6674)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2023-01-31 14:54:14 -0300
+Processing by UsersController#log_in as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/log_in.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 0.4ms | Allocations: 73)
+  Rendered users/log_in.html.erb within layouts/application (Duration: 9.0ms | Allocations: 4084)
+  Rendered layout layouts/application.html.erb (Duration: 43.8ms | Allocations: 7997)
+Completed 200 OK in 46ms (Views: 44.4ms | ActiveRecord: 0.0ms | Allocations: 8251)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2023-01-31 14:54:15 -0300
+Processing by UsersController#log_in as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/log_in.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered users/log_in.html.erb within layouts/application (Duration: 13.1ms | Allocations: 4088)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 6440)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.0ms | Allocations: 6695)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2023-01-31 14:54:17 -0300
+Processing by UsersController#log_in as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/log_in.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered users/log_in.html.erb within layouts/application (Duration: 5.6ms | Allocations: 4082)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 6419)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms | Allocations: 6674)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2023-01-31 14:54:41 -0300
+Processing by UsersController#log_in as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/log_in.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered users/log_in.html.erb within layouts/application (Duration: 7.9ms | Allocations: 4084)
+  Rendered layout layouts/application.html.erb (Duration: 35.4ms | Allocations: 7958)
+Completed 200 OK in 37ms (Views: 36.1ms | ActiveRecord: 0.0ms | Allocations: 8212)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2023-01-31 14:54:47 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered users/_form.html.erb (Duration: 3.1ms | Allocations: 1509)
+  Rendered users/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 2404)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 4741)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms | Allocations: 5013)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2023-01-31 14:54:48 -0300
+Processing by UsersController#log_in as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/log_in.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered users/log_in.html.erb within layouts/application (Duration: 21.2ms | Allocations: 4069)
+  Rendered layout layouts/application.html.erb (Duration: 29.0ms | Allocations: 6406)
+Completed 200 OK in 35ms (Views: 33.1ms | ActiveRecord: 0.0ms | Allocations: 6662)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2023-01-31 14:54:49 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered users/_form.html.erb (Duration: 16.0ms | Allocations: 1491)
+  Rendered users/new.html.erb within layouts/application (Duration: 18.8ms | Allocations: 2386)
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 4723)
+Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 0.0ms | Allocations: 4995)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2023-01-31 14:54:49 -0300
+Processing by UsersController#log_in as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/log_in.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered users/log_in.html.erb within layouts/application (Duration: 20.0ms | Allocations: 4085)
+  Rendered layout layouts/application.html.erb (Duration: 42.0ms | Allocations: 6422)
+Completed 200 OK in 45ms (Views: 44.0ms | ActiveRecord: 0.0ms | Allocations: 6678)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2023-01-31 14:55:05 -0300
+Processing by UsersController#log_in as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/log_in.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered users/log_in.html.erb within layouts/application (Duration: 11.3ms | Allocations: 4072)
+  Rendered layout layouts/application.html.erb (Duration: 43.1ms | Allocations: 7944)
+Completed 200 OK in 48ms (Views: 45.3ms | ActiveRecord: 0.0ms | Allocations: 8198)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2023-01-31 14:55:06 -0300
+Processing by UsersController#log_in as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/log_in.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered users/log_in.html.erb within layouts/application (Duration: 11.1ms | Allocations: 4072)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 6409)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 6663)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2023-01-31 14:57:09 -0300
+Processing by UsersController#log_in as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/log_in.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 2.9ms | Allocations: 223)
+  Rendered users/log_in.html.erb within layouts/application (Duration: 16.5ms | Allocations: 4750)
+  Rendered layout layouts/application.html.erb (Duration: 51.5ms | Allocations: 8866)
+Completed 200 OK in 55ms (Views: 54.1ms | ActiveRecord: 0.0ms | Allocations: 9570)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2023-01-31 14:57:09 -0300
+Processing by UsersController#log_in as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/log_in.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 0.3ms | Allocations: 73)
+  Rendered users/log_in.html.erb within layouts/application (Duration: 7.6ms | Allocations: 4078)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 6427)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.0ms | Allocations: 6684)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2023-01-31 14:57:23 -0300
+Processing by UsersController#log_in as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/log_in.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered users/log_in.html.erb within layouts/application (Duration: 6.7ms | Allocations: 4098)
+  Rendered layout layouts/application.html.erb (Duration: 31.0ms | Allocations: 7982)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.0ms | Allocations: 8237)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2023-01-31 14:57:25 -0300
+Processing by UsersController#log_in as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/log_in.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered users/log_in.html.erb within layouts/application (Duration: 5.3ms | Allocations: 4089)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 6426)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms | Allocations: 6680)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2023-01-31 14:58:19 -0300
+Processing by UsersController#log_in as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/log_in.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered users/log_in.html.erb within layouts/application (Duration: 9.5ms | Allocations: 4076)
+  Rendered layout layouts/application.html.erb (Duration: 55.1ms | Allocations: 7956)
+Completed 200 OK in 57ms (Views: 56.2ms | ActiveRecord: 0.0ms | Allocations: 8210)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2023-01-31 14:58:20 -0300
+Processing by UsersController#log_in as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/log_in.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered users/log_in.html.erb within layouts/application (Duration: 7.5ms | Allocations: 4091)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 6428)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms | Allocations: 6682)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2023-01-31 14:59:07 -0300
+Processing by UsersController#log_in as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/log_in.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 3.6ms | Allocations: 223)
+  Rendered users/log_in.html.erb within layouts/application (Duration: 18.8ms | Allocations: 4754)
+  Rendered layout layouts/application.html.erb (Duration: 34.7ms | Allocations: 7317)
+Completed 200 OK in 43ms (Views: 38.1ms | ActiveRecord: 0.0ms | Allocations: 8021)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2023-01-31 14:59:11 -0300
+Processing by UsersController#log_in as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/log_in.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered users/log_in.html.erb within layouts/application (Duration: 6.7ms | Allocations: 4091)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 6428)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 6683)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2023-01-31 14:59:52 -0300
+Processing by UsersController#log_in as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/log_in.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 3.0ms | Allocations: 223)
+  Rendered users/log_in.html.erb within layouts/application (Duration: 13.3ms | Allocations: 4761)
+  Rendered layout layouts/application.html.erb (Duration: 40.9ms | Allocations: 7339)
+Completed 200 OK in 45ms (Views: 43.3ms | Allocations: 8045)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2023-01-31 15:00:18 -0300
+Processing by UsersController#log_in as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/log_in.html.erb within layouts/application
+  Rendered users/log_in.html.erb within layouts/application (Duration: 30.8ms | Allocations: 14271)
+  Rendered layout layouts/application.html.erb (Duration: 31.1ms | Allocations: 14360)
+Completed 500 Internal Server Error in 34ms (Allocations: 15068)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+
+<div class="container-father">
+    <%= render "header" %>
+    <div class="container">
+        <div class="image">
+            <%= image_tag 'Frame.jpg' %>
+        </div>
+        <div class="_form">
+            <h2> Ingresar a mi cuenta </h2>
+            <%= form_with  do |form|%>
+                <div>
+                    <%= form.label :email %> </br>
+                    <%= form.text_field :email , placeholder: "Ingresa tu email" %>
+                </div>
+                <div>
+                    <%= form.label :password %></br>
+                    <%= form.password_field :password, placeholder: "Contraseña" %>
+                </div>
+                <div>
+                    <%= form.check_box :remember %>
+                    <%= label_tag(:remember, "Recordarme") %>
+                </div>
+                <div>
+                    <%= form.submit "Iniciar sesion", class: 'submit-button' %> 
+                </div>
+                <%= link_to "Olvide mi contraseña", :class 'forgot_password' %>
+            <% end %> 
+            <%= button_to "Registrarme con Google"%> 
+        </div>
+    </div>
+</div>
+
+
+):
+1:    
+2:    
+3:    <div class="container-father">
+4:        <%= render "header" %>
+5:        <div class="container">
+6:            <div class="image">
+7:                <%= image_tag 'Frame.jpg' %>
+8:            </div>
+9:            <div class="_form">
+10:                <h2> Ingresar a mi cuenta </h2>
+11:                <%= form_with  do |form|%>
+12:                    <div>
+13:                        <%= form.label :email %> </br>
+14:                        <%= form.text_field :email , placeholder: "Ingresa tu email" %>
+15:                    </div>
+16:                    <div>
+17:                        <%= form.label :password %></br>
+18:                        <%= form.password_field :password, placeholder: "Contraseña" %>
+19:                    </div>
+20:                    <div>
+21:                        <%= form.check_box :remember %>
+22:                        <%= label_tag(:remember, "Recordarme") %>
+23:                    </div>
+24:                    <div>
+25:                        <%= form.submit "Iniciar sesion", class: 'submit-button' %> 
+26:                    </div>
+27:                    <%= link_to "Olvide mi contraseña", :class 'forgot_password' %>
+28:                <% end %> 
+29:                <%= button_to "Registrarme con Google"%> 
+30:            </div>
+31:        </div>
+32:    </div>
+  
+app/views/users/log_in.html.erb:27: syntax error, unexpected string literal, expecting ')'
+app/views/users/log_in.html.erb:27: syntax error, unexpected string literal, expecting ')'
+app/views/users/log_in.html.erb:27: syntax error, unexpected string literal, expecting ')'
+app/views/users/log_in.html.erb:27: syntax error, unexpected string literal, expecting ')'
+app/views/users/log_in.html.erb:27: syntax error, unexpected string literal, expecting ')'
+app/views/users/log_in.html.erb:27: syntax error, unexpected string literal, expecting ')'
+Started GET "/log_in" for 127.0.0.1 at 2023-01-31 15:00:51 -0300
+Processing by UsersController#log_in as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/log_in.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 3.0ms | Allocations: 223)
+  Rendered users/log_in.html.erb within layouts/application (Duration: 14.0ms | Allocations: 4754)
+  Rendered layout layouts/application.html.erb (Duration: 25.7ms | Allocations: 7331)
+Completed 200 OK in 30ms (Views: 28.8ms | Allocations: 8037)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2023-01-31 15:01:29 -0300
+Processing by UsersController#log_in as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/log_in.html.erb within layouts/application
+  Rendered users/_header.html.erb (Duration: 2.8ms | Allocations: 223)
+  Rendered users/log_in.html.erb within layouts/application (Duration: 12.6ms | Allocations: 4738)
+  Rendered layout layouts/application.html.erb (Duration: 58.8ms | Allocations: 8842)
+Completed 200 OK in 64ms (Views: 60.6ms | Allocations: 9546)
+>>>>>>> 4f0296380f30f58515445f6f9a17f539948df244
 
 
