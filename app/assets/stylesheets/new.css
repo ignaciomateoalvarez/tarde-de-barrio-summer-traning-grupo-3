@@ -1,0 +1,45 @@
+.container-new{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.register-button {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 29px;
+	/* or 163% */
+	text-align: center;
+	color: #0090AF;
+	border-width: 2px;
+}
+
+.register-form{
+	width: 40%;
+}
+
+.register-form input{
+	width: 20em;
+	height: 2em;
+}
+
+.register-button,
+.button_to button {
+	background: white;
+	border-radius: 3.4537px;
+	width: 233.11px;
+	height: 40px;
+	left: 823.89px;
+	top: 603px;
+	border-style: 2px solid;
+	border-color: #0090AF;
+	box-shadow: none;
+}
+
+.register-button:hover,
+.button_to button:hover {
+	background: #0090AF;
+	color: white;
+}

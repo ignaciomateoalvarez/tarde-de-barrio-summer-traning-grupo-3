@@ -1,5 +1,5 @@
 
-<div class="_form">
+<div class="register_form">
     <%= form_with model:user do |form| %>
         <div>
         <%= form.label :name %>
@@ -18,7 +18,7 @@
         <%= form.password_field :password_confirmation%>
         </div>
         <div>
-        <%= form.submit "Registrarme" , class: "submit-button" %> 
+        <%= form.submit "Registrarme" , class: "register-button" %> 
         </div>
         <%= button_to "Registrarme con Google" %> 
     <% end %> 

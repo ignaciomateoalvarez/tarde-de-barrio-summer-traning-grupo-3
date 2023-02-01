@@ -30,3 +30,4 @@ passenger-standalone.json
 
 /gitignore
 /config/database.yml
+.DS_Store
