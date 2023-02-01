@@ -71,7 +71,7 @@ group :test, :development do
   gem "selenium-webdriver"
   gem "webdrivers"
   gem 'factory_bot_rails'
-  gem 'faker'
+  gem 'faker',  '~> 3.1.0'
   gem 'rails-controller-testing'
   gem 'rspec-rails'
   gem 'shoulda-matchers'

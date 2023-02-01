@@ -9,8 +9,9 @@
 require 'faker'
 
 30.times do
-  users = User.create(
-    name: Faker::Name.first_name,
+  User.create(
+    name: Faker::Name.last_name,
+    lastname: Faker::Name.first_name,
     email: Faker::Internet.unique.email,
     password: 'holahola'
   )
