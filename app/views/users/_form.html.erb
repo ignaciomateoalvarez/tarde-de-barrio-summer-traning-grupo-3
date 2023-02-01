@@ -1,5 +1,9 @@
-
 <div class="register_form">
+    <% flash.each do |type, msg| %>
+        <div>
+            <%= msg %>
+        </div>
+    <% end %>
     <%= form_with model: @user, method: :post do |form| %>
         <div>
         <%= form.label :name %>
