@@ -1,35 +1,41 @@
+<div class="container">
+	<%= render "header" %>
 
-
-<div class="container-father">
-    <%= render "header" %>
-    <div class="container">
-        <div class="image">
-            <%= image_tag 'Frame.jpg' %>
-        </div>
-        <div class="_form">
-            <h2> Ingresar a mi cuenta </h2>
-            <%= form_with  do |form|%>
-                <div>
-                    <%= form.label :email %> </br>
-                    <%= form.text_field :email , placeholder: "Ingresa tu email" %>
-                </div>
-                <div>
-                    <%= form.label :password %></br>
-                    <%= form.password_field :password, placeholder: "Contraseña" %>
-                </div>
-                <div>
-                    <%= form.check_box :remember %>
-                    <%= label_tag(:remember, "Recordarme") %>
-                </div>
-                <div>
-                    <%= form.submit "Iniciar sesion", class: 'submit-button' %> 
-                </div>
-                <div class="forgot_password">
-                <%= link_to "Olvide mi contraseña"%>
-                </div>
-            <% end %> 
-            <%= button_to "Registrarme con Google"%> 
-        </div>
-    </div>
+	<div class="container-log-in">
+		
+		<div class="image">
+			<%= image_tag 'Frame.jpg' %>
+		</div>
+		
+		<div class="log-in-form">
+			<h2> Ingresar a mi cuenta </h2>
+			
+			<%= form_with  do |form|%>
+			<div>
+				<%= form.label :email %> </br>
+				<%= form.text_field :email , placeholder: "Ingresa tu email" %>
+			</div>
+			
+			<div>
+				<%= form.label :password %></br>
+				<%= form.password_field :password, placeholder: "Contraseña" %>
+			</div>
+			
+			<div>
+				<%= form.check_box :remember %>
+				<%= label_tag(:remember, "Recordarme") %>
+			</div>
+		
+			<div>
+				<%= form.submit "Iniciar sesion"%> 
+			</div>
+			
+			<div class="forgot_password">
+				<%= link_to "Olvide mi contraseña"%>
+			</div>
+			<% end %> 
+			<%= button_to "Registrarme con Google"%> 
+		</div>
+	</div>
 </div>
 

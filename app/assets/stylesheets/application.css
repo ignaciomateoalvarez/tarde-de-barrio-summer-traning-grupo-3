@@ -14,114 +14,25 @@
  *= require_self
  */
 
-
- /*** REGISTRO ***/
-
- *{
-    font-family: 'Roboto';
-    font-style: normal;
- }
-
- body{
-    background: #0090AF;
- }
- ._form{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    gap: 0.9375rem;
- }
-
- .submit-button, .button_to button{
-    background: white;
-    border-radius: 0.2159rem;
-    width: 14.5694rem;
-    height: 2.5rem;
-    left: 51.4931rem;
-    top: 37.6875rem;
-    border-style: 0.125rem solid;
-    border-color: #0090AF;
-    box-shadow: none;
- }
-
- .submit-button:hover, .button_to button:hover{
-    background:#0090AF;
-    color: white;
- }
-.form_register, .image, ._form{
-    width: 40%;
-}
-.image{
-    margin: auto;
-}
-.header{
-    width: 90%;
-    margin:auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 3.125rem;
-    border-bottom: 0.0625rem solid #BEC2C4;
+* {
+	font-family: 'Roboto';
+	font-style: normal;
 }
 
-.header .session-button a, .header .register-button a {
-    text-decoration: none;
-    color: black;
+body {
+	background: #0090AF;
 }
 
-.header .session-button :hover, .header .register-button :hover {
-    border-bottom: 0.0625rem solid #0090AF;
-    color: #0090AF;
-} /* ARREGLAR LINEAS */
-
-.session-button{
-    font-weight: 300;
-    font-size: 1.125rem;
-    line-height: 1.8125rem;
-    /* or 163% */
-
-    text-align: center;
-
-    color: #000000;
-}
-.register-button{
-    font-weight: 500;
-    font-size: 1.125rem;
-    line-height: 1.8125rem;
-    /* or 163% */
-    text-align: center;
-    color: #0090AF;
-    border-width: 0.125rem;
+.image {
+	margin: auto;
 }
 
-.container{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.container-father{
-    width: 80%;
-    height: 80vh;
-    margin: 5% auto;
-    align-items: center;
-    background: #FFFFFF;
-    box-shadow: -0.4375rem 0.4375rem 1.875rem rgba(0, 76, 92, 0.2);
-    border-radius: 0.5rem;
-}
-
-
-/*** LOGIN ***/
-
-.log_in_form{
-    display:flex;
-    flex-direction: column;
-}
-
-.forgot_password a{
-    text-decoration: none;
-    color: #0090AF;
-    font-weight: 500;
-    font-size: 0.8125rem;
-    line-height: 1.8125rem;
+.container {
+	width: 80%;
+	height: 80vh;
+	margin: 5% auto;
+	align-items: center;
+	background: #FFFFFF;
+	box-shadow: -0.4375rem 0.4375rem 1.875rem rgba(0, 76, 92, 0.2);
+	border-radius: 0.5rem;
 }

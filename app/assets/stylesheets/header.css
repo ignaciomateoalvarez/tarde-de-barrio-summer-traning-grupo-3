@@ -1,0 +1,29 @@
+.header {
+	width: 90%;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 3.125rem;
+	border-bottom: 0.0625rem solid #BEC2C4;
+}
+
+.header-link a {
+	text-decoration: none;
+	color: black;
+}
+
+.header-link {
+	font-weight: 300;
+	font-size: 1.125rem;
+	line-height: 1.8125rem;
+	/* or 163% */
+	text-align: center;
+	color: #000000;
+}
+
+.header-link:hover a{
+	border-bottom: 0.0625rem solid #0090AF;
+	color: #0090AF;
+}
+/* ARREGLAR LINEAS */
