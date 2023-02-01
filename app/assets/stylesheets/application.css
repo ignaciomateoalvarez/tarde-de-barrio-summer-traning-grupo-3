@@ -24,7 +24,6 @@ body {
 }
 
 .image {
-	width: 40%;
 	margin: auto;
 }
 
@@ -34,6 +33,6 @@ body {
 	margin: 5% auto;
 	align-items: center;
 	background: #FFFFFF;
-	box-shadow: -7px 7px 30px rgba(0, 76, 92, 0.2);
-	border-radius: 8px;
+	box-shadow: -0.4375rem 0.4375rem 1.875rem rgba(0, 76, 92, 0.2);
+	border-radius: 0.5rem;
 }

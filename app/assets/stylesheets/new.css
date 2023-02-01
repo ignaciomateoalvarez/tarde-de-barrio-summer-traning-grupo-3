@@ -4,42 +4,53 @@
   align-items: center;
 }
 
-.register-button {
-	font-family: 'Roboto';
-	font-style: normal;
+.register-form{
+	width: 50%;
+}
+
+.register-form [type='submit'] {
 	font-weight: 500;
-	font-size: 18px;
-	line-height: 29px;
+	font-size: 1.125rem;
+	line-height: 1.8125rem;
 	/* or 163% */
 	text-align: center;
 	color: #0090AF;
-	border-width: 2px;
+	border-width: 0.125rem;
 }
 
-.register-form{
+.register-form form{
 	width: 40%;
+	display: flex;
+	flex-direction: column;
+	gap:0.9375rem;
 }
 
 .register-form input{
-	width: 20em;
-	height: 2em;
+	width: 25rem;
+	height: 2rem;
 }
 
-.register-button,
+.register-form [type='submit'],
 .button_to button {
+	text-align: center;
 	background: white;
-	border-radius: 3.4537px;
-	width: 233.11px;
-	height: 40px;
-	left: 823.89px;
-	top: 603px;
-	border-style: 2px solid;
+	border-radius: 0.2159rem;
+	width: 15rem;
+	height: 2rem;
+	border-style: 0.125rem solid;
 	border-color: #0090AF;
 	box-shadow: none;
 }
 
-.register-button:hover,
+.register-form [type='submit']:hover,
 .button_to button:hover {
 	background: #0090AF;
 	color: white;
+}
+
+.register-buttons-wrapper {
+	display: flex;
+  justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }

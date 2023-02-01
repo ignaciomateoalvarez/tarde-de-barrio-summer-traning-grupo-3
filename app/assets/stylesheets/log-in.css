@@ -5,22 +5,34 @@
 }
 
 .log-in-form {
+	width: 50%;
+}
+
+.log-in-form [type='submit']{
+	font-weight: 500;
+	font-size: 1.125rem;
+	line-height: 1.8125rem;
+	/* or 163% */
+	text-align: center;
+	color: #0090AF;
+	border-width: 0.125rem;
+}
+
+.log-in-form form{
+	width: 40%;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly;
-	gap: 15px;
-	width: 40%;
-	vertical-align: center;
+	gap:0.9375rem;
 }
 
 .log-in-form input{
-	width: 20em;
-	height: 2em;
+	width: 25rem;
+	height: 2rem;
 }
 
 .log-in-form input[type='checkbox']{
 	width: auto;
-	height: 3em;
+	height: 1rem;
 }
 
 .log-in-form input[type='submit']{
@@ -28,15 +40,20 @@
 	gap: 2em;
 }
 
-.log-in-button {
+.log-in-form [type='submit'],
+.button_to button {
+	text-align: center;
 	background: white;
-	width: 15em;
-	border-radius: 3.4537px;
-	border-style: 2px solid;
+	border-radius: 0.2159rem;
+	width: 15rem;
+	height: 2rem;
+	border-style: 0.125rem solid;
 	border-color: #0090AF;
+	box-shadow: none;
 }
 
-.log-in-button:hover{
+.log-in-form [type='submit']:hover,
+.button_to button:hover {
 	background: #0090AF;
 	color: white;
 }
@@ -45,7 +62,8 @@
 	text-decoration: none;
 	color: #0090AF;
 	font-weight: 500;
-	font-size: 13px;
-	line-height: 29px;
+	font-size: 0.8125rem;
+	line-height: 1.8125rem;
 	text-align: center;;
 }
+
