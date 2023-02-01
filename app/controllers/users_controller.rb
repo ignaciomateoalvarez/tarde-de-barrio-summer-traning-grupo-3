@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation, :lastname).except(:password_confirmation)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation,
+                                 :lastname).except(:password_confirmation)
   end
+
   def index; end
 
   def new
@@ -9,14 +11,12 @@ class UsersController < ApplicationController
   end
 
   def create
-    
-    
-    if user_params["password"] == params["user"]["password_confirmation"]
+    if user_params['password'] == params['user']['password_confirmation']
       @user = User.new(user_params)
       if @user.save
-        flash[:notice] = "Successfully created user."
+        flash[:notice] = 'Successfully created user.'
       else
-        flash[:error] = "Error creating user."
+        flash[:error] = 'Error creating user.'
       end
     else
       flash[:error] = "Passwords don't match."
@@ -25,5 +25,4 @@ class UsersController < ApplicationController
   end
 
   def log_in; end
-
 end

@@ -9,9 +9,6 @@ gem "rails", "~> 7.0.4", ">= 7.0.4.1"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
-# Use faker
-gem 'faker', '~> 1.6', '>= 1.6.6'
-
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
 
@@ -68,9 +65,14 @@ group :development do
   # gem "spring"
 end
 
-group :test do
+group :test, :development do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'rails-controller-testing'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
 end
