@@ -1,9 +1,13 @@
 
 <div class="register_form">
-    <%= form_with model:user do |form| %>
+    <%= form_with model: @user, method: :post do |form| %>
         <div>
         <%= form.label :name %>
         <%= form.text_field :name %>
+        </div>
+        <div>
+        <%= form.label :lastname %>
+        <%= form.text_field :lastname %>
         </div>
         <div>
         <%= form.label :email %>
