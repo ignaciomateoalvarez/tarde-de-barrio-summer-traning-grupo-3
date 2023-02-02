@@ -7,9 +7,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  root "users#log_in"
+  root "users#login"
   get 'home', to: 'home#index'
-  get 'log_in', to: 'users#log_in'
+  get 'login', to: 'users#login'
 
   post 'login' => "user_sessions#create"
   post 'logout' => 'user_sessions#destroy', :as => :logout

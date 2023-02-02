@@ -1,9 +1,7 @@
 <div class="log-in-form">
   <h2> Ingresar a mi cuenta </h2>			
-
-  <%= render "msg", flash: flash %>
-
-  <%= form_with url: "/login", method: :post do |form|%>
+  <%= render "msg", flash: flash  %>
+  <%= form_with url:"/login", method: :post do |form|%>
     <div>
       <%= form.label :email %> </br>
       <%= form.text_field :email , placeholder: "Ingresa tu email" %>
