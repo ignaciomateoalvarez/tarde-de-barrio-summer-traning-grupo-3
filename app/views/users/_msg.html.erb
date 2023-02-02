@@ -1,0 +1,10 @@
+<% if flash[:notice].present? || flash[:error].present? %>
+  <% flash.each do |type, msg| %>
+    <div class="notice-msg">
+      <p id="notice"><%= flash[:notice] %></p>
+    </div>
+    <div class="error-msg">
+      <p id="error"><%= flash[:error] %></p>
+    </div>
+  <% end %> 
+<% end %>

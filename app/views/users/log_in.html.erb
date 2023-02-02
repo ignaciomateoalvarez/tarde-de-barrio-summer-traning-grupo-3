@@ -5,41 +5,7 @@
 		<div class="image">
 			<%= image_tag 'Frame.jpg' %>
 		</div>
-		
-		<div class="log-in-form">
-			<h2> Ingresar a mi cuenta </h2>
-			<div>
-				
-				<p id="notice"><%= flash[:notice] %></p>
-				<p id="alert"><%= flash[:alert] %></p>
-			</div>
-			
-			<%= form_with url: "/login", method: :post do |form|%>
-				<div>
-					<%= form.label :email %> </br>
-					<%= form.text_field :email , placeholder: "Ingresa tu email" %>
-				</div>
-				
-				<div>
-					<%= form.label :password %></br>
-					<%= form.password_field :password, placeholder: "Contraseña" %>
-				</div>
-				
-				<div>
-					<%= form.check_box :remember %>
-					<%= label_tag(:remember, "Recordarme") %>
-				</div>
-			
-				<div>
-					<%= form.submit "Iniciar sesion"%> 
-				</div>
-				
-				<div class="forgot_password">
-					<%= link_to "Olvide mi contraseña"%>
-				</div>
-			<% end %> 
-			<%= button_to "Registrarme con Google"%> 
-		</div>
+		<%= render "log_in" %>
 	</div>
 </div>
 

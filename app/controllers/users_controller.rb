@@ -19,13 +19,14 @@ class UsersController < ApplicationController
       @user = User.new(user_params)
       if @user.save
         flash[:notice] = 'Successfully created user.'
-        redirect_to @user
+        redirect_to log_in_path
       else
         flash[:error] = @user.errors.full_messages.to_sentence
+        redirect_to new_user_path 
       end
     else
       flash[:error] = "Passwords don't match."
+      redirect_to new_user_path 
     end
-    redirect_to new_user_path 
   end
 end
