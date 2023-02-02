@@ -4,6 +4,8 @@ class UsersController < ApplicationController
                                  :lastname).except(:password_confirmation)
   end
 
+  def log_in; end
+
   def index; end
 
   def new
@@ -19,7 +21,7 @@ class UsersController < ApplicationController
       @user = User.new(user_params)
       if @user.save
         flash[:notice] = 'Successfully created user.'
-        redirect_to log_in_path
+        redirect_to login_path
       else
         flash[:error] = @user.errors.full_messages.to_sentence
         redirect_to new_user_path 

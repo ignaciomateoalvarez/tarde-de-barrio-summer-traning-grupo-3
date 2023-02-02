@@ -5,8 +5,8 @@ class UserSessionsController < ApplicationController
       flash[:notice] = 'Login successful'
       redirect_to(home_path)
     else
-      flash[:alert] = 'Login failed'
-      render :log_in, status: :unprocessable_entity
+      flash[:error] = 'Login failed'
+      redirect_to login_path, status: :unprocessable_entity
     end
   end
 
