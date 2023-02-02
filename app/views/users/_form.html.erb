@@ -1,8 +1,11 @@
 <div class="register_form">
-  <% flash.each do |type, msg| %>
-    <div>
-      <%= msg %>
-    </div>
+  <% if flash[:notice].present? || flash[:error].present? %>
+    <% flash.each do |type, msg| %>
+      <div>
+          <p id="notice"><%= flash[:notice] %></p>
+          <p id="error"><%= flash[:error] %></p>
+      </div>
+    <% end %>
   <% end %>
   <%= form_with model: @user, method: :post do |form| %>
     <div>

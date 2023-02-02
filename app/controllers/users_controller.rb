@@ -8,11 +8,10 @@ class UsersController < ApplicationController
 
   def new
     if current_user
-      redirect_to home_path      
+      redirect_to home_path
     else
       @user = User.new
     end
-    
   end
 
   def create
@@ -20,12 +19,13 @@ class UsersController < ApplicationController
       @user = User.new(user_params)
       if @user.save
         flash[:notice] = 'Successfully created user.'
+        redirect_to @user
       else
-        flash[:error] = 'Error creating user.'
+        flash[:error] = @user.errors.full_messages.to_sentence
       end
     else
       flash[:error] = "Passwords don't match."
     end
-    redirect_to @user
+    redirect_to new_user_path 
   end
 end
