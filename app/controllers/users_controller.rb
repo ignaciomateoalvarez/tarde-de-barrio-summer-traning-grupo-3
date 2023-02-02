@@ -7,7 +7,12 @@ class UsersController < ApplicationController
   def index; end
 
   def new
-    @user = User.new
+    if current_user
+      redirect_to home_path      
+    else
+      @user = User.new
+    end
+    
   end
 
   def create
@@ -21,8 +26,6 @@ class UsersController < ApplicationController
     else
       flash[:error] = "Passwords don't match."
     end
-    @user
+    redirect_to @user
   end
-
-  def log_in; end
 end

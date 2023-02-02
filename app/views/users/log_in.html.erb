@@ -8,8 +8,13 @@
 		
 		<div class="log-in-form">
 			<h2> Ingresar a mi cuenta </h2>
+			<div>
+				
+				<p id="notice"><%= flash[:notice] %></p>
+				<p id="alert"><%= flash[:alert] %></p>
+			</div>
 			
-			<%= form_with  do |form|%>
+			<%= form_with url: "/login", method: :post do |form|%>
 				<div>
 					<%= form.label :email %> </br>
 					<%= form.text_field :email , placeholder: "Ingresa tu email" %>
