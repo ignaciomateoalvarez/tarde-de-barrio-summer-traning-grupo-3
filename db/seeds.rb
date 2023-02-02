@@ -10,8 +10,8 @@ require 'faker'
 
 30.times do
   User.create(
-    name: Faker::Name.last_name,
-    lastname: Faker::Name.first_name,
+    name: Faker::Name.first_name,
+    lastname: Faker::Name.last_name,
     email: Faker::Internet.unique.email,
     password: 'holahola'
   )

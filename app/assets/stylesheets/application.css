@@ -14,12 +14,12 @@
  *= require_self
  */
 
-* {
+body {
 	font-family: 'Roboto';
 	font-style: normal;
 }
 
-body {
+body{
 	background: #0090AF;
 }
 
@@ -29,7 +29,7 @@ body {
 
 .container {
 	width: 80%;
-	height: 80vh;
+	padding-bottom: 20px;
 	margin: 5% auto;
 	align-items: center;
 	background: #FFFFFF;
