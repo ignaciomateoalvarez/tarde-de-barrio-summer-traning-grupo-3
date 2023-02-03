@@ -6,6 +6,8 @@ ruby "3.2.0"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4", ">= 7.0.4.1"
 
+gem 'pagy', '~> 6.0' # omit patch digit
+
 #Gem Sorcery
 gem 'sorcery'
 
