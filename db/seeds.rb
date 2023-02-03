@@ -8,7 +8,7 @@
 
 require 'faker'
 
-30.times do
+50.times do
   User.create(
     name: Faker::Name.first_name,
     lastname: Faker::Name.last_name,

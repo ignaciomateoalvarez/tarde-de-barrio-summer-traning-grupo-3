@@ -6,7 +6,15 @@ class UsersController < ApplicationController
 
   def log_in; end
 
-  def index; end
+  def users_list
+    @users = User.all
+    @users = @users.where("lower(name) like ?", "%#{params[:name].downcase}%") if params[:name].present?
+    @users = @users.where("lower(lastname) like ?", "%#{params[:lastname].downcase}%") if params[:lastname].present?
+    if @users.empty?
+      flash.now[:error]="Couldn't find any user"
+    end
+    @pagy, @records = pagy(@users)
+  end
 
   def new
     if current_user
