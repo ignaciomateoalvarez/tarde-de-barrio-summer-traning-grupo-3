@@ -1,0 +1,36 @@
+<div class="container"> 
+  <%= render "header" %>
+  <div class="container-list">
+    <h1> <%= t '.title' %> </h1>
+
+    <div class="filter-users">
+      <%= form_with(url: users_list_path, method: :get) do |form| %>
+        <label id="name">Name</label>
+        <%= form.text_field :name, value: params[:name] %>
+        <label id="lastname">Lastname</label>
+        <%= form.text_field :lastname, value: params[:lastname] %>
+        <%= form.submit "Search"%> 
+      <% end %>
+    </div>
+    <%= render "msg", flash: flash  %>
+    <div class="users-table">
+      <table>
+        <tr>
+          <th>Name</th>        
+          <th>Lastname </th>
+          <th>Email </th>
+        </tr>
+        <% @records.each do |user| %>
+          <tr>
+            <td><%= user.name%></td>
+            <td><%=user.lastname %></td>
+            <td><%=user.email %></td>
+          </tr>
+        <% end %>
+      </table>
+      <div class="pagy">
+        <%== pagy_nav(@pagy) %>
+      </div>
+    </div>
+  </div>
+</div> 

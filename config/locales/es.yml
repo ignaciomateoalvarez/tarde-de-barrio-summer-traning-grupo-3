@@ -1,7 +1,5 @@
 es:
   users:
-    index:
-      title: Lista de usuarios
     show:
       title: Perfil
     edit:
@@ -12,6 +10,8 @@ es:
       new: Registrar usuario
       list: Listar Usuarios
       lang_button: "Change to english"
+    users_list: 
+      title: Lista de usuarios
   home:
     index: 
       title: Bienvenidos
