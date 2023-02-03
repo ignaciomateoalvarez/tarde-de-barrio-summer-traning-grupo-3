@@ -14,6 +14,8 @@ gem 'sorcery'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
+gem 'pagy', '~> 6.0' # omit patch digit
+
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
 
