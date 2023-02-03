@@ -12,25 +12,28 @@
         <%= form.submit "Search"%> 
       <% end %>
     </div>
-    <%= render "msg", flash: flash  %>
-    <div class="users-table">
-      <table>
-        <tr>
-          <th>Name</th>        
-          <th>Lastname </th>
-          <th>Email </th>
-        </tr>
-        <% @records.each do |user| %>
+    <% if @records.empty? %>
+      <%= render "msg", flash: flash  %>
+    <% else %>
+      <div class="users-table">
+        <table>
           <tr>
-            <td><%= user.name%></td>
-            <td><%=user.lastname %></td>
-            <td><%=user.email %></td>
+            <th>Name</th>        
+            <th>Lastname </th>
+            <th>Email </th>
           </tr>
-        <% end %>
-      </table>
-      <div class="pagy">
-        <%== pagy_nav(@pagy) %>
+          <% @records.each do |user| %>
+            <tr>
+              <td><%= user.name%></td>
+              <td><%=user.lastname %></td>
+              <td><%=user.email %></td>
+            </tr>
+          <% end %>
+        </table>
+        <div class="pagy">
+          <%== pagy_nav(@pagy) %>
+        </div>
       </div>
-    </div>
+    <% end %>
   </div>
 </div> 
