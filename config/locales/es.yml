@@ -14,7 +14,11 @@ es:
       users_list: Lista de Usuarios
     log_in:
       title: Ingresar a mi cuenta
+      email: Email
       email_placeholder: Ingresa tu email
+      password: Contraseña
       password_placeholder: Ingresa tu contraseña
       remember: Recordarme
       login:  Iniciar Sesión
+      forgot-password: Olvide mi contraseña
+      button-google: Registrarme con Google

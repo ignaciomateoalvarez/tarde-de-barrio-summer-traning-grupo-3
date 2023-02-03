@@ -3,13 +3,13 @@
   <%= render "msg", flash: flash  %>
   <%= form_with url:"/login", method: :post do |form|%>
     <div>
-      <%= form.label :email %> </br>
-      <%= form.text_field :email , placeholder: (t'.email_placeholder')%>
+      <%= form.label t('.email') %> </br>
+      <%= form.text_field t('.email') , placeholder: (t'.email_placeholder')%>
     </div>
     
     <div>
-      <%= form.label :password %></br>
-      <%= form.password_field :password, placeholder: (t'.password_placeholder') %>
+      <%= form.label t('.password') %></br>
+      <%= form.password_field t('.password'), placeholder: (t'.password_placeholder') %>
     </div>
     
     <div>
@@ -22,8 +22,12 @@
     </div>
     
     <div class="forgot-password">
-      <%= link_to "Olvide mi contraseña"%>
+      <%= link_to do %>
+        <%= t('.forgot-password') %>
+        <% end %>
     </div>
   <% end %> 
-  <%= button_to "Registrarme con Google"%> 
+  <%= button_to do %>
+    <%= t('.button-google') %>
+  <% end %> 
 </div>
