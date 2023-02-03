@@ -40,8 +40,7 @@ class UsersController < ApplicationController
 
   def filter_params
     params.fetch(:user_filter, {}).permit(
-      :name,
-      :lastname
+      :name
     )
   end
 end
