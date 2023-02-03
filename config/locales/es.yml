@@ -1,17 +1,20 @@
 es:
   users:
-    show:
-      title: Perfil
-    edit:
-      title: Actualizar usuario
-    new:
-      title: Crear usuario
-    header:
-      new: Registrar usuario
-      list: Listar Usuarios
-      lang_button: "Change to english"
-    users_list: 
-      title: Lista de usuarios
-  home:
-    index: 
-      title: Bienvenidos
+    users_list:
+      title: Lista de Usuarios
+      name: Nombre
+      lastname: Apellido
+      button: Buscar
+    user_list: 
+      name: Nombre
+      lastname: Apellido
+    header: 
+      login: Iniciar Sesión
+      register: Registrarse
+      users_list: Lista de Usuarios
+    log_in:
+      title: Ingresar a mi cuenta
+      email_placeholder: Ingresa tu email
+      password_placeholder: Ingresa tu contraseña
+      remember: Recordarme
+      login:  Iniciar Sesión

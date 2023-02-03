@@ -1,14 +1,21 @@
 
 <div class= "header">
   <div class= "header-link">
-    <%= link_to "Log in", login_path() %>
+    <%= link_to login_path() do %>
+      <%= t('.login') %>
+    <% end %>
   </div>
 
   <div class= "header-link">
-    <%=link_to "Register", new_user_path() %>
+    <%=link_to new_user_path() do%>
+      <%= t('.register') %>
+    <% end %>
   </div>
 
   <div class= "header-link">
-    <%=link_to "User list", users_list_path() %>
+    <%=link_to users_list_path() do%>
+      <%= t('.users_list') %>
+    <% end %>
   </div>
 </div>
+
