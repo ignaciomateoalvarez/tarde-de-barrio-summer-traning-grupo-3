@@ -7,8 +7,6 @@
       <%= form_with(model: @filter, url: users_list_path, method: :get) do |form| %>
         <label id="name"><%= t '.name' %></label>
         <%= form.text_field :name, value: params[:name] %>
-        <label id="lastname"><%= t '.lastname' %></label>
-        <%= form.text_field :lastname, value: params[:lastname] %>
         <%= form.submit t '.button'%> 
       <% end %>
     </div>
