@@ -1,1 +1,19 @@
-<%== render partial: 'pagy/nav', locals: {pagy: @pagy} %>
+<div class="users-table">
+        <table>
+          <tr>
+            <th><%= t '.name' %></th>        
+            <th><%= t '.lastname' %> </th>
+            <th>Email </th>
+          </tr>
+          <% records.each do |user| %>
+            <tr>
+              <td><%= user.name%></td>
+              <td><%=user.lastname %></td>
+              <td><%=user.email %></td>
+            </tr>
+          <% end %>
+        </table>
+        <div class="pagy">
+          <%== pagy_nav(pagy) %>
+        </div>
+      </div>

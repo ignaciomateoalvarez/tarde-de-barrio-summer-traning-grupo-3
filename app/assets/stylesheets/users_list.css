@@ -1,3 +1,4 @@
+
 .users-table{
   /*border: 0.0625rem solid #DADADA; */
   border-radius: 0.5rem;
@@ -10,15 +11,13 @@
 table{
   width: 100%;
 }
-
+tr{
+  border: 2px solid black;
+}
 th, td {
   box-sizing: border-box;
-  gap: 0.625rem;
-  height: 2rem;
-}
-
-table tr {
-  border: 0.125rem solid #DADADA ;
+  border-bottom: 2px solid #DADADA ;
+  height: 2.5rem;
 }
 
 .container-list{

@@ -1,24 +1,24 @@
 <div class="log-in-form">
-  <h2> Ingresar a mi cuenta </h2>			
+  <h2> <%= t '.title' %> </h2>			
   <%= render "msg", flash: flash  %>
   <%= form_with url:"/login", method: :post do |form|%>
     <div>
       <%= form.label :email %> </br>
-      <%= form.text_field :email , placeholder: "Ingresa tu email" %>
+      <%= form.text_field :email , placeholder: (t'.email_placeholder')%>
     </div>
     
     <div>
       <%= form.label :password %></br>
-      <%= form.password_field :password, placeholder: "Contraseña" %>
+      <%= form.password_field :password, placeholder: (t'.password_placeholder') %>
     </div>
     
     <div>
       <%= form.check_box :remember %>
-      <%= label_tag(:remember, "Recordarme") %>
+      <%= label_tag(:remember, (t".remember")) %>
     </div>
   
     <div>
-      <%= form.submit "Iniciar sesion"%> 
+      <%= form.submit (t".login")%> 
     </div>
     
     <div class="forgot-password">

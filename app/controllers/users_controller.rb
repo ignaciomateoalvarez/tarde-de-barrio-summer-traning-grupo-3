@@ -1,18 +1,11 @@
 class UsersController < ApplicationController
-  def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation,
-                                 :lastname).except(:password_confirmation)
-  end
-
   def log_in; end
 
   def users_list
-    @users = User.all
-    @users = @users.where("lower(name) like ?", "%#{params[:name].downcase}%") if params[:name].present?
-    @users = @users.where("lower(lastname) like ?", "%#{params[:lastname].downcase}%") if params[:lastname].present?
-    if @users.empty?
-      flash.now[:error]="Couldn't find any user"
-    end
+    @filter = UserFilter.new(User.all, filter_params)
+    @users  = @filter.call
+
+    flash.now[:error] = "Couldn't find any user" if @users.empty?
     @pagy, @records = pagy(@users)
   end
 
@@ -32,11 +25,23 @@ class UsersController < ApplicationController
         redirect_to login_path
       else
         flash[:error] = @user.errors.full_messages.to_sentence
-        redirect_to new_user_path 
+        redirect_to new_user_path
       end
     else
       flash[:error] = "Passwords don't match."
-      redirect_to new_user_path 
+      redirect_to new_user_path
     end
+  end
+
+  def user_params
+    params.require(:user).permit(:name, :email, :password, :password_confirmation,
+                                 :lastname).except(:password_confirmation)
+  end
+
+  def filter_params
+    params.fetch(:user_filter, {}).permit(
+      :name,
+      :lastname
+    )
   end
 end
