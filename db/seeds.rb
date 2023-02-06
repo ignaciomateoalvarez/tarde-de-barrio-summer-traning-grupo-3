@@ -6,7 +6,13 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+require 'faker'
 
-lau = User.create(name: "lau", email: "lautaro@gmail.com", password: "lautaro", lastname:"mastronardi")
-juani = User.create(name: "juani", email: "juani@gmail.com", password: "juani", lastname:"bottassi")
-
+50.times do
+  User.create(
+    name: Faker::Name.first_name,
+    lastname: Faker::Name.last_name,
+    email: Faker::Internet.unique.email,
+    password: 'holahola'
+  )
+end

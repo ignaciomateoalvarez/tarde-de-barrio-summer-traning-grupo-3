@@ -5,7 +5,8 @@
 }
 
 .register-form{
-	width: 50%;
+	width: 40%;
+	align-items: center;
 }
 
 .register-form [type='submit'] {
@@ -19,27 +20,30 @@
 }
 
 .register-form form{
-	width: 40%;
 	display: flex;
 	flex-direction: column;
 	gap:0.9375rem;
 }
 
 .register-form input{
-	width: 25rem;
-	height: 2rem;
+	width: 100%;
+	height: 2.0625rem;
+	text-align: left;
+	background: #FAFAFA;
+	border: 1.3px solid #CCCCCC;
+	border-radius: 7.06992px;
 }
 
 .register-form [type='submit'],
 .button_to button {
-	text-align: center;
 	background: white;
 	border-radius: 0.2159rem;
-	width: 15rem;
-	height: 2rem;
 	border-style: 0.125rem solid;
 	border-color: #0090AF;
 	box-shadow: none;
+	width: 70%;
+	cursor: pointer;
+	margin-bottom: 20px;
 }
 
 .register-form [type='submit']:hover,
@@ -48,9 +52,6 @@
 	color: white;
 }
 
-.register-buttons-wrapper {
-	display: flex;
-  justify-content: center;
-	align-items: center;
-	flex-direction: column;
+.register-button{
+	text-align: center;
 }

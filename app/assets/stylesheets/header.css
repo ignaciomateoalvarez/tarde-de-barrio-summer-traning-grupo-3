@@ -8,13 +8,19 @@
 	border-bottom: 0.0625rem solid #BEC2C4;
 }
 
+.header-logged{
+	justify-content: flex-end;
+}
+
 .header-link a {
 	text-decoration: none;
 	color: black;
+	padding-bottom: 0.875rem;
 }
 
 .header-link {
 	font-weight: 300;
+	margin: 0.3125rem;
 	font-size: 1.125rem;
 	line-height: 1.8125rem;
 	/* or 163% */
@@ -23,7 +29,11 @@
 }
 
 .header-link:hover a{
-	border-bottom: 0.0625rem solid #0090AF;
+	border-bottom: 0.15rem solid #0090AF;
 	color: #0090AF;
 }
-/* ARREGLAR LINEAS */
+
+.user-header{
+	padding: auto;
+	margin-right: auto;
+}

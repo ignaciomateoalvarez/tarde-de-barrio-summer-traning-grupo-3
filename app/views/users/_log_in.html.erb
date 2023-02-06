@@ -1,0 +1,41 @@
+<div class="log-in-form">
+  <div class="title">
+    <h1> <%= t '.title' %> </h1>	
+  </div>	
+  <%= render "msg", flash: flash  %>
+  <%= form_with(url: login_path,method: :post) do |form| %>
+    <div class="form-field">
+      <%= form.label t('.email') %>
+      <%= form.text_field :email , placeholder: (t'.email_placeholder')%>
+    </div>
+    
+<<<<<<< HEAD
+    <div class="form-field">
+      <%= form.label t'.password' %>
+      <%= form.password_field :password, placeholder: (t'.password_placeholder') %>
+=======
+    <div>
+      <%= form.label t('.password') %></br>
+      <%= form.password_field t('.password'), placeholder: (t'.password_placeholder'), :required => true%>
+>>>>>>> d8bfdb6289382d40905acc24ff2cf454cd387d7b
+    </div>
+    
+    <div>
+      <%= form.check_box :remember %>
+      <%= label_tag(:remember, (t".remember")) %>
+    </div>
+  
+    <div class="log-in-button">
+        <%= form.submit (t".login")%> 
+      <div class="forgot-password">
+        <%= link_to do %>
+          <%= t('.forgot-password') %>
+        <% end %>
+      </div>
+        <%= button_to do %>
+          <%= image_tag "logo.png", class:'google-logo' ,alt: "Google logo" %>
+          <%= t('.button-google') %>
+        <% end %> 
+    </div>
+  <% end %> 
+</div>
