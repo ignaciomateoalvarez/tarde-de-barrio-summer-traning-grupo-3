@@ -61,3 +61,21 @@ th, td {
   width: 100%;
   height: 2.0625rem;
 }
+.form-user-list{
+  display: flex;
+}
+.search-input input{  
+  height: 100%;
+
+}
+.search-icon{
+  background-image: url('search.png');
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  background-size: 24px 24px;
+}
+.form-user-list button{
+  display: flex;
+}
+
