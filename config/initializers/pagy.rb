@@ -13,7 +13,7 @@
 
 # Instance variables
 # See https://ddnexus.github.io/pagy/docs/api/pagy#instance-variables
- Pagy::DEFAULT[:page]   = 4                                  # default
+ Pagy::DEFAULT[:page]   = 1                                  # default
  Pagy::DEFAULT[:items]  = 10                                 # default
 # Pagy::DEFAULT[:outset] = 0                                  # default
 
@@ -175,8 +175,8 @@ Pagy::DEFAULT[:size]       = [1,4,4,1]                       # default
 
 # Overflow extra: Allow for easy handling of overflowing pages
 # See https://ddnexus.github.io/pagy/docs/extras/overflow
-require 'pagy/extras/overflow'
-Pagy::DEFAULT[:overflow] = :last_page    # default  (other options: :last_page and :exception)
+#require 'pagy/extras/overflow'
+#Pagy::DEFAULT[:overflow] = :last_page    # default  (other options: :last_page and :exception)
 
 # Support extra: Extra support for features like: incremental, infinite, auto-scroll pagination
 # See https://ddnexus.github.io/pagy/docs/extras/support
@@ -212,7 +212,7 @@ Pagy::DEFAULT[:overflow] = :last_page    # default  (other options: :last_page a
 #
 # Examples:
 # load the "de" built-in locale:
-# Pagy::I18n.load(locale: 'de')
+Pagy::I18n.load(locale: 'es')
 #
 # load the "de" locale defined in the custom file at :filepath:
 # Pagy::I18n.load(locale: 'de', filepath: 'path/to/pagy-de.yml')

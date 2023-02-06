@@ -3,17 +3,22 @@
   <div class="container-list">
     <h1> <%= t '.title' %> </h1>
     
-    <div class="filter-users">
       <%= form_with(model: @filter, url: users_list_path, method: :get) do |form| %>
-        <label id="name"><%= t '.name' %></label>
-        <%= form.text_field :name, value: params[:name] %>
+      <div>
+        <%= form.text_field :name, value: params[:name]%>
+      </div>
+      <div>
         <%= form.submit t '.button'%> 
+      </div>
       <% end %>
-    </div>
-    <% if @records.empty? %>
-      <%= render "msg", flash: flash  %>
-    <% else %>
-      <%== render partial: 'user_list', locals: {records: @records, pagy: @pagy} %>
-    <% end %>
+    
+      <% if @records.empty? %>
+        <div class="login-error">
+          <%= render "msg", flash: flash  %>
+        </div>
+      <% else %>
+        <%== render partial: 'users_list', locals: {records: @records, pagy: @pagy} %>
+      <% end %>
+    
   </div>
 </div> 

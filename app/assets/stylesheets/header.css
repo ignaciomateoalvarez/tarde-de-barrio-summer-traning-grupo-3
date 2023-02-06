@@ -8,6 +8,10 @@
 	border-bottom: 0.0625rem solid #BEC2C4;
 }
 
+.header-logged{
+	justify-content: flex-end;
+}
+
 .header-link a {
 	text-decoration: none;
 	color: black;
@@ -27,4 +31,9 @@
 .header-link:hover a{
 	border-bottom: 0.15rem solid #0090AF;
 	color: #0090AF;
+}
+
+.user-header{
+	padding: auto;
+	margin-right: auto;
 }

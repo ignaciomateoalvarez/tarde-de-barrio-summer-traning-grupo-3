@@ -1,21 +1,28 @@
+<% unless current_user %>  
+  <div class= "header">
+    <div class= "header-link">
+      <%= link_to login_path() do %>
+        <%= t('.login') %>
+      <% end %>
+    </div>
 
-<div class= "header">
-  <div class= "header-link">
-    <%= link_to login_path() do %>
-      <%= t('.login') %>
+    <div class= "header-link">
+      <%=link_to new_user_path() do%>
+        <%= t('.register') %>
+      <% end %>
+    </div>
+  <% else %>
+  <div class="header header-logged">
+    <div class="user-header">
+      <h2><%= @current_user[:name] %></h2>
+    </div>
+    <div class= "header-link">
+      <%=link_to users_list_path() do%>
+        <%= t('.users_list') %>
+      <% end %>
+      </div>
+      <div class="header-link">
+        <%= link_to "Logout", :logout , data: { turbo_method: "post" } %>
+      </div>
     <% end %>
-  </div>
-
-  <div class= "header-link">
-    <%=link_to new_user_path() do%>
-      <%= t('.register') %>
-    <% end %>
-  </div>
-
-  <div class= "header-link">
-    <%=link_to users_list_path() do%>
-      <%= t('.users_list') %>
-    <% end %>
-  </div>
 </div>
-

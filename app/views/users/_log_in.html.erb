@@ -1,15 +1,17 @@
 <div class="log-in-form">
-  <h2> <%= t '.title' %> </h2>			
+  <div class="title">
+    <h1> <%= t '.title' %> </h1>	
+  </div>	
   <%= render "msg", flash: flash  %>
-  <%= form_with url:"/login", method: :post do |form|%>
-    <div>
-      <%= form.label t('.email') %> </br>
-      <%= form.text_field t('.email') , placeholder: (t'.email_placeholder')%>
+  <%= form_with(url: login_path,method: :post) do |form| %>
+    <div class="form-field">
+      <%= form.label t('.email') %>
+      <%= form.text_field :email , placeholder: (t'.email_placeholder')%>
     </div>
     
-    <div>
-      <%= form.label t('.password') %></br>
-      <%= form.password_field t('.password'), placeholder: (t'.password_placeholder') %>
+    <div class="form-field">
+      <%= form.label t'.password' %>
+      <%= form.password_field :password, placeholder: (t'.password_placeholder') %>
     </div>
     
     <div>
@@ -17,17 +19,17 @@
       <%= label_tag(:remember, (t".remember")) %>
     </div>
   
-    <div>
-      <%= form.submit (t".login")%> 
-    </div>
-    
-    <div class="forgot-password">
-      <%= link_to do %>
-        <%= t('.forgot-password') %>
+    <div class="log-in-button">
+        <%= form.submit (t".login")%> 
+      <div class="forgot-password">
+        <%= link_to do %>
+          <%= t('.forgot-password') %>
         <% end %>
+      </div>
+        <%= button_to do %>
+          <%= image_tag "logo.png", class:'google-logo' ,alt: "Google logo" %>
+          <%= t('.button-google') %>
+        <% end %> 
     </div>
-  <% end %> 
-  <%= button_to do %>
-    <%= t('.button-google') %>
   <% end %> 
 </div>
