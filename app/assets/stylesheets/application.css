@@ -13,14 +13,12 @@
  *= require_tree .
  *= require_self
  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-* {
-	font-family: 'Roboto';
-	font-style: normal;
-}
-
-body {
+body{
 	background: #0090AF;
+	font-family: 'Roboto', sans-serif;
+	font-style: normal;
 }
 
 .image {
@@ -30,6 +28,7 @@ body {
 .container {
 	width: 80%;
 	height: 80vh;
+	padding-bottom: 20px;
 	margin: 5% auto;
 	align-items: center;
 	background: #FFFFFF;
