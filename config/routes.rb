@@ -4,5 +4,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  root "home#index"
+  root "users#log_in"
+
+  get 'log_in', to: 'users#log_in'
+  post 'log_in', to: 'users#log_in'
+
+  resources :users 
 end

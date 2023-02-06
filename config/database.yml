@@ -21,7 +21,7 @@ default: &default
 
 development:
   <<: default
-  url: postgres://postgres:root@localhost/user
+  url: postgres://lautaro:root@localhost/etapa_dos
 
 
 

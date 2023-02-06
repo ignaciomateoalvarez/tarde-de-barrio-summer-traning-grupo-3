@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+	font-family: 'Roboto';
+	font-style: normal;
+}
+
+body {
+	background: #0090AF;
+}
+
+.image {
+	margin: auto;
+}
+
+.container {
+	width: 80%;
+	height: 80vh;
+	margin: 5% auto;
+	align-items: center;
+	background: #FFFFFF;
+	box-shadow: -0.4375rem 0.4375rem 1.875rem rgba(0, 76, 92, 0.2);
+	border-radius: 0.5rem;
+}
