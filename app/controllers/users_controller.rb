@@ -20,14 +20,14 @@ class UsersController < ApplicationController
 
   def new
     if current_user
-      redirect_to root_path
-    else
       @user = User.new
+    else
+      redirect_to login_path
     end
   end
 
   def create
-    unless current_user
+    if current_user
       if user_params['password'] == params['user']['password_confirmation']
         @user = User.new(user_params)
         if @user.save
@@ -47,7 +47,6 @@ class UsersController < ApplicationController
   end
 
   private
-
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation,
                                  :lastname).except(:password_confirmation)

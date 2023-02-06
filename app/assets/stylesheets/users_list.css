@@ -79,3 +79,38 @@ th, td {
   display: flex;
 }
 
+.form-user-list form{
+  height: 100%;
+  margin: 5px;
+}
+
+.new-user-icon{
+  background-image: url('new-user-icon.png');
+  background-repeat: no-repeat;
+  /* background-color: #0090AF; */
+  height: 24px;
+  width: 30px;
+}
+
+.new-user-button button{
+  display:flex;
+  background-color: #0090AF;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 5px;
+  color:white;
+}
+
+.new-user-button button:hover{
+  background-color: #007691;
+  border-color: #007691;
+}
+
+.new-user-button{
+  width: 10rem;
+}
+
+.search-msg{
+  width: 40%;
+}
