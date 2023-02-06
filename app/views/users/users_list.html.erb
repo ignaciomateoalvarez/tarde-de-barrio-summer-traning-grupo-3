@@ -3,12 +3,14 @@
   <div class="container-list">
     <h1> <%= t '.title' %> </h1>
     
-      <%= form_with(model: @filter, url: users_list_path, method: :get) do |form| %>
-      <div>
+      <%= form_with(html:{class: "form-user-list"},model: @filter, url: users_list_path, method: :get) do |form| %>
+      <div class= "search-input">
         <%= form.text_field :name, value: params[:name]%>
       </div>
       <div>
-        <%= form.submit t '.button'%> 
+        <%= button_tag :submit do %>
+          <i class='search-icon'></i>
+        <% end %>
       </div>
       <% end %>
     
