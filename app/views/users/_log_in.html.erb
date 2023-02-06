@@ -9,9 +9,15 @@
       <%= form.text_field :email , placeholder: (t'.email_placeholder')%>
     </div>
     
+<<<<<<< HEAD
     <div class="form-field">
       <%= form.label t'.password' %>
       <%= form.password_field :password, placeholder: (t'.password_placeholder') %>
+=======
+    <div>
+      <%= form.label t('.password') %></br>
+      <%= form.password_field t('.password'), placeholder: (t'.password_placeholder'), :required => true%>
+>>>>>>> d8bfdb6289382d40905acc24ff2cf454cd387d7b
     </div>
     
     <div>
