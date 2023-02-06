@@ -1,0 +1,24 @@
+<div class="container"> 
+  <%= render "header" %>
+  <div class="container-list">
+    <h1> <%= t '.title' %> </h1>
+    
+      <%= form_with(model: @filter, url: users_list_path, method: :get) do |form| %>
+      <div>
+        <%= form.text_field :name, value: params[:name]%>
+      </div>
+      <div>
+        <%= form.submit t '.button'%> 
+      </div>
+      <% end %>
+    
+      <% if @records.empty? %>
+        <div class="login-error">
+          <%= render "msg", flash: flash  %>
+        </div>
+      <% else %>
+        <%== render partial: 'users_list', locals: {records: @records, pagy: @pagy} %>
+      <% end %>
+    
+  </div>
+</div> 

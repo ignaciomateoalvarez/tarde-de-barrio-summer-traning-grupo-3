@@ -1,0 +1,23 @@
+<div class="users-table">
+  <table>
+    <thead>
+      <tr class="table-head">
+        <th><%= t '.name' %></th>        
+        <th><%= t '.lastname' %> </th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% records.each do |user| %>
+        <tr class="table-row">
+          <td><%=user.name%></td>
+          <td><%=user.lastname %></td>
+          <td><%=user.email %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <div class="pagy">
+    <%== pagy_nav(pagy) %>
+  </div>
+</div>

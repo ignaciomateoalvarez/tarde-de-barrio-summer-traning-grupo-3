@@ -2,19 +2,17 @@
 	border: 1px darkgreen solid;
 	background-color: lightgreen;
 	color: black;
-	width: 60%;
-  margin-left:30px;
   font-weight: bold;
   text-align: center;
   border-radius: 2px;
+  margin-bottom:20px;
 }
 
 .error-msg{
 	border: 1px darkred solid;
 	background-color: lightcoral;
 	color: black;
-  width: 60%;
-  margin-left:30px;
+  margin-bottom:20px;
   font-weight: bold;
   text-align: center;
   border-radius: 2px;

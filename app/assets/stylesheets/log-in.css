@@ -6,7 +6,7 @@
 }
 
 .log-in-form {
-	width: 50%;
+	width: 40%;
 }
 
 .log-in-form [type='submit']{
@@ -26,8 +26,17 @@
 }
 
 .log-in-form input{
-	width: 25rem;
-	height: 2rem;
+	width: 100%;
+	height: 2.0625rem;
+	text-align: left;
+	background: #FAFAFA;
+	border: 1.3px solid #CCCCCC;
+	border-radius: 7.06992px;
+}
+
+.form-field{
+	display:flex;
+	flex-direction: column;
 }
 
 .log-in-form input[type='checkbox']{
@@ -35,21 +44,15 @@
 	height: 1rem;
 }
 
-.log-in-form input[type='submit']{
-	width: 15em;
-	gap: 2em;
-}
-
 .log-in-form [type='submit'],
 .button_to button {
-	text-align: center;
 	background: white;
 	border-radius: 0.2159rem;
-	width: 15rem;
-	height: 2rem;
 	border-style: 0.125rem solid;
 	border-color: #0090AF;
 	box-shadow: none;
+	width: 70%;
+	cursor: pointer;
 }
 
 .log-in-form [type='submit']:hover,
@@ -58,7 +61,15 @@
 	color: white;
 }
 
-.forgot_password a {
+.log-in-button{
+	text-align: center;
+}
+
+.forgot-password{
+	margin-bottom: 10px;
+}
+
+.forgot-password a{
 	text-decoration: none;
 	color: #0090AF;
 	font-weight: 500;
@@ -66,4 +77,3 @@
 	line-height: 1.8125rem;
 	text-align: center;
 }
-

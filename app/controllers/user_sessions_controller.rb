@@ -1,11 +1,10 @@
 class UserSessionsController < ApplicationController
   def create
-    @user = login(params[:email], params[:password])
+    @user = login(params[:email], params[:password], params[:remember])
     if @user
-      flash[:notice] = 'Login successful'
-      redirect_to(home_path)
+      redirect_to(root_path)
     else
-      flash[:error] = 'Login failed'
+      flash[:error] = 'Usuario o contraseña incorrectos'
       redirect_to login_path, status: :unprocessable_entity
     end
   end
