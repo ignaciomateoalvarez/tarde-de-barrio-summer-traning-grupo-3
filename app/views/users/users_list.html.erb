@@ -28,5 +28,6 @@
       <% end %>
     </div>
       <%== render partial: 'users_list', locals: {records: @records, pagy: @pagy} %>
+     <%= link_to "Nuevo usuario", new_user_path(@user), data: { turbo_frame: 'modal' } %>
   </div>
 </div> 

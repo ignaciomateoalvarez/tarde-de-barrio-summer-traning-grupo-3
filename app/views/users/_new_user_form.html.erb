@@ -2,7 +2,7 @@
 <%= form_with model: @user, method: :post do |form| %>
   <div class="form-field">
     <%= form.label :name %>
-    <%= form.text_field :name, value: @user[:name] %>
+    <%= form.text_field :name %>
   </div>
   <div class="form-field">
     <%= form.label :lastname %>

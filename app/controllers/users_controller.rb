@@ -13,6 +13,7 @@ class UsersController < ApplicationController
     if current_user
       @filter = UserFilter.new(User.all, filter_params)
       @users  = @filter.call
+      @user = User.new
 
       flash.now[:error] = "Couldn't find any user" if @users.empty?
       @pagy, @records = pagy(@users)

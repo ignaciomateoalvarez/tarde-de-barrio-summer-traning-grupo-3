@@ -1,10 +1,12 @@
-<div id="new-user-modal" class="modal">
-  <div class="container-modal"> 
-      <div class="modal-form">
-        <div class="title">
-          <h1>Crear usuario</h1>
+<%= turbo_frame_tag "modal" do %>
+  <div id="new-user-modal" class="modal">
+    <div class="container-modal"> 
+        <div class="modal-form">
+          <div class="title">
+            <h1>Crear usuario</h1>
+          </div>
+          <%= render "new_user_form", user: @user %>
         </div>
-        <%= render "new_user_form", user: @user %>
-      </div>
-  </div> 
-</div>
+    </div> 
+  </div>
+<% end %>
