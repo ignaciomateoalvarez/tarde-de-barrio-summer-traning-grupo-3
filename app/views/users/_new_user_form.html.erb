@@ -2,7 +2,7 @@
 <%= form_with model: @user, method: :post do |form| %>
   <div class="form-field">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, value: @user[:name] %>
   </div>
   <div class="form-field">
     <%= form.label :lastname %>
@@ -22,9 +22,5 @@
   </div>
   <div class="register-button">
     <%= form.submit "Registrarme" %> 
-    <%= button_to do %>
-        <%= image_tag "logo.png", class:'google-logo' ,alt: "Google logo" %>
-        <%= t('.button-google') %>
-    <% end %> 
   </div>
 <% end %> 

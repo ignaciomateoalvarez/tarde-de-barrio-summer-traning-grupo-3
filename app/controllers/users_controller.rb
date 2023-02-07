@@ -1,9 +1,12 @@
 class UsersController < ApplicationController
-  
   def login
-    if current_user
-      redirect_to root_path
-    end
+    return unless current_user
+
+    redirect_to root_path
+  end
+
+  def edit
+    @user = User.find(params[:id])
   end
 
   def users_list
@@ -28,8 +31,8 @@ class UsersController < ApplicationController
 
   def create
     if current_user
+      @user = User.new(user_params)
       if user_params['password'] == params['user']['password_confirmation']
-        @user = User.new(user_params)
         if @user.save
           flash[:notice] = 'Successfully created user.'
           redirect_to login_path
@@ -46,7 +49,14 @@ class UsersController < ApplicationController
     end
   end
 
+  def update
+    @user = User.find(params[:id])
+    @user.update(user_params)
+    redirect_to root_path, notice: 'Usuario '+@user.name+' '+@user.lastname+' modificado'
+  end
+
   private
+
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation,
                                  :lastname).except(:password_confirmation)
