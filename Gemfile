@@ -81,3 +81,5 @@ group :test, :development do
   gem 'shoulda-matchers'
   gem 'webdrivers'
 end
+
+gem "view_component", "~> 2.82"

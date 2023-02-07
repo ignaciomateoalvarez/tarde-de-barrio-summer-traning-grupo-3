@@ -1,4 +1,4 @@
-<div class="container"> 
+<div id= "container" class="container"> 
   <%= render "header" %>
   <div class="container-list">
     <h1> <%= t '.title' %> </h1>
@@ -16,10 +16,11 @@
       <% end %>
 
       <div class="new-user-button">
-        <%= button_to new_user_path, method: :get do %>
+        <%= button_to new_user_path(@user), data: { turbo_frame: 'modal' }, method: :get do %>
           <i class='new-user-icon'> </i>
           <span>Nuevo Usuario</span>
         <% end %>
+        
       </div>
     </div>
     <div class="search-msg">
@@ -28,6 +29,5 @@
       <% end %>
     </div>
       <%== render partial: 'users_list', locals: {records: @records, pagy: @pagy} %>
-     <%= link_to "Nuevo usuario", new_user_path(@user), data: { turbo_frame: 'modal' } %>
   </div>
 </div> 
