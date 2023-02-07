@@ -16,7 +16,7 @@
           <td><%=user.email %></td>
           <td><%=user.rol%></td>
           <td>
-            <%= button_to edit_user_path(user), method: :get do %>
+            <%= button_to edit_user_path(user), data: { turbo_frame: 'modal' }, method: :get do %>
               Editar
             <% end %>
           </td>
@@ -24,8 +24,6 @@
       <% end %>
     </tbody>
   </table>
-  
-
   <div class="pagy">
     <%== pagy_nav(pagy) %>
   </div>

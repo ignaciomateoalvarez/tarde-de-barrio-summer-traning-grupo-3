@@ -13,8 +13,9 @@ class UsersController < ApplicationController
     if current_user
       @filter = UserFilter.new(User.all, filter_params)
       @users  = @filter.call
-      @user = User.new
-
+      unless @user
+        @user = User.new
+      end 
       flash.now[:error] = "Couldn't find any user" if @users.empty?
       @pagy, @records = pagy(@users)
     else
@@ -53,14 +54,15 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     @user.update(user_params)
-    redirect_to root_path, notice: 'Usuario '+@user.name+' '+@user.lastname+' modificado'
+    flash[:notice]="Usuario modificado con exito"
+    redirect_to users_list_path
   end
 
   private
 
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation,
-                                 :lastname).except(:password_confirmation)
+                                 :lastname, :rol).except(:password_confirmation)
   end
 
   def filter_params
