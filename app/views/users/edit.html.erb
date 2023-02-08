@@ -3,13 +3,13 @@
     <%= tag.div data: { controller: "turbo-modal" }, style: "padding: 30px;" do %>
       <div class="modal">
         <div class="container-modal"> 
-            <div class="modal-form">
-              <div class="title">
-                <h1>Crear usuario</h1>
-              </div>
-              <%= render "users/partials/new_user_form", user: @user %>
+          <div class = "modal-form">
+            <div class="title">
+              <h1>Actualizar usuario</h1>
             </div>
-        </div> 
+            <%= render "users/partials/edit_user_form", user: @user %>
+          </div>
+      </div> 
       </div>
     <% end %>
   <% end %>

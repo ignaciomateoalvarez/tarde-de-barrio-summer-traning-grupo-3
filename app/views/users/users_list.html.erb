@@ -1,24 +1,35 @@
-<div class="container"> 
-  <%= render "header" %>
+<div id= "container" class="container"> 
+  <%= render "users/partials/header" %>
+
   <div class="container-list">
     <h1> <%= t '.title' %> </h1>
-    
-      <%= form_with(model: @filter, url: users_list_path, method: :get) do |form| %>
+    <div class="form-user-list">
+      <%= form_with(html:{class: "form-user-list"},model: @filter, url: users_list_path, method: :get) do |form| %>
+      <div class= "search-input">
+        <%= form.text_field :name, placeholder: @user[:name] %>
+      </div> 
+
       <div>
-        <%= form.text_field :name, value: params[:name]%>
-      </div>
-      <div>
-        <%= form.submit t '.button'%> 
+        <%= button_tag :submit do %>
+          <i class='search-icon'></i>
+        <% end %>
       </div>
       <% end %>
-    
-      <% if @records.empty? %>
-        <div class="login-error">
-          <%= render "msg", flash: flash  %>
-        </div>
-      <% else %>
-        <%== render partial: 'users_list', locals: {records: @records, pagy: @pagy} %>
+
+      <div class="new-user-button">
+        <%= button_to new_user_path(), data: { turbo_frame: 'modal' }, method: :get do %>
+          <i class='new-user-icon'> </i>
+          <span>Nuevo Usuario</span>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="search-msg">
+      <% if flash[:notice].present? || flash[:error].present? %>
+        <%= render "partials/msg", flash: flash  %>
       <% end %>
-    
+    </div>
+
+      <%== render partial: 'users/partials/users_list', locals: {records: @records, pagy: @pagy} %>
   </div>
 </div> 

@@ -5,13 +5,13 @@
         <%= t('.login') %>
       <% end %>
     </div>
-
     <div class= "header-link">
       <%=link_to new_user_path() do%>
         <%= t('.register') %>
       <% end %>
     </div>
-  <% else %>
+  </div>
+<% else %>
   <div class="header header-logged">
     <div class="user-header">
       <h2><%= @current_user[:name] %></h2>
@@ -20,9 +20,9 @@
       <%=link_to users_list_path() do%>
         <%= t('.users_list') %>
       <% end %>
-      </div>
-      <div class="header-link">
+    </div>
+    <div class="header-link">
         <%= link_to "Logout", :logout , data: { turbo_method: "post" } %>
-      </div>
-    <% end %>
-</div>
+    </div>
+  </div>
+<% end %>

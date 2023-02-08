@@ -1,16 +1,21 @@
 class UsersController < ApplicationController
-  
   def login
-    if current_user
-      redirect_to root_path
-    end
+    return unless current_user
+
+    redirect_to root_path
+  end
+
+  def edit
+    @user = User.find(params[:id])
   end
 
   def users_list
     if current_user
       @filter = UserFilter.new(User.all, filter_params)
       @users  = @filter.call
-
+      unless @user
+        @user = User.new
+      end 
       flash.now[:error] = "Couldn't find any user" if @users.empty?
       @pagy, @records = pagy(@users)
     else
@@ -20,16 +25,16 @@ class UsersController < ApplicationController
 
   def new
     if current_user
-      redirect_to root_path
-    else
       @user = User.new
+    else
+      redirect_to login_path
     end
   end
 
   def create
-    unless current_user
+    if current_user
+      @user = User.new(user_params)
       if user_params['password'] == params['user']['password_confirmation']
-        @user = User.new(user_params)
         if @user.save
           flash[:notice] = 'Successfully created user.'
           redirect_to login_path
@@ -46,11 +51,18 @@ class UsersController < ApplicationController
     end
   end
 
+  def update
+    @user = User.find(params[:id])
+    @user.update(user_params)
+    flash[:notice]="Usuario modificado con exito"
+    redirect_to users_list_path
+  end
+
   private
 
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation,
-                                 :lastname).except(:password_confirmation)
+                                 :lastname, :rol).except(:password_confirmation)
   end
 
   def filter_params

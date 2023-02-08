@@ -1,4 +1,4 @@
-<%= render "msg", flash: flash  %>
+<%= render "partials/msg", flash: flash  %>
 <%= form_with model: @user, method: :post do |form| %>
   <div class="form-field">
     <%= form.label :name %>
@@ -18,13 +18,9 @@
   </div>
   <div class="form-field">
     <%= form.label :password_confirmation %>
-    <%= form.password_field :password_confirmation%>
+    <%= form.password_field :password_confirmation %>
   </div>
   <div class="register-button">
     <%= form.submit "Registrarme" %> 
-    <%= button_to do %>
-        <%= image_tag "logo.png", class:'google-logo' ,alt: "Google logo" %>
-        <%= t('.button-google') %>
-    <% end %> 
   </div>
 <% end %> 

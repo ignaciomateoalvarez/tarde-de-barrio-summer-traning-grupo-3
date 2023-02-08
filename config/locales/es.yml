@@ -22,3 +22,5 @@ es:
       login:  Iniciar Sesión
       forgot-password: Olvide mi contraseña
       button-google: Registrarme con Google
+    form:
+      button-google: Registrarme con Google
