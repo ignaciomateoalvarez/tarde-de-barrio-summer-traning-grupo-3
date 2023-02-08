@@ -1,8 +1,14 @@
 class UserSessionsController < ApplicationController
   def create
-    @user = login(params[:email], params[:password], params[:remember])
+    @user = User.find_by(email: params[:email])
     if @user
-      redirect_to(root_path)
+      if @user.active
+        login(params[:email], params[:password])
+        redirect_to root_url, notice: 'Logged in'
+      else
+        flash[:error] = 'Usuario desabilitado'
+        redirect_to(login_path)
+      end
     else
       flash[:error] = 'Usuario o contraseña incorrectos'
       redirect_to login_path, status: :unprocessable_entity
