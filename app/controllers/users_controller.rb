@@ -61,6 +61,7 @@ class UsersController < ApplicationController
   def change_active
     @user = User.find(params[:user_id])
     @user.active = params[:user][:active]
+    authorize @user
     if @user.save
       flash[:notice] = 'Estado modificado'
     else
@@ -68,6 +69,15 @@ class UsersController < ApplicationController
     end
     redirect_to users_list_path
   end
+
+  #def create_student?; end
+  #def create_note_student?; end
+  #def edit_student?; end
+  #def create_news?; end
+  #def list_assists?; end
+  #def calendar?; end
+
+
 
   private
 
