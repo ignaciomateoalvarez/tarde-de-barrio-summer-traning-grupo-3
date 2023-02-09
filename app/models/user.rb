@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   authenticates_with_sorcery!
 
-  enum rol: { Colaborador: 0, Administrador: 1 }
+  enum rol: { colaborador: 0, administrador: 1 }
 
   validates :name, :lastname, format: { with: /\A[a-zA-Z]+\z/, message: 'Only letters allowed.' }
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP, message: 'Formato de email incorrecto.' },

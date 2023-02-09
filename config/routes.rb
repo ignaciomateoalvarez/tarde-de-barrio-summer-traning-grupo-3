@@ -15,5 +15,7 @@ Rails.application.routes.draw do
   post 'login' => "user_sessions#create"
   post 'logout' => 'user_sessions#destroy', :as => :logout
 
-  resources :users 
+  resources :users do
+    patch 'change_active', to: 'users#change_active'
+  end
 end

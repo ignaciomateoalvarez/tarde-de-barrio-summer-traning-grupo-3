@@ -78,8 +78,9 @@ group :test, :development do
   gem 'rails-controller-testing'
   gem 'rspec-rails'
   gem 'selenium-webdriver'
-  gem 'shoulda-matchers'
+  gem 'shoulda-matchers', '~> 5.0'
   gem 'webdrivers'
+  
 end
 
 gem "view_component", "~> 2.82"

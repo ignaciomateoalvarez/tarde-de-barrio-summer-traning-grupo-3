@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
+  before_action :ensure_frame_response, only: [:new, :edit]
+
   def login
     return unless current_user
-
     redirect_to root_path
   end
 
@@ -12,10 +13,7 @@ class UsersController < ApplicationController
   def users_list
     if current_user
       @filter = UserFilter.new(User.all, filter_params)
-      @users  = @filter.call
-      unless @user
-        @user = User.new
-      end 
+      @users  = @filter.call.order(:created_at)
       flash.now[:error] = "Couldn't find any user" if @users.empty?
       @pagy, @records = pagy(@users)
     else
@@ -58,6 +56,17 @@ class UsersController < ApplicationController
     redirect_to users_list_path
   end
 
+  def change_active
+    @user=User.find(params[:user_id])
+    @user.active=params[:user][:active]
+    if @user.save
+      flash[:notice]="Estado modificado"
+    else
+      flash[:error] = @user.errors.full_messages.to_sentence
+    end
+    redirect_to users_list_path
+  end
+
   private
 
   def user_params
@@ -69,5 +78,10 @@ class UsersController < ApplicationController
     params.fetch(:user_filter, {}).permit(
       :name
     )
+  end
+
+  def ensure_frame_response
+    return unless Rails.env.development?
+    redirect_to root_path unless turbo_frame_request?
   end
 end

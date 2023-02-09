@@ -8,6 +8,8 @@
 
 require 'faker'
 
+User.create(name: 'admin', lastname: 'admin', email: 'admin@istrador.com', password: 'admin', rol: 0)
+
 50.times do
   User.create(
     name: Faker::Name.first_name,
