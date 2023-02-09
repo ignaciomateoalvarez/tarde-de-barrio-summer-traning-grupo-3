@@ -13,6 +13,10 @@
     <%= form.text_field :email %>
   </div>
   <div class="form-field">
+    <%= form.label :rol %>
+    <%= form.select :rol, User.rols.keys %>
+  </div>
+  <div class="form-field">
     <%= form.label :password %>
     <%= form.password_field :password %>
   </div>
