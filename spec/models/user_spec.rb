@@ -5,6 +5,7 @@ RSpec.describe User, type: :model do
   describe 'Validations' do
     subject { build(:user) }
     it { should validate_presence_of(:name) }
+    it { should validate_uniqueness_of(:email) }
     #it { is_expected.to validate_presence_of(:email) }
     #it { is_expected.to validate_presence_of(:name) }
     #it { is_expected.to validate_presence_of(:lastname) }
