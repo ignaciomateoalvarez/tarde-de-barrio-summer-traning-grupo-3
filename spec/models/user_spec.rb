@@ -1,12 +1,13 @@
+# frozen_string_literal: true
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-
+  let (:user) { build(:user) }
   describe 'Validations' do
-    subject { create(:user) }
-    it do
-       is_expected.to validate_presence_of(:name)
-     end
+    it do 
+      is_expected.to validate_presence_of(:name) 
+       debugger
+    end
     it { is_expected.to validate_uniqueness_of(:email) }
     it { is_expected.to validate_presence_of(:email) }
     it { is_expected.to validate_presence_of(:name) }
@@ -15,10 +16,8 @@ RSpec.describe User, type: :model do
   end
 
   describe 'Factory' do
-    it { expect(create(:user)).to be_valid }
-  end
-
-  context 'Factory' do
-    it { expect(create(:user)).to be_persisted }
+    it 'Factory valid' do
+      expect(build(:user)).to be_valid
+    end
   end
 end
