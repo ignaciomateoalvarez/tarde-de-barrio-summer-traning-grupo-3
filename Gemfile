@@ -86,3 +86,7 @@ end
 gem "view_component", "~> 2.82"
 
 gem "pundit", "~> 2.3"
+
+gem "dockerfile-rails", ">= 1.0", :group => :development
+
+gem "redis", "~> 5.0"

@@ -33,3 +33,8 @@ passenger-standalone.json
 .DS_Store
 /log/development.log
 config/database.yml
+.dockerignore
+Dockerfile
+bin/docker-entrypoint
+config/dockerfile.yml
+fly.toml
