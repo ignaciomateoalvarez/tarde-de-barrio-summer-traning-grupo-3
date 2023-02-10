@@ -16,9 +16,9 @@ class UsersController < ApplicationController
   def index; end
 
   def users_list
+    authorize User
     @filter = UserFilter.new(User.all, filter_params)
     @users  = @filter.call.order(:created_at)
-    authorize @users
     flash.now[:error] = "Couldn't find any user" if @users.empty?
     @pagy, @records = pagy(@users)
   end

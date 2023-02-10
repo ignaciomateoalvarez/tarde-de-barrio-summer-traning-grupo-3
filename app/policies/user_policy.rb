@@ -14,23 +14,6 @@ class UserPolicy
     @user.administrador?
   end
 
-  # def update
-  #   @user = User.find(params[:id])
-  #   authorize @user
-  #   if @user.update(user_params)
-  #     redirect_to @user
-  #   else
-  #     render :edit
-  #   end
-  # end
-
-  # def publish
-  #   @user = User.find(params[:id])
-  #   authorize @post, :update?
-  #   @post.publish!
-  #   redirect_to @post
-  # end
-
   # def destroy?
   #   user.rol == 'admin'
   # end

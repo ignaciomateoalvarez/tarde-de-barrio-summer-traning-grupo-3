@@ -32,3 +32,4 @@ passenger-standalone.json
 /config/database.yml
 .DS_Store
 /log/development.log
+config/database.yml
