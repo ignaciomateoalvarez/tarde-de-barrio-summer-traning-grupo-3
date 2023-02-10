@@ -14,18 +14,27 @@ class UserPolicy
     @user.administrador?
   end
 
-  # def destroy?
-  #   user.rol == 'admin'
-  # end
-  # def create_student?
-  #   user.rol == 'colaborador' || user.rol == 'admin'
+  def create_student?
+    @user.administrador? || @user.colaborador?
+  end
 
-  # end
-  # def create_note_student?
-  #   user.rol == 'colaborador' || user.rol == 'admin'
+  def create_note_student?
+    @user.administrador? || @user.colaborador?
+  end
 
-  # end
-  # def edit_student?
-  #   user.rol == 'admin' || student.user == user
-  # end
+  def edit_student?
+    @user.administrador?  || student.user == user
+  end
+  def create_news?
+    @user.administrador? || @user.colaborador?
+  end
+  def list_assists?
+    @user.administrador? || @user.colaborador?
+  end
+  def change_active?
+    @user.administrador?
+  end
+  def calendar?
+    @user.administrador?
+  end
 end

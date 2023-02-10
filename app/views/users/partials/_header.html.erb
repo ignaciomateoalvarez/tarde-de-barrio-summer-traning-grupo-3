@@ -1,4 +1,4 @@
-<% unless current_user %>  
+<% unless @current_user %>  
   <div class= "header">
     <div class= "header-link">
       <%= link_to login_path() do %>
@@ -14,7 +14,7 @@
 <% else %>
   <div class="header header-logged">
     <div class="user-header">
-      <h2><%= current_user[:name] %></h2>
+      <h2><%= @current_user[:name] %></h2>
     </div>
     <div class= "header-link">
       <%=link_to users_list_path() do%>
