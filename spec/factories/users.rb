@@ -1,8 +1,11 @@
+# frozen_string_literal: true
 FactoryBot.define do
   factory :user do
-    name { Faker::Name.first_name}
+    name { Faker::Name.first_name }
     lastname { Faker::Name.last_name }
-    email { Faker::Internet.email }
-    password {'holahola'}
+    email { Faker::Internet.unique.email }
+    password { Faker::Internet.password(min_length: 8) }
+    rol { :administrador }
+    active { :true }
   end
 end

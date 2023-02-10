@@ -8,7 +8,7 @@
 
 require 'faker'
 
-User.create(name: 'admin', lastname: 'admin', email: 'admin@istrador.com', password: 'admin', rol: 0)
+User.create(name: 'admin', lastname: 'admin', email: 'admin@admin.com', password: 'adminadmin', rol: :administrador)
 
 50.times do
   User.create(

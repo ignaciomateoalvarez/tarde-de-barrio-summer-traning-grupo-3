@@ -9,7 +9,7 @@ export default class extends Controller {
     this.element.parentElement.removeAttribute("src")
     // Remove src reference from parent frame element
     // Without this, turbo won't re-open the modal on subsequent click
-    this.modalTarget.remove()
+    this.modalTarget.parentElement.remove()
   }
 
   // hide modal on successful form submission
