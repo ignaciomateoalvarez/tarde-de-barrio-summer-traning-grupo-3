@@ -5,12 +5,11 @@ class UsersController < ApplicationController
 
   def login
     return unless current_user
-
     redirect_to users_list_path
   end
 
   def edit
-    authorize @user
+    authorize User
   end
 
   def index; end
@@ -33,8 +32,8 @@ class UsersController < ApplicationController
 
   def create
     if current_user
-      @user = User.new(user_params)
-      if user_params['password'] == params['user']['password_confirmation']
+      @user = User.new(user_create_params)
+      if user_create_params['password'] == params['user']['password_confirmation']
         if @user.save
           flash[:notice] = 'Successfully created user.'
           redirect_to users_list_path
@@ -52,16 +51,20 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = User.find(params[:id])
+    authorize User
     @user.update(user_params)
-    flash[:notice] = 'Usuario modificado con exito'
+    if(@user.save)
+      flash[:notice] = 'Usuario modificado con exito'
+    else
+      flash[:notice] = @user.errors
+    end
     redirect_to users_list_path
   end
 
   def change_active
+    authorize User
     @user = User.find(params[:user_id])
     @user.active = params[:user][:active]
-    authorize @user
     if @user.save
       flash[:notice] = 'Estado modificado'
     else
@@ -85,9 +88,13 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  def user_params
+  def user_create_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation,
                                  :lastname, :rol).except(:password_confirmation)
+  end
+
+  def user_params
+    params.require(:user).permit(:name, :email, :lastname, :rol)
   end
 
   def filter_params

@@ -10,6 +10,10 @@ class UserPolicy
     @user.administrador?
   end
 
+  def update?
+    @user.administrador?
+  end
+
   def users_list?
     @user.administrador?
   end
@@ -23,17 +27,21 @@ class UserPolicy
   end
 
   def edit_student?
-    @user.administrador?  || student.user == user
+    @user.administrador? || student.user == user
   end
+
   def create_news?
     @user.administrador? || @user.colaborador?
   end
+
   def list_assists?
     @user.administrador? || @user.colaborador?
   end
+
   def change_active?
     @user.administrador?
   end
+
   def calendar?
     @user.administrador?
   end
