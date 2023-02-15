@@ -1,10 +1,10 @@
 class UsersController < ApplicationController
   before_action :ensure_frame_response, only: %i[new edit]
   before_action :set_user, only: %i[show edit update destroy]
-  # after_action  :verify_authorized, only: [:index, :new, :edit]
 
   def login
     return unless current_user
+
     redirect_to users_list_path
   end
 
@@ -53,11 +53,11 @@ class UsersController < ApplicationController
   def update
     authorize User
     @user.update(user_params)
-    if(@user.save)
-      flash[:notice] = 'Usuario modificado con exito'
-    else
-      flash[:notice] = @user.errors
-    end
+    flash[:notice] = if @user.save
+                       'Usuario modificado con exito'
+                     else
+                       @user.errors
+                     end
     redirect_to users_list_path
   end
 
@@ -72,15 +72,6 @@ class UsersController < ApplicationController
     end
     redirect_to users_list_path
   end
-
-  #def create_student?; end
-  #def create_note_student?; end
-  #def edit_student?; end
-  #def create_news?; end
-  #def list_assists?; end
-  #def calendar?; end
-
-
 
   private
 

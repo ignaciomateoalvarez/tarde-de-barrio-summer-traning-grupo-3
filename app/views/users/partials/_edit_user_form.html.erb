@@ -2,22 +2,22 @@
 
 <%= form_with model: @user, method: "patch" do |form| %>
   <div class="form-field">
-    <%= form.label :name %>
+    <%= form.label t('.name') %>
     <%= form.text_field :name%>
   </div>
   <div class="form-field">
-    <%= form.label :lastname %>
+    <%= form.label t('.lastname')%>
     <%= form.text_field :lastname %>
   </div>
   <div class="form-field">
-    <%= form.label :email %>
+    <%= form.label t('.email') %>
     <%= form.text_field :email, readonly: true %>
   </div>
   <div class="form-field">
-    <%= form.label :rol %>
+    <%= form.label t('.rol')%>
     <%= form.select :rol, User.rols.keys %>
   </div>
   <div class="register-button">
-    <%= form.submit "Actualizar usuario" %> 
+    <%= form.submit t('.edit_user') %> 
   </div>
 <% end %> 

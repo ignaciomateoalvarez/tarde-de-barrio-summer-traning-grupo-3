@@ -1,16 +1,16 @@
 <%= turbo_frame_tag "modal" do %>
-    <%= render TurboModalComponent.new do %>
-      <%= tag.div data: { controller: "turbo-modal" }, style: "padding: 30px;" do %>
-        <div class="modal">
-          <div class="container-modal"> 
-            <div class = "modal-form">
-              <div class="title">
-                <h1>Actualizar usuario</h1>
-              </div>
-              <%= render "users/partials/edit_user_form", user: @user %>
+  <%= render TurboModalComponent.new do %>
+    <%= tag.div data: { controller: "turbo-modal" }, style: "padding: 30px;" do %>
+      <div class="modal">
+        <div class="container-modal"> 
+          <div class = "modal-form">
+            <div class="title">
+              <h1> <%= t('.edit_user') %> </h1>
             </div>
-          </div> 
-        </div>
-      <% end %>
+            <%= render "users/partials/edit_user_form", user: @user %>
+          </div>
+        </div> 
+      </div>
     <% end %>
+  <% end %>
 <% end %>

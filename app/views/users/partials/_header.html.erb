@@ -1,12 +1,12 @@
 <% unless current_user %>  
   <div class= "header">
     <div class= "header-link">
-      <%= link_to login_path() do %>
+      <%= link_to login_path do %>
         <%= t('.login') %>
       <% end %>
     </div>
     <div class= "header-link">
-      <%=link_to new_user_path() do%>
+      <%=link_to new_user_path do%>
         <%= t('.register') %>
       <% end %>
     </div>
@@ -16,8 +16,11 @@
     <div class="user-header">
       <h2><%= current_user[:name] %></h2>
     </div>
+    <div>
+       <h1> <%= t '.title' %> </h1>
+    </div>
     <div class= "header-link">
-      <%=link_to users_list_path() do%>
+      <%=link_to users_list_path do%>
         <%= t('.users_list') %>
       <% end %>
     </div>
