@@ -1,0 +1,23 @@
+<div class="users-table">
+  <table>
+    <thead>
+      <tr class="table-head">
+        <th>Students</th>        
+        <th>Age </th>
+        <th>School grade</th>
+        <th>Currenly studying</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @presenter.students.each do |student| %>
+        <tr class="table-row">
+          <td><%= student.full_name %></td>
+          <td><%= student.age %></td>
+          <td><%= student.school_grade_capitalize %></td>
+          <td><%= student.currently_studying_humanized %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%== pagy_nav(pagy) %>
+</div>

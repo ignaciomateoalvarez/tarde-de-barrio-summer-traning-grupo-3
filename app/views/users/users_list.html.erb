@@ -2,7 +2,6 @@
   <%= render "users/partials/header" %>
 
   <div class="container-list">
-    <h1> <%= t '.title' %> </h1>
     <div class="form-user-list">
       <%= form_with(html:{class: "form-user-list"},model: @filter, url: users_list_path, method: :get) do |form| %>
       <div class= "search-input">

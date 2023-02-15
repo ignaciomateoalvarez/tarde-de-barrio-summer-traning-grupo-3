@@ -1,0 +1,42 @@
+en:
+  users:
+    edit:
+      edit_user: Edit user
+    new:
+      create_user: New user
+    partials:
+      edit_user_form:
+        name: Name
+        lastname: Last name
+        email: Email
+        rol: Role
+        edit_user: Save changes
+      header: 
+        title: Users
+        login: Login
+        register: Sign up
+        users_list: Users list
+      log_in:
+        title: Login
+        email: Email
+        email_placeholder: youremail@example.com
+        password: Password
+        password_placeholder: Password
+        remember: Remember me
+        login:  Login
+        forgot-password: I forgot my password
+        button-google: Login with Google
+      new_user_form:   
+        name: Name
+        lastname: Last name
+        email: Email
+        rol: Role
+        password: Password
+        password_confirmation: Confirm password
+        register: Sign up user
+      users_list:
+        user: User
+        email: Email
+        rol: Role
+        active: Activate
+        edit: Edit

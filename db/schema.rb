@@ -16,13 +16,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_13_163651) do
 
   create_table "students", force: :cascade do |t|
     t.string "name"
+    t.string "lastname"
     t.date "birthday"
     t.string "address"
     t.boolean "currently_studying"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "school_grade", default: 0
-    t.string "lastname"
   end
 
   create_table "users", force: :cascade do |t|

@@ -2,10 +2,10 @@
   <table>
     <thead>
       <tr class="table-head">
-        <th>Usuario</th>        
-        <th>Email </th>
-        <th>Rol</th>
-        <th>Activar</th>
+        <th> <%= t('.user') %> </th>        
+        <th> <%= t('.email') %> </th>
+        <th> <%= t('.rol') %> </th>
+        <th> <%= t('.active') %> </th>
       </tr>
     </thead>
     <tbody>
@@ -24,7 +24,7 @@
           </td>
           <td>
             <%= button_to edit_user_path(user), data: { turbo_frame: 'modal' }, method: :get do %>
-              Editar
+              <%= t('.edit') %>
             <% end %>
           </td>
         </tr>

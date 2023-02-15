@@ -5,10 +5,8 @@ class Student < ApplicationRecord
   validates :birthday, presence: true
   validates :address, presence: true
   validates :school_grade, presence: true
-  validates :currently_studying, presence: true
-
+  validates :currently_studying, inclusion: { in: [true, false] }
   def age
-    #((Time.zone.now – date_of_birth.to_time) / 1.year.seconds).floor
     age = Date.today.year - birthday.year
     age -= 1 if Date.today < birthday + age.years
 
