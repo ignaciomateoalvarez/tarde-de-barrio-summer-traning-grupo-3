@@ -1,1 +1,28 @@
 es:
+  students:
+    index:
+      new-student: Nuevo estudiante
+      student-list: Lista de estudiantes
+    show:
+      student: Estudiante
+      student-data: Datos del estudiante
+      birthday: Fecha de nacimiento
+      address: Domicilio
+      school_grade: Grado de escolaridad
+      currently_studying: Escolarizado
+    new:
+      create-student: Crear estudiante
+    student_list:
+      students: Estudiantes
+      age: Edad
+      school_grade: Grado de escolaridad
+      currently_studying: Escolarizado
+    new_student_form:
+      name: Nombre
+      lastname: Apellido
+      birthday: Fecha de nacimiento
+      address: Domicilio
+      school_grade: Grado de escolaridad
+      currently_studying: Escolarizado?
+      radio-yes: Si
+      register: Registrar estudiante

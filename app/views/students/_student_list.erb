@@ -2,16 +2,16 @@
   <table>
     <thead>
       <tr class="table-head">
-        <th>Students</th>        
-        <th>Age </th>
-        <th>School grade</th>
-        <th>Currenly studying</th>
+        <th> <%= t('.students')%> </th>        
+        <th> <%= t('.age')%>  </th>
+        <th> <%= t('.school_grade')%> </th>
+        <th> <%= t('.currently_studying')%> </th>
       </tr>
     </thead>
     <tbody>
       <% @presenter.students.each do |student| %>
         <tr class="table-row">
-          <td><%= student.full_name %></td>
+          <td><%= link_to student.full_name, student %></td>
           <td><%= student.age %></td>
           <td><%= student.school_grade_capitalize %></td>
           <td><%= student.currently_studying_humanized %></td>

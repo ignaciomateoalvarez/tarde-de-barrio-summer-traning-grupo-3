@@ -7,7 +7,7 @@ class User < ApplicationRecord
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP, message: 'Formato de email incorrecto.' },
                     uniqueness: true, presence: true
   validate :forbid_changing_email, on: :update
-  validates :password, length: { minimum: 3 }
+  validates :password, length: { minimum: 3 }, if: :new_record?
 
   private
 
