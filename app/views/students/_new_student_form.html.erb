@@ -1,33 +1,33 @@
 <%= render "partials/msg", flash: flash  %>
 <%= form_with model: @student, method: :post do |form| %>
   <div class="form-field">
-    <%= form.label :name %>
+    <%= form.label t('.name') %>
     <%= form.text_field :name %>
   </div>
   <div class="form-field">
-    <%= form.label :lastname %>
+    <%= form.label t('.lastname')  %>
     <%= form.text_field :lastname %>
   </div>
   <div class="form-field">
-    <%= form.label :birthday %>
+    <%= form.label t('.birthday')  %>
     <%= form.date_field :birthday, max: Date.today %>
   </div>
   <div class="form-field">
-    <%= form.label :address %>
+    <%= form.label t('.address')  %>
     <%= form.text_field :address %>
   </div>
   <div class="form-field">
-    <%= form.label :school_grade %>
+    <%= form.label t('.school_grade')  %>
     <%= form.select :school_grade, Student.school_grades.keys%>
   <div class="form-field">
-    <%= form.label :currently_studying? %>
+    <%= form.label t('.currently_studying') %>
     <br>
     <%= form.radio_button :currently_studying, true %>
-    <%= form.label 'Si' %>
+    <%= form.label t('.radio-yes')  %>
     <%= form.radio_button :currently_studying, false %>
     <%= form.label 'No' %>
   </div>
   <div class="register-button">
-    <%= form.submit "Registrar estudiante" %> 
+    <%= form.submit t('.register')  %> 
   </div>
 <% end %> 

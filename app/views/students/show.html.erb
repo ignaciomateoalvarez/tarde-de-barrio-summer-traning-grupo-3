@@ -1,0 +1,29 @@
+<div class='show-container'>
+  <div class="user-container">
+    <div class='show-header'>
+      <h2> <%= link_to t('.student'), students_path %> </h2>
+      <h2> > </h2>
+      <h2 class='light-blue-color'> <%= @student.full_name %> </h2>
+    </div>
+    <h1> <%= @student.name %> <%= @student.lastname %>  </h1>
+    <div class="student-data">
+      <h2 class='light-blue-color'> <%= t('.student-data')%> </h2>
+        <div>
+          <h3> <%= t('.birthday')%>  </h3>
+          <p> <%= @student.birthday %> </p>
+        </div>
+        <div>
+          <h3> <%= t('.address')%> </h3>
+          <p> <%= @student.address %> </p>
+        </div>
+        <div>
+          <h3> <%= t('.school_grade')%>  </h3>
+          <p> <%= @student.school_grade_capitalize %> </p>
+        </div>
+        <div>
+          <h3> <%= t('.currently_studying')%>  </h3>
+          <p> <%= @student.currently_studying_humanized %> </p>
+        </div> 
+    </div>
+  </div>
+</div>

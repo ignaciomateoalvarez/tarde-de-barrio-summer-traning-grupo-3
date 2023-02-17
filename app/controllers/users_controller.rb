@@ -12,8 +12,6 @@ class UsersController < ApplicationController
     authorize User
   end
 
-  def index; end
-
   def users_list
     authorize User
     @filter = UserFilter.new(User.all, filter_params)

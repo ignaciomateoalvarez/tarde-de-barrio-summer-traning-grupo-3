@@ -1,18 +1,18 @@
-.notice-msg{
-	border: 1px darkgreen solid;
-	background-color: lightgreen;
-	color: black;
+.notice-msg {
+  border: 1px darkgreen solid;
+  background-color: lightgreen;
+  color: black;
   font-weight: bold;
   text-align: center;
   border-radius: 2px;
-  margin-bottom:20px;
+  margin-bottom: 20px;
 }
 
-.error-msg{
-	border: 1px darkred solid;
-	background-color: lightcoral;
-	color: black;
-  margin-bottom:20px;
+.error-msg {
+  border: 1px darkred solid;
+  background-color: lightcoral;
+  color: black;
+  margin-bottom: 20px;
   font-weight: bold;
   text-align: center;
   border-radius: 2px;

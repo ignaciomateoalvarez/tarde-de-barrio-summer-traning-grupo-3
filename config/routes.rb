@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'user_sessions/new'
   get 'user_sessions/destroy'
 
-  root 'users#index'
+  root 'users#login'
   get 'login', to: 'users#login'
 
   get 'users_list', to: 'users#users_list'

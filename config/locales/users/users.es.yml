@@ -4,6 +4,16 @@ es:
       edit_user: Modificar usuario
     new:
       create_user: Nuevo usuario
+    login:
+      title: Ingresar a mi cuenta
+      email: Mail
+      email_placeholder: tumail@ejemplo.com
+      password: Contraseña
+      password_placeholder: Ingresa tu contraseña
+      remember: Recordarme
+      login: Ingresar
+      forgot-password: Olvidé mi contraseña
+      button-google: Ingresar con Google
     partials:
       edit_user_form:
         name: Nombre
@@ -11,23 +21,13 @@ es:
         email: Mail
         rol: Rol
         edit_user: Guardar cambios
-      header: 
+      header:
         title: Usuarios
         login: Sesión
         register: Registro
         users_list: Lista de usuarios
-      log_in:
-        title: Ingresar a mi cuenta
-        email: Mail
-        email_placeholder: tumail@ejemplo.com
-        password: Contraseña
-        password_placeholder: Ingresa tu contraseña
-        remember: Recordarme
-        login:  Ingresar
-        forgot-password: Olvidé mi contraseña
-        button-google: Ingresar con Google
-      new_user_form:   
-        name: Nombre 
+      new_user_form:
+        name: Nombre
         lastname: Apellido
         email: Mail
         rol: Rol
@@ -40,4 +40,3 @@ es:
         rol: Rol
         active: Activar
         edit: Editar
-      

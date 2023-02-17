@@ -1,5 +1,17 @@
 <div id= "container" class="container"> 
-  <%= render "users/partials/header" %>
+  <div class="header header-logged">
+    <div class="user-header">
+      <h2><%= current_user[:name] %></h2>
+    </div>
+    <div class= "header-link">
+      <%=link_to users_list_path do%>
+        <%= t('.users_list') %>
+      <% end %>
+    </div>
+    <div class="header-link">
+        <%= link_to "Logout", :logout , data: { turbo_method: "post" } %>
+    </div>
+  </div>
 
   <div class="container-list">
     <div class="form-user-list">
