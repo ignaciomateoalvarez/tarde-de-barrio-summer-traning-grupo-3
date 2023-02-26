@@ -10,14 +10,32 @@
     </thead>
     <tbody>
       <% @presenter.students.each do |student| %>
-        <tr class="table-row">
+        <tr class="user">
           <td><%= link_to student.full_name, student %></td>
           <td><%= student.age %></td>
           <td><%= student.school_grade_capitalize %></td>
           <td><%= student.currently_studying_humanized %></td>
+          <td>
+            <% if policy(student).edit? %>
+              <%= button_to edit_student_path(student), data: { turbo_frame: 'modal' }, method: :get do %>
+                <%= image_tag 'Edit.svg', alt: 'edit button', class: 'edit-img' %>
+              <% end %>
+            <% end %>
+          </td>
+          <td>
+            <% if policy(student).destroy? %>
+            <div class='delete-student-container'>
+              <%= link_to student_path(action: :delete, id: student.id), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} do %>
+                <%= image_tag 'Delete.svg', alt: 'edit button', class: 'delete-img' %>
+              <% end %>
+            </div>
+            <% end %>
+          </td>
         </tr>
       <% end %>
     </tbody>
   </table>
-  <%== pagy_nav(pagy) %>
+  <div class="pagy">
+    <%== pagy_nav(pagy) %>
+  </div>
 </div>

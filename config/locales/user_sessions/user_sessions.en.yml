@@ -1,0 +1,12 @@
+en:
+  user_sessions:
+    new:
+      title: Login
+      email: Email
+      email_placeholder: youremail@example.com
+      password: Password
+      password_placeholder: Password
+      remember: Remember me
+      login: Login
+      forgot-password: I forgot my password
+      button-google: Login with Google

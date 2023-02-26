@@ -4,16 +4,6 @@ es:
       edit_user: Modificar usuario
     new:
       create_user: Nuevo usuario
-    login:
-      title: Ingresar a mi cuenta
-      email: Mail
-      email_placeholder: tumail@ejemplo.com
-      password: Contraseña
-      password_placeholder: Ingresa tu contraseña
-      remember: Recordarme
-      login: Ingresar
-      forgot-password: Olvidé mi contraseña
-      button-google: Ingresar con Google
     partials:
       edit_user_form:
         name: Nombre

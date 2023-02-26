@@ -1,30 +1,35 @@
-<div id= "container" class="container"> 
-  <div class="header header-logged">
-    <div class="user-header">
-      <h2><%= current_user[:name] %></h2>
-    </div>
-    <div class= "header-link">
-      <%=link_to t('.student-list'), students_path %>
-    </div>
-    <div class="header-link">
-        <%= link_to "Logout", :logout , data: { turbo_method: "post" } %>
-    </div>
+<div class='users-index'>
+  <div class="header-list">
+    <%= link_to "Logout", :logout , data: { turbo_method: "post" } %>
+    <%=link_to students_path do%>
+      Students
+    <% end %>
+      <p><%= current_user[:name] %></p>
   </div>
 
-  <div class="container-list">
+  <div class='filter-section'>
+    <div>
+      <%=link_to students_path do%>
+        <%= t('.students_list') %>
+      <% end %>
+    </div>
+    <div>
+      <%=link_to users_list_path do%>
+        <%= t('.users_list') %>
+      <% end %>
+    </div>
+
     <div class="form-user-list">
       <%= form_with(html:{class: "form-user-list"},model: @filter, url: users_list_path, method: :get) do |form| %>
       <div class= "search-input">
         <%= form.text_field :name, placeholder: params[:name] %>
       </div> 
-
       <div>
         <%= button_tag :submit do %>
           <i class='search-icon'></i>
         <% end %>
       </div>
       <% end %>
-
       <div class="new-user-button">
         <%= button_to new_student_path(), data: { turbo_frame: 'modal' }, method: :get do %>
           <i class='new-user-icon'> </i>
@@ -32,13 +37,14 @@
         <% end %>
       </div>
     </div>
+  </div>
 
+  <div class="container-list">
     <div class="search-msg">
       <% if flash[:notice].present? || flash[:error].present? %>
         <%= render "partials/msg", flash: flash  %>
       <% end %>
     </div>
-
     <%= render partial: 'student_list', locals: {records: @presenter.students, pagy: @presenter.pagy_data}%>
   </div>
 </div> 

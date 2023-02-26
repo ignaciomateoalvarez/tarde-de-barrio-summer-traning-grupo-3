@@ -24,7 +24,5 @@
     <%= form.label t('.password_confirmation') %>
     <%= form.password_field :password_confirmation %>
   </div>
-  <div class="register-button">
-    <%= form.submit t('.register') %> 
-  </div>
+  <%= form.submit t('.register'), class: 'login-button' %> 
 <% end %> 

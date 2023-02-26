@@ -17,7 +17,5 @@
     <%= form.label t('.rol')%>
     <%= form.select :rol, User.rols.keys %>
   </div>
-  <div class="register-button">
-    <%= form.submit t('.edit_user') %> 
-  </div>
+  <%= form.submit t('.edit_user'), class: 'login-button' %> 
 <% end %> 

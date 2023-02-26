@@ -1,0 +1,53 @@
+<div class="container">
+	<div class= "login-header">
+    <div class= "header-link">
+      <%= link_to login_path do %>
+        <%= t('.login') %>
+      <% end %>
+    </div>
+    <div class= "header-link">
+      <%=link_to register_path, class: "#{current_page?(register_path) ? 'current-page' : ''}" do%>
+        <%= t('.title') %>
+      <% end %>
+    </div>
+  </div>
+	<div class="container-log-in">
+		<div class="image">
+			<%= image_tag 'Frame.jpg' %>
+		</div>
+
+    <div class="log-in-form">
+    <div class="title">
+      <h1> <%= t '.title' %> </h1>	
+    </div>	
+    <%= render "partials/msg", flash: flash  %>
+    <%= form_with(url: register_path, scope: :user, method: :post) do |form| %>
+      <div class="form-field">
+        <%= form.label t('.name')  %>
+        <%= form.text_field :name %>
+      </div>
+      <div class="form-field">
+        <%= form.label t('.lastname')  %>
+        <%= form.text_field :lastname %>
+      </div>
+      <div class="form-field">
+        <%= form.label t('.email')  %>
+        <%= form.text_field :email %>
+      </div>
+      <div class="form-field">
+        <%= form.label t('.password') %>
+        <%= form.password_field :password %>
+      </div>
+      <div class="form-field">
+        <%= form.label t('.password_confirmation') %>
+        <%= form.password_field :password_confirmation %>
+      </div>
+      <%= form.submit t('.register'), class: 'login-button' %> 
+      <div class="login-google">
+        <%= image_tag "logo.png", class:'google-logo' ,alt: "Google logo" %>
+        <%= link_to t('.google-login')%>
+      </div>
+    <% end %> 
+	</div>
+</div>
+

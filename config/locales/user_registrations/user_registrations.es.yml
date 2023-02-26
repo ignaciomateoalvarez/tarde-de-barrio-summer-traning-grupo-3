@@ -1,0 +1,13 @@
+es:
+  user_registrations:
+    new:
+      login: Sesion
+      name: Nombre
+      lastname: Apellido
+      title: Registro
+      email: Email
+      email_placeholder: tumail@ejemplo.com
+      password: Contraseña
+      password_confirmation: Confirmar contraseña
+      register: Registrarme
+      google-login: Registrarme con Google

@@ -1,5 +1,6 @@
 <%= render "partials/msg", flash: flash  %>
-<%= form_with model: @student, method: :post do |form| %>
+
+<%= form_with model: @student, method: "patch" do |form| %>
   <div class="form-field">
     <%= form.label t('.name') %>
     <%= form.text_field :name %>
@@ -34,4 +35,5 @@
     </div>
   </div>
   <%= form.submit t('.register'), class: 'login-button'  %> 
+  </div>
 <% end %> 

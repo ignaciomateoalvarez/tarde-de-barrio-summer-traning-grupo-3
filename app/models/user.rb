@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   authenticates_with_sorcery!
+  has_many :students
 
   enum rol: { colaborador: 0, administrador: 1 }
 
@@ -8,6 +9,7 @@ class User < ApplicationRecord
                     uniqueness: true, presence: true
   validate :forbid_changing_email, on: :update
   validates :password, length: { minimum: 3 }, if: :new_record?
+  validates_confirmation_of :password
 
   private
 

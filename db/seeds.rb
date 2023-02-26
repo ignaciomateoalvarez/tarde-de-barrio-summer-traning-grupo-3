@@ -8,7 +8,8 @@
 
 require 'faker'
 
-User.create(name: 'admin', lastname: 'admin', email: 'admin@admin.com', password: 'adminadmin', rol: :administrador)
+admin = User.create(name: 'admin', lastname: 'admin', email: 'admin@admin.com', password: 'adminadmin',
+                    rol: :administrador)
 
 30.times do
   User.create(
@@ -26,6 +27,7 @@ end
     birthday: Faker::Date.birthday,
     address: Faker::Address.full_address,
     school_grade: Faker::Number.within(range: 0..2),
-    currently_studying: Faker::Boolean.boolean
+    currently_studying: Faker::Boolean.boolean,
+    user: admin
   )
 end
