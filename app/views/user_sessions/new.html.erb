@@ -1,2 +1,48 @@
-<h1>UserSessions#new</h1>
-<p>Find me in app/views/user_sessions/new.html.erb</p>
+<div class="container">
+	<div class= "login-header">
+    <div class= "header-link">
+      <%= link_to login_path, class: "#{current_page?(login_path) ? 'current-page' : ''}" do %>
+        <%= t('.login') %>
+      <% end %>
+    </div>
+    <div class= "header-link">
+      <%=link_to register_path do%>
+        <%= t('.register') %>
+      <% end %>
+    </div>
+  </div>
+	<div class="container-log-in">
+		<div class="image">
+			<%= image_tag 'Frame.jpg' %>
+		</div>
+
+    <div class="log-in-form">
+    <div class="title">
+      <h1> <%= t '.title' %> </h1>	
+    </div>	
+    <%= render "partials/msg", flash: flash  %>
+    <%= form_with(url: login_path,method: :post) do |form| %>
+      <div class="form-field">
+        <%= form.label t('.email') %>
+        <%= form.text_field :email , placeholder: (t'.email_placeholder')%>
+      </div>
+      
+      <div class="form-field">
+        <%= form.label t'.password' %>
+        <%= form.password_field :password, placeholder: (t'.password_placeholder'), :required => true %>
+      </div>
+      
+      <div class='remember-me'>
+        <%= form.check_box :remember %>
+        <%= label_tag(:remember, t('.remember')) %>
+      </div>
+      <%= form.submit 'Ingresar' , class: 'login-button'%> 
+      <%= link_to t('.recover-password'),'/#', class:'recover-password' %> 
+      <div class="login-google">
+        <%= image_tag "logo.png", class:'google-logo' ,alt: "Google logo" %>
+        <%= link_to t('.google-login')%>
+      </div>
+    <% end %> 
+	</div>
+</div>
+

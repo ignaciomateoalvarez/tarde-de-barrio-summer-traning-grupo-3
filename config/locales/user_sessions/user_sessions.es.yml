@@ -1,0 +1,13 @@
+es:
+  user_sessions:
+    new:
+      title: Ingresar a mi cuenta
+      register: Registro
+      email: Email
+      email_placeholder: tumail@ejemplo.com
+      password: Contraseña
+      password_placeholder: Ingresa tu contraseña
+      remember: Recordarme
+      login: Sesion
+      forgot-password: Olvidé mi contraseña
+      button-google: Ingresar con Google

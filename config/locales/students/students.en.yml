@@ -12,12 +12,23 @@ en:
       currently_studying: Currently studying
     new:
       create-student: Create student
+    edit:
+      edit_student: Modificar estudiante
     student_list:
       students: Student
       age: Age
       school_grade: School grade
       currently_studying: Currently studying
     new_student_form:
+      name: Name
+      lastname: Lastname
+      birthday: Birthday
+      address: Address
+      school_grade: School grade
+      currently_studying: Currently studying
+      radio-yes: "Yes"
+      register: Register student
+    edit_student_form:
       name: Name
       lastname: Lastname
       birthday: Birthday

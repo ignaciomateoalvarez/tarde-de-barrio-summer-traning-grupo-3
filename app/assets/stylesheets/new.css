@@ -1,16 +1,9 @@
-.container-new {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
 .register-form {
   width: 40%;
   align-items: center;
 }
 
 .register-form [type="submit"] {
-  font-weight: 500;
   font-size: 1.125rem;
   line-height: 1.8125rem;
   /* or 163% */
@@ -30,12 +23,11 @@
   height: 2.0625rem;
   text-align: left;
   background: #fafafa;
-  border: 1.3px solid #cccccc;
-  border-radius: 7.06992px;
+  border: 1.3008px solid #cccccc;
+  border-radius: 7.0704px;
 }
 
-.register-form [type="submit"],
-.button_to button {
+.register-form [type="submit"] {
   background: white;
   border-radius: 0.2159rem;
   border-style: 0.125rem solid;
@@ -45,14 +37,19 @@
   margin-bottom: 20px;
 }
 
-.register-form [type="submit"]:hover,
-.button_to button:hover {
+.register-form [type="submit"]:hover {
   background: #0090af;
   color: white;
 }
 
 .register-button {
   text-align: center;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .modal {
@@ -65,4 +62,10 @@
   overflow: hidden; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.radio-buttons {
+  display: flex;
+  gap: 7.1875rem;
+  margin-top: 15px;
 }

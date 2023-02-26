@@ -1,4 +1,4 @@
-.header {
+.login-header {
   width: 90%;
   margin: auto;
   display: flex;
@@ -6,34 +6,9 @@
   align-items: center;
   height: 3.125rem;
   border-bottom: 0.0625rem solid #bec2c4;
+  gap: 60px;
 }
 
 .header-logged {
   justify-content: flex-end;
-}
-
-.header-link a {
-  text-decoration: none;
-  color: black;
-  padding-bottom: 0.875rem;
-}
-
-.header-link {
-  font-weight: 300;
-  margin: 0.3125rem;
-  font-size: 1.125rem;
-  line-height: 1.8125rem;
-  /* or 163% */
-  text-align: center;
-  color: #000000;
-}
-
-.header-link:hover a {
-  border-bottom: 0.15rem solid #0090af;
-  color: #0090af;
-}
-
-.user-header {
-  padding: auto;
-  margin-right: auto;
 }

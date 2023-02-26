@@ -2,12 +2,6 @@ class UsersController < ApplicationController
   before_action :ensure_frame_response, only: %i[new edit]
   before_action :set_user, only: %i[show edit update destroy]
 
-  def login
-    return unless current_user
-
-    redirect_to users_list_path
-  end
-
   def edit
     authorize User
   end
@@ -31,16 +25,11 @@ class UsersController < ApplicationController
   def create
     if current_user
       @user = User.new(user_create_params)
-      if user_create_params['password'] == params['user']['password_confirmation']
-        if @user.save
-          flash[:notice] = 'Successfully created user.'
-          redirect_to users_list_path
-        else
-          flash[:error] = @user.errors.full_messages.to_sentence
-          redirect_to new_user_path
-        end
+      if @user.save
+        flash[:notice] = 'Successfully created user.'
+        redirect_to users_list_path
       else
-        flash[:error] = "Passwords don't match."
+        flash[:error] = @user.errors.full_messages.to_sentence
         redirect_to new_user_path
       end
     else

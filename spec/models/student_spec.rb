@@ -26,5 +26,14 @@ RSpec.describe Student, type: :model do
     describe 'Factory' do
       it { expect(create(:student)).to be_persisted }
     end
+
+    describe 'Destroy' do
+      let(:student) { FactoryBot.create(:student, name: 'pepito') }
+      it 'checks that a student can be destroyed' do
+        student.destroy
+        expect(Student.count).to eq(0)
+        expect(Student.find_by(name: 'pepito')).to be_nil
+      end
+    end
   end
 end

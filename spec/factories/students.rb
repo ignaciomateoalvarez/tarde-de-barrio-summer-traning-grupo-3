@@ -6,5 +6,6 @@ FactoryBot.define do
     address { Faker::Address.full_address }
     school_grade { Faker::Number.within(range: 0..2) }
     currently_studying { true }
+    user { create(:user) }
   end
 end

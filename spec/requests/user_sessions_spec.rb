@@ -20,7 +20,7 @@ RSpec.describe 'UserSessions', type: :request do
     end
     it 'returns http success' do
       post('/login', params: {})
-      expect(response).to have_http_status(302)
+      expect(response).to have_http_status(422)
     end
   end
 

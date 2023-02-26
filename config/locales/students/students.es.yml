@@ -12,12 +12,23 @@ es:
       currently_studying: Escolarizado
     new:
       create-student: Crear estudiante
+    edit:
+      edit_student: Modificar estudiante
     student_list:
       students: Estudiantes
       age: Edad
       school_grade: Grado de escolaridad
       currently_studying: Escolarizado
     new_student_form:
+      name: Nombre
+      lastname: Apellido
+      birthday: Fecha de nacimiento
+      address: Domicilio
+      school_grade: Grado de escolaridad
+      currently_studying: Escolarizado?
+      radio-yes: Si
+      register: Registrar estudiante
+    edit_student_form:
       name: Nombre
       lastname: Apellido
       birthday: Fecha de nacimiento

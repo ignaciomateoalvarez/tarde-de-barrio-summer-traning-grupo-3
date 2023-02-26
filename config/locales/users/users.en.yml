@@ -4,16 +4,6 @@ en:
       edit_user: Edit user
     new:
       create_user: New user
-    login:
-      title: Login
-      email: Email
-      email_placeholder: youremail@example.com
-      password: Password
-      password_placeholder: Password
-      remember: Remember me
-      login: Login
-      forgot-password: I forgot my password
-      button-google: Login with Google
     partials:
       edit_user_form:
         name: Name
