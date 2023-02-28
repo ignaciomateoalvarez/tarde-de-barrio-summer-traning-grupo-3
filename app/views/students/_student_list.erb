@@ -1,5 +1,5 @@
-<div class="users-table">
-  <table>
+<div class="table-container">
+  <table class='table-class'>
     <thead>
       <tr class="table-head">
         <th> <%= t('.students')%> </th>        
@@ -10,32 +10,32 @@
     </thead>
     <tbody>
       <% @presenter.students.each do |student| %>
-        <tr class="user">
-          <td><%= link_to student.full_name, student %></td>
+        <tr class="tr-row-data">
+          <td><%= link_to student.full_name, student, class:'student-link' %></td>
           <td><%= student.age %></td>
           <td><%= student.school_grade_capitalize %></td>
           <td><%= student.currently_studying_humanized %></td>
           <td>
-            <% if policy(student).edit? %>
-              <%= button_to edit_student_path(student), data: { turbo_frame: 'modal' }, method: :get do %>
-                <%= image_tag 'Edit.svg', alt: 'edit button', class: 'edit-img' %>
-              <% end %>
-            <% end %>
-          </td>
-          <td>
-            <% if policy(student).destroy? %>
-            <div class='delete-student-container'>
-              <%= link_to student_path(action: :delete, id: student.id), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} do %>
-                <%= image_tag 'Delete.svg', alt: 'edit button', class: 'delete-img' %>
+            <div class='table-button-center'>
+              <% if policy(student).edit? %>
+                <%= button_to edit_student_path(student), data: { turbo_frame: 'modal' }, method: :get do %>
+                  <%= image_tag 'Edit.svg', alt: 'edit button', class: 'user-list-edit-img' %>
+                <% end %>
               <% end %>
             </div>
-            <% end %>
+          </td>
+          <td>
+            <div class='table-button-center'>
+                <%= link_to student_path(action: :delete, id: student.id), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} do %>
+                  <div class='delete-img'/>
+                <% end %>           
+            </div>
           </td>
         </tr>
       <% end %>
     </tbody>
   </table>
-  <div class="pagy">
-    <%== pagy_nav(pagy) %>
-  </div>
+</div>
+<div class="pagy">
+  <%== pagy_nav(pagy) %>
 </div>

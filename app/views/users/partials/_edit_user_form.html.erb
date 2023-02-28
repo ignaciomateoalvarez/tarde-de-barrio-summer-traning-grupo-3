@@ -1,21 +1,21 @@
 <%= render "partials/msg", flash: flash  %>
 
 <%= form_with model: @user, method: "patch" do |form| %>
-  <div class="form-field">
+  <div class="edit-user-form-field">
     <%= form.label t('.name') %>
     <%= form.text_field :name%>
   </div>
-  <div class="form-field">
+  <div class="edit-user-form-field">
     <%= form.label t('.lastname')%>
     <%= form.text_field :lastname %>
   </div>
-  <div class="form-field">
+  <div class="edit-user-form-field">
     <%= form.label t('.email') %>
     <%= form.text_field :email, readonly: true %>
   </div>
-  <div class="form-field">
+  <div class="edit-user-form-field">
     <%= form.label t('.rol')%>
     <%= form.select :rol, User.rols.keys %>
   </div>
-  <%= form.submit t('.edit_user'), class: 'login-button' %> 
+  <%= form.submit t('.edit_user'), class: 'edit-user-login-button' %> 
 <% end %> 

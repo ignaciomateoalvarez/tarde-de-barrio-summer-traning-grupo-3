@@ -17,17 +17,27 @@
 
 * {
   box-sizing: border-box;
-  font-weight: 100;
+  margin: 0;
+  padding: 0;
+}
+
+.container a:visited {
+  color: inherit;
 }
 
 body {
   background: #0090af;
   font-family: "Roboto", sans-serif;
   font-style: normal;
+  height: 100vh;
 }
 
-a:visited {
+.show-container a:visited {
   color: inherit;
+}
+
+textarea {
+  resize: none;
 }
 
 button {
@@ -37,8 +47,7 @@ button {
 }
 
 .container {
-  width: 50%;
-  height: 650px;
+  width: 70%;
   padding-bottom: 20px;
   margin: 5% auto;
   align-items: center;

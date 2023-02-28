@@ -29,10 +29,8 @@ passenger-standalone.json
 .dumps/
 
 /gitignore
-/config/database.yml
 .DS_Store
 /log/development.log
-config/database.yml
 .dockerignore
 Dockerfile
 bin/docker-entrypoint

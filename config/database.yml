@@ -1,0 +1,16 @@
+default: &default
+  adapter:  postgresql
+  encoding: unicode
+  pool:     <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  url: postgres://postgres:root@localhost:5432/tarde_de_barrio
+
+test:
+  <<: *default
+  url: postgres://postgres:root@localhost:5432/tarde_de_barrio_test
+
+production:
+  <<: *default
+  url: <%= ENV["DATABASE_URL"] %>

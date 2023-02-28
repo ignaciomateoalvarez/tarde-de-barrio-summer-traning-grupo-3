@@ -1,0 +1,43 @@
+.user-list-container-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-class {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+  display: table;
+  margin-top: 50px;
+}
+
+.table-head * {
+  color: #0090af;
+  font-weight: bold;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.tr-row-data {
+  height: 3rem;
+  outline: 0.0625rem solid #cccccc;
+  border-radius: 0.625rem;
+  text-align: center;
+}
+
+.table-container{
+  width: 85%;
+}
+
+.tr-row-data:hover {
+  outline: 0.2rem solid #0090af;
+}
+
+.table-button-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

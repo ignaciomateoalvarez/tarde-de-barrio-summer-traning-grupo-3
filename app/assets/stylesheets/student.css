@@ -1,0 +1,7 @@
+.student-link {
+  color: black;
+}
+
+.student-link:hover {
+    color: #0090af;
+}

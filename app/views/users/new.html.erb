@@ -1,12 +1,12 @@
 <%= turbo_frame_tag "modal" do %>
   <%= render TurboModalComponent.new do %>
     <%= tag.div data: { controller: "turbo-modal" } do %>
-      <div class="modal">
-        <div class="container-modal"> 
-          <div class="modal-title">
+      <div class="user-new-modal">
+        <div class="user-new-container-modal"> 
+          <div class="user-new-modal-title ">
             <h1> <%= t('.create_user') %> </h1>
           </div>
-          <div class="modal-form">
+          <div class="user-new-modal-form">
             <%= render "users/partials/new_user_form", user: @user %>
           </div>
         </div> 

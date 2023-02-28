@@ -12,3 +12,19 @@
 .header-logged {
   justify-content: flex-end;
 }
+
+.header-home {
+  display: flex;
+  justify-items: center;
+}
+
+.header-home p {
+  display: flex;
+  justify-items: center;
+}
+
+.header-home *:hover,
+.header-list a:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}

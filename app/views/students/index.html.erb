@@ -1,13 +1,6 @@
-<div class='users-index'>
-  <div class="header-list">
-    <%= link_to "Logout", :logout , data: { turbo_method: "post" } %>
-    <%=link_to students_path do%>
-      Students
-    <% end %>
-      <p><%= current_user[:name] %></p>
-  </div>
+<div class='users-list-index''>
 
-  <div class='filter-section'>
+  <div class='users-list-filter-section'>
     <div>
       <%=link_to students_path do%>
         <%= t('.students_list') %>
@@ -19,28 +12,28 @@
       <% end %>
     </div>
 
-    <div class="form-user-list">
+    <div class="user-list-form">
       <%= form_with(html:{class: "form-user-list"},model: @filter, url: users_list_path, method: :get) do |form| %>
-      <div class= "search-input">
-        <%= form.text_field :name, placeholder: params[:name] %>
-      </div> 
       <div>
-        <%= button_tag :submit do %>
-          <i class='search-icon'></i>
+        <%= button_tag :submit, class: 'user-list-filter-button' do %>
+          <i class='user-list-search-icon'></i>
         <% end %>
       </div>
+      <div class= "user-list-search-input">
+        <%= form.text_field :name, placeholder: params[:name] %>
+      </div> 
       <% end %>
-      <div class="new-user-button">
+      <div class="user-list-new-user-button">
         <%= button_to new_student_path(), data: { turbo_frame: 'modal' }, method: :get do %>
-          <i class='new-user-icon'> </i>
-          <span> <%= t('.new-student') %> </span>
+          <%= image_tag 'New-user.svg', alt:'new-user-img'%>
+          <span>Nuevo Estudiante</span>
         <% end %>
       </div>
     </div>
   </div>
 
-  <div class="container-list">
-    <div class="search-msg">
+  <div class="user-list-container-list">
+    <div class="user-list-search-msg">
       <% if flash[:notice].present? || flash[:error].present? %>
         <%= render "partials/msg", flash: flash  %>
       <% end %>

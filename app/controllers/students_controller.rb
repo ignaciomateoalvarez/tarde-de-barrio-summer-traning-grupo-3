@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-  before_action :set_student, only: %i[edit update destroy]
+  before_action :set_student, only: %i[edit update destroy show]
 
   def index
     @presenter = StudentsPresenter.new(params)
@@ -20,7 +20,30 @@ class StudentsController < ApplicationController
   end
 
   def show
-    @student = Student.find(params[:id]).decorate
+    @comments = @student.comments
+  end
+
+  def edit
+    authorize @student
+  end
+
+  def update
+    if @student.update(student_params)
+      flash[:notice] = 'Edit Student'
+    else
+      flash[:alert] = 'Could not edit student'
+    end
+    redirect_to students_path
+  end
+
+  def destroy
+    authorize @student
+    if @student.destroy
+      flash[:notice] = 'Deleted Student'
+    else
+      flash[:alert] = 'Could not delete student'
+    end
+    redirect_to students_path
   end
 
   def edit
@@ -54,6 +77,6 @@ class StudentsController < ApplicationController
   end
 
   def set_student
-    @student = Student.find(params[:id])
+    @student = Student.find(params[:id]).decorate
   end
 end

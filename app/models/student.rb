@@ -1,5 +1,6 @@
 class Student < ApplicationRecord
   belongs_to :user
+  has_many :comments, dependent: :destroy
 
   enum school_grade: { inicial: 0, primaria: 1, secundaria: 2 }
 

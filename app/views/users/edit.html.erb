@@ -1,10 +1,10 @@
 <%= turbo_frame_tag "modal" do %>
   <%= render TurboModalComponent.new do %>
     <%= tag.div data: { controller: "turbo-modal" } do %>
-      <div class="modal">
-        <div class="container-modal"> 
-          <div class = "modal-form">
-            <div class="title">
+      <div class="user-edit-modal">
+        <div class="user-edit-container-modal"> 
+          <div class = "user-edit-modal-form">
+            <div class="user-edit-title">
               <h1> <%= t('.edit_user') %> </h1>
             </div>
             <%= render "users/partials/edit_user_form", user: @user %>
