@@ -11,6 +11,7 @@
   </head>
 
   <body>
+    <%= render partial: '/partials/navbar' if logged_in? %>
     <%= turbo_frame_tag "modal", user: @user %>
     <%= yield %>
   </body>

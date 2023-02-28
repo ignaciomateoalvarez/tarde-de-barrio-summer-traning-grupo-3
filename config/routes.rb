@@ -16,6 +16,7 @@ Rails.application.routes.draw do
 
   resources :students do
     get 'index', to: 'students#index'
+    resources :comments
   end
 
   resources :users do

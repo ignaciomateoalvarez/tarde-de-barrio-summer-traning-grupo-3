@@ -1,28 +1,28 @@
 <%= render "partials/msg", flash: flash  %>
 <%= form_with model: @user, method: :post do |form| %>
-  <div class="form-field">
+  <div class="new-user-form-field">
     <%= form.label t('.name')  %>
     <%= form.text_field :name %>
   </div>
-  <div class="form-field">
+  <div class="new-user-form-field">
     <%= form.label t('.lastname')  %>
     <%= form.text_field :lastname %>
   </div>
-  <div class="form-field">
+  <div class="new-user-form-field">
     <%= form.label t('.email')  %>
     <%= form.text_field :email %>
   </div>
-  <div class="form-field">
+  <div class="new-user-form-field">
     <%= form.label t('.rol') %>
     <%= form.select :rol, User.rols.keys %>
   </div>
-  <div class="form-field">
+  <div class="new-user-form-field">
     <%= form.label t('.password') %>
     <%= form.password_field :password %>
   </div>
-  <div class="form-field">
+  <div class="new-user-form-field">
     <%= form.label t('.password_confirmation') %>
     <%= form.password_field :password_confirmation %>
   </div>
-  <%= form.submit t('.register'), class: 'login-button' %> 
+  <%= form.submit t('.register'), class: 'new-user-login-button' %> 
 <% end %> 

@@ -1,0 +1,8 @@
+
+<%= form_with(model: [student, Comment.new]) do |form| %>
+  <div class='comment-input-section'>
+    <%= form.label :body, "Comentarios" %>
+    <%= form.text_area :body, placeholder: "¿Qué deseas publicar?. Puedes utilizar “@” para mencionar personas." %>
+    <%= form.submit value: 'Publicar', class: 'login-button' %>
+  </div>
+<% end %>

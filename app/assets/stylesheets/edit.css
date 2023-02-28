@@ -46,21 +46,3 @@
   opacity: 0.5;
 }
 
-.delete-student-container {
-  position: relative;
-}
-
-.delete-img {
-  position: absolute;
-  left: 10px;
-  top: -13px;
-}
-
-.delete-img:hover {
-  opacity: 0.5;
-}
-
-.delete-img:hover {
-  filter: invert(10%) sepia(85%) saturate(6989%) hue-rotate(7deg)
-    brightness(78%) contrast(112%);
-}
