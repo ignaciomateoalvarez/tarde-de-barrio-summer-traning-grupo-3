@@ -2,6 +2,7 @@ class User < ApplicationRecord
   authenticates_with_sorcery!
   has_many :students
   has_many :comments
+  has_many :subcomments
 
   enum rol: { colaborador: 0, administrador: 1 }
 

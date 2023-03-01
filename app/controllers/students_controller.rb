@@ -20,7 +20,7 @@ class StudentsController < ApplicationController
   end
 
   def show
-    @comments = @student.comments
+    @comments = @student.comments.decorate
   end
 
   def edit
