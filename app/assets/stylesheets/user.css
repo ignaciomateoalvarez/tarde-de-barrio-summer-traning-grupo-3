@@ -6,7 +6,6 @@
   left: 0;
   top: 0;
   width: 100%; /* Full width */
-  height: 100%; /* Full height */
   overflow: hidden; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
@@ -110,7 +109,7 @@
   left: 0;
   top: 0;
   width: 100%; /* Full width */
-  height: 100%; /* Full height */
+
   overflow: hidden; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
@@ -222,7 +221,7 @@
 
 .users-list-index {
   background: white;
-  height: 100%;
+  min-height: 100%;
 }
 
 .users-index a {
@@ -311,7 +310,9 @@
 
 .user-list-form {
   display: flex;
-  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1.5625rem;
+  align-items: flex-end;
 }
 
 .user-list-search-input input {
@@ -331,8 +332,8 @@
   height: 24px;
   width: 24px;
   position: absolute;
-  top: 107.2px;
-  right: 386px;
+  right: 350px;
+  margin-top: 10px;
 }
 
 .search-icon:hover {
@@ -381,10 +382,6 @@
 
 .user-list-new-user-button {
   width: 10rem;
-}
-
-.user-list-search-msg {
-  width: 40%;
 }
 
 .user-list-toggle-button input[type="checkbox"] {

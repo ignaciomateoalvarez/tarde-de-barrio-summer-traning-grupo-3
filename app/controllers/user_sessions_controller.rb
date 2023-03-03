@@ -7,7 +7,7 @@ class UserSessionsController < ApplicationController
     @user = User.find_by(email: params[:email])
     if @user && @user.active
       login(params[:email], params[:password])
-      redirect_to users_list_path, notice: 'Logged in'
+      redirect_to users_path, notice: 'Logged in'
     else
       flash[:error] = 'Usuario o contraseña incorrectos'
       render :new, status: :unprocessable_entity

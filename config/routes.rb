@@ -1,12 +1,10 @@
 Rails.application.routes.draw do
-  root 'users#users_list'
+  root 'user_sessions#new'
 
   get 'user_sessions/new'
   get 'user_sessions/destroy'
 
   get 'login', to: 'user_sessions#new'
-
-  get 'users_list', to: 'users#users_list'
 
   post 'login' => 'user_sessions#create'
   post 'logout' => 'user_sessions#destroy', :as => :logout
