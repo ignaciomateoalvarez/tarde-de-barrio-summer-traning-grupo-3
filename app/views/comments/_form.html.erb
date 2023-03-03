@@ -1,16 +1,17 @@
-
-<%= form_with(model: [student, Comment.new]) do |form| %>
+<%= form_with(model: [student, Comment.new], data: {controller: 'emojipicker'})do |form| %>
   <div class='comment-input-section'>
     <%= form.label :body, "Comentarios" %>
-    <%= form.text_area :body, placeholder: "¿Qué deseas publicar?. Puedes utilizar “@” para mencionar personas." %>
+    <%= form.text_area :body, placeholder: "¿Qué deseas publicar?. Puedes utilizar “@” para mencionar personas.", data: {'emojipicker-target': 'textArea'} %>
     <div class='buttom-modal-comment'>    
       <div class='left-bottom-comment'>
-        <%= image_submit_tag("smile.svg", class: 'post-comment-svg')%>
-        <%= image_submit_tag("image.svg", class: 'post-comment-svg')%>
+        <%= image_tag("smile.svg",class: 'post-comment-svg',data: {'emojipicker-target': 'button',
+        action: 'click->emojipicker#openPicker'})%>
+        <%= image_tag("image.svg", class: 'post-comment-svg1')%>
        <div class='highlight-comment'>
          <%= form.check_box :stand_out , class: 'highlight-checkbox' %>
          <%= form.label 'Destacar publicación', class: 'highlight-text' %>
        </div>
+        <div class='my-picker-comment' data-emojipicker-target='container'></div>
       </div>
         <%= form.submit value: 'Publicar', class: 'post-comment' %>
     </div>

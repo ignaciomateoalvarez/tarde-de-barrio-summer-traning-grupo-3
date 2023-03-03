@@ -58,3 +58,47 @@
 .featured {
   border-left: 0.625rem solid #d95234;
 }
+
+.buttom-modal-comment {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-bottom-comment {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 50px;
+  gap: 20px;
+}
+
+.post-comment-svg {
+  height: 2.1875rem;
+  width: 2.1875rem;
+}
+
+.login-button-comment {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  height: 45px;
+  border-radius: 8px;
+  border-color: inherit;
+  background-color: #0090af;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+}
+
+.comment {
+  width: 90%;
+  border: 0.0625rem solid black;
+  border-radius: 0.9375rem;
+  padding: 1.25rem;
+  position: relative;
+}
+
+.featured {
+  border-left: 0.625rem solid #d95234;
+}
