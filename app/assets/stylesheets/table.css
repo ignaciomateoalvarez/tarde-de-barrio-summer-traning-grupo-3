@@ -29,7 +29,8 @@
 }
 
 .table-container{
-  width: 85%;
+  width: 100%;
+  padding: 0px 30px 0px 30px;
 }
 
 .tr-row-data:hover {

@@ -3,6 +3,16 @@
   <div class='comment-input-section'>
     <%= form.label :body, "Comentarios" %>
     <%= form.text_area :body, placeholder: "¿Qué deseas publicar?. Puedes utilizar “@” para mencionar personas." %>
-    <%= form.submit value: 'Publicar', class: 'login-button' %>
+    <div class='buttom-modal-comment'>    
+      <div class='left-bottom-comment'>
+        <%= image_submit_tag("smile.svg", class: 'post-comment-svg')%>
+        <%= image_submit_tag("image.svg", class: 'post-comment-svg')%>
+       <div class='highlight-comment'>
+         <%= form.check_box :stand_out , class: 'highlight-checkbox' %>
+         <%= form.label 'Destacar publicación', class: 'highlight-text' %>
+       </div>
+      </div>
+        <%= form.submit value: 'Publicar', class: 'post-comment' %>
+    </div>
   </div>
 <% end %>

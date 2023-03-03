@@ -20,7 +20,6 @@
     <div class="title">
       <h1> <%= t '.title' %> </h1>	
     </div>	
-    <%= render "partials/msg", flash: flash  %>
     <%= form_with(url: login_path,method: :post) do |form| %>
       <div class="form-field">
         <%= form.label t('.email') %>

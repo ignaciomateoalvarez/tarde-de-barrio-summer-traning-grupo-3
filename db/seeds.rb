@@ -10,6 +10,10 @@ require 'faker'
 
 admin = User.create(name: 'admin', lastname: 'admin', email: 'admin@admin.com', password: 'adminadmin',
                     rol: :administrador)
+User.create(name: 'Gianlucas', lastname: 'Galati', email: 'gianlucas@gmail.com', 
+            password: '123',rol: :administrador)
+User.create(name: 'Camila', lastname: 'Tisera', email: 'camila@gmail.com', 
+            password: '123',rol: :administrador)
 
 30.times do
   User.create(

@@ -12,6 +12,10 @@
 
   <body>
     <%= render partial: '/partials/navbar' if logged_in? %>
+    <% flash.each do |type, msg| %>
+    <% debugger %>
+      <%= render '/partials/flash_message' , message: msg, warning_type: type %>
+    <% end %>
     <%= turbo_frame_tag "modal", user: @user %>
     <%= yield %>
   </body>

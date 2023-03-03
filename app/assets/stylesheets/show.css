@@ -4,11 +4,11 @@
 
 .show-container {
   display: flex;
-  width: 100vw;
-  height: 100vh;
   background-color: white;
   font-size: 0.75rem;
   color: #474747;
+  min-height: 100%;
+  padding-top: 50px;
 }
 .user-container {
   display: flex;
@@ -78,18 +78,6 @@
   padding: 1.25rem;
   gap: 0.625rem;
 }
-
-.comment {
-  width: 90%;
-  border: 0.0625rem solid black;
-  border-radius: 0.9375rem;
-  padding: 1.25rem;
-  border-left: 0.625rem solid #d95234;
-  position: relative;
-}
-/* details[open]{
-  border-left: 0.625rem solid #d95234;
-} */
 
 .comment-header{
   display: flex;

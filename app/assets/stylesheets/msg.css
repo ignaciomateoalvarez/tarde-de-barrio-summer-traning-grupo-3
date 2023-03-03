@@ -1,19 +1,30 @@
-.notice-msg {
-  border: 1px darkgreen solid;
-  background-color: lightgreen;
-  color: black;
-  font-weight: bold;
-  text-align: center;
-  border-radius: 2px;
-  margin-bottom: 20px;
+.notice, .warning, .success {
+  position: absolute;
+  top: 3.1rem;
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 0.625rem;
+  width: fit-content;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto;
 }
 
-.error-msg {
-  border: 1px darkred solid;
-  background-color: lightcoral;
+.notice {
   color: black;
-  margin-bottom: 20px;
-  font-weight: bold;
-  text-align: center;
-  border-radius: 2px;
+  background-color: white;
+  border: 5px solid black;
 }
+.warning{
+  color: red;
+  background-color: white;
+  border: 5px solid red;
+
+}
+.success{
+  color: green;
+  background-color: white;
+  border: 5px solid green;
+}
+

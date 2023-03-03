@@ -20,7 +20,13 @@ class StudentsController < ApplicationController
   end
 
   def show
-    @comments = @student.comments.decorate
+    @comments = @student.comments
+                        .order(created_at: :desc)
+                        .decorate
+
+    @featured = @comments.where(stand_out: true).group_by{ |c| c.created_at.to_date }
+    @not_featured = @comments.where(stand_out: false).group_by{ |c| c.created_at.to_date }
+    
   end
 
   def edit
@@ -28,30 +34,6 @@ class StudentsController < ApplicationController
   end
 
   def update
-    if @student.update(student_params)
-      flash[:notice] = 'Edit Student'
-    else
-      flash[:alert] = 'Could not edit student'
-    end
-    redirect_to students_path
-  end
-
-  def destroy
-    authorize @student
-    if @student.destroy
-      flash[:notice] = 'Deleted Student'
-    else
-      flash[:alert] = 'Could not delete student'
-    end
-    redirect_to students_path
-  end
-
-  def edit
-    authorize @student
-  end
-
-  def update
-    authorize @student
     if @student.update(student_params)
       flash[:notice] = 'Edit Student'
     else

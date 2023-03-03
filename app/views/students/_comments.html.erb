@@ -1,0 +1,36 @@
+<% comments.each do |key,comment| %>
+  <h3> <%= (key.to_date == Date.today ) ? t('.today') : key %> </h3>
+  <% comment.each do |comment| %>
+      <div class="comment <%= "featured" if featured %>">
+          <div class='comment-header'>
+            <div class='coment-header-left'>
+              <p class='comment-username'> <%= comment.name %> </p>
+              <p class='subcomment-hour'><%= comment.hour %></p>
+            </div>
+            <div class='coment-header-right'>
+              <div class= "likes">
+                <p>99</p>
+                <%= image_submit_tag("like.svg", class: 'like-svg')%>
+              </div>
+            </div>
+          </div>
+          <p> <%= comment.body %> </p>
+        <details>
+          <summary class='summary-btn-comment'></summary>
+          <hr class='hr-style'/>
+          <div class='sub-comment-container'>
+            <% comment.subcomments.each do |subcomment| %>
+              <div class='sub-comment'>
+                <div class='subcomment-header'>
+                  <p class='subcomment-username'> <%= subcomment.decorate.name %> </p>
+                  <p class='subcomment-hour'><%= subcomment.decorate.hour %></p>
+                </div>
+                <p> <%= subcomment.decorate.body %> </p>
+              </div>
+            <% end %>
+          </div>
+          <%= render partial: "comments/post_sub_comment_form", locals: { comment: comment, student: @student}  %>
+        </details>
+      </div>
+  <% end %>
+<% end %>

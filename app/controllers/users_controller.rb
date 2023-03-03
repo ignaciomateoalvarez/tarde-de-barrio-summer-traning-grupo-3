@@ -2,17 +2,18 @@ class UsersController < ApplicationController
   before_action :ensure_frame_response, only: %i[new edit]
   before_action :set_user, only: %i[show edit update destroy]
 
-  def edit
-    authorize User
-  end
-
-  def users_list
+  def index
     authorize User
     @filter = UserFilter.new(User.all, filter_params)
     @users  = @filter.call.order(:created_at)
     flash.now[:error] = "Couldn't find any user" if @users.empty?
     @pagy, @records = pagy(@users)
   end
+
+  def edit
+    authorize User
+  end
+
 
   def new
     if current_user
@@ -27,7 +28,7 @@ class UsersController < ApplicationController
       @user = User.new(user_create_params)
       if @user.save
         flash[:notice] = 'Successfully created user.'
-        redirect_to users_list_path
+        redirect_to users_path
       else
         flash[:error] = @user.errors.full_messages.to_sentence
         redirect_to new_user_path
@@ -45,7 +46,7 @@ class UsersController < ApplicationController
                      else
                        @user.errors
                      end
-    redirect_to users_list_path
+    redirect_to users_path
   end
 
   def change_active
@@ -57,7 +58,7 @@ class UsersController < ApplicationController
     else
       flash[:error] = @user.errors.full_messages.to_sentence
     end
-    redirect_to users_list_path
+    redirect_to users_path
   end
 
   private
@@ -84,6 +85,6 @@ class UsersController < ApplicationController
   def ensure_frame_response
     return unless Rails.env.development?
 
-    redirect_to users_list_path unless turbo_frame_request?
+    redirect_to users_path unless turbo_frame_request?
   end
 end

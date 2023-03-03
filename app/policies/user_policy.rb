@@ -18,7 +18,7 @@ class UserPolicy
     @user.administrador?
   end
 
-  def users_list?
+  def index?
     @user && (@user.administrador? || @user.colaborador?)
   end
 
