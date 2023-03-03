@@ -187,3 +187,8 @@ summary::-webkit-details-marker {
 details > summary {
   list-style: none;
 }
+
+.my-picker-comment{
+  z-index: 1;
+  position: relative;
+}

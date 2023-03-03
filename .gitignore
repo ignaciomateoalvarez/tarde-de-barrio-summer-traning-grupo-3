@@ -36,3 +36,4 @@ Dockerfile
 bin/docker-entrypoint
 config/dockerfile.yml
 fly.toml
+/node_modules

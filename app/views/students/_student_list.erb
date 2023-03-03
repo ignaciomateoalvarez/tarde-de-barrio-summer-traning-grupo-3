@@ -23,12 +23,12 @@
                 <% end %>
               <% end %>
             </div>
-          </td>
+          <td>
           <td>
             <div class='table-button-center'>
-                <%= link_to student_path(action: :delete, id: student.id), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} do %>
-                  <div class='delete-img'/>
-                <% end %>           
+          <%= button_to student_path(student),method: :delete,  data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} do%>
+            <%= image_tag( "Delete.svg", class: 'student-pen-icon') %>
+          <% end %>             
             </div>
           </td>
         </tr>

@@ -30,7 +30,9 @@
 
 body {
   height: 100vh;
-  background-color: #0090af;
+  /*overflow-x:hidden;
+  overflow-y:hidden;*/
+  background-color: #0090af ;
 }
 
 .show-container a:visited {
@@ -48,7 +50,8 @@ button {
 }
 
 .container {
-  width: 70%;
+  width: 60%;
+  height: 80%;
   padding-bottom: 20px;
   margin: 5% auto;
   align-items: center;
@@ -60,7 +63,8 @@ button {
 .title h1 {
   font-weight: 100;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  font-size: x-large;
 }
 
 .google-logo {

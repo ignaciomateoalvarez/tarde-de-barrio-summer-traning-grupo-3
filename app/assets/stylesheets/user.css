@@ -272,7 +272,7 @@
   justify-content: flex-end;
   gap: 20px;
   margin-right: 10%;
-  padding-top: 50px;
+  padding-top: 10px;
 }
 
 .user-list-filter-button {
@@ -311,7 +311,6 @@
 .user-list-form {
   display: flex;
   gap: 2rem;
-  margin-bottom: 1.5625rem;
   align-items: flex-end;
 }
 
