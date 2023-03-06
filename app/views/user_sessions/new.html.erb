@@ -18,17 +18,17 @@
 
     <div class="log-in-form">
     <div class="title">
-      <h1> <%= t '.title' %> </h1>	
+      <h1> <%= t('.title') %> </h1>	
     </div>	
     <%= form_with(url: login_path,method: :post) do |form| %>
       <div class="form-field">
         <%= form.label t('.email') %>
-        <%= form.text_field :email , placeholder: (t'.email_placeholder')%>
+        <%= form.text_field :email , placeholder: t('.email_placeholder')%>
       </div>
       
       <div class="form-field">
         <%= form.label t'.password' %>
-        <%= form.password_field :password, placeholder: (t'.password_placeholder'), :required => true %>
+        <%= form.password_field :password, placeholder: t('.password_placeholder'), :required => true %>
       </div>
       
       <div class='remember-me'>

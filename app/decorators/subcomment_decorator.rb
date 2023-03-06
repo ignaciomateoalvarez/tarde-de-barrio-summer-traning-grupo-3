@@ -8,8 +8,5 @@ class SubcommentDecorator <  Draper::Decorator
   def hour 
     created_at.to_fs(:time)
   end
-
-  def user_comment
-    comment.comment
-  end
+  
 end

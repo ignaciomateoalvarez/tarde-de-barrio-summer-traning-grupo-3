@@ -30,3 +30,5 @@ es:
         rol: Rol
         active: Activar
         edit: Editar
+      index:
+        new_user: Nuevo usuario

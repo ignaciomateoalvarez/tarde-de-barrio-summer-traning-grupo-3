@@ -1,7 +1,7 @@
 es:
   students:
     index:
-      new-student: Nuevo estudiante
+      new_student: Nuevo estudiante
       student-list: Lista de estudiantes
     show:
       student: Estudiante
@@ -10,6 +10,10 @@ es:
       address: Domicilio
       school_grade: Grado de escolaridad
       currently_studying: Escolarizado
+      featured_comments: Comentario destacado
+      comments: Comentarios
+      no_comment: Sin comentarios
+
     new:
       create-student: Crear estudiante
     edit:

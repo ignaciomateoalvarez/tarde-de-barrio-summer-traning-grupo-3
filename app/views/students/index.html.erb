@@ -26,7 +26,7 @@
       <div class="user-list-new-user-button">
         <%= button_to new_student_path(), data: { turbo_frame: 'modal' }, method: :get do %>
           <%= image_tag 'New-user.svg', alt:'new-user-img'%>
-          <span>Nuevo Estudiante</span>
+          <span><%= t('.new_student')%></span>
         <% end %>
       </div>
     </div>
