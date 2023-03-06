@@ -13,8 +13,8 @@ Rails.application.routes.draw do
   post 'register' => 'user_registrations#create'
 
   resources :students do
-    get 'index', to: 'students#index'
     resources :comments, only: [:create] do
+      post 'likes/toggle_comment_like'
       resources :subcomments, only: [:create]
     end
   end

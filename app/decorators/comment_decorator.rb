@@ -1,6 +1,7 @@
 class CommentDecorator <  Draper::Decorator
   delegate_all
   include Draper::LazyHelpers
+  decorates_association :subcomments
   def name
     user.name
   end
@@ -9,7 +10,4 @@ class CommentDecorator <  Draper::Decorator
     created_at.to_fs(:time)
   end
 
-  def user_comment
-    comment.comment
-  end
 end

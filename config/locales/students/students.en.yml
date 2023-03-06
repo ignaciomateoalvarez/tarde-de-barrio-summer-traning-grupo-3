@@ -1,7 +1,7 @@
 en:
   students:
     index:
-      new-student: New student
+      new_student: New student
       student-list: Student list
     show:
       student: Student
@@ -10,6 +10,9 @@ en:
       address: Address
       school_grade: School grade
       currently_studying: Currently studying
+      featured_comments: Featured Comments
+      comments: Comments
+      no_comment: No comments
     new:
       create-student: Create student
     edit:

@@ -1,0 +1,33 @@
+<%= turbo_frame_tag comment, class: featured ? 'comment featured' : 'comment' do %>
+  <div class='comment-header'>
+    <div class='coment-header-left'>
+      <p class='comment-username'> <%= comment.name %> </p>
+      <p class='subcomment-hour'><%= comment.hour %></p>
+    </div>
+    <div class='coment-header-right'>
+      <div class= "likes">
+        <p><%= comment.likes.count %></p>
+        <%= button_to student_comment_likes_toggle_comment_like_path(student, comment), method: :post do%>
+          <%= image_tag("like.svg", class: comment.liked?(current_user) ? 'dislike-svg' : 'like-svg')%>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <p> <%= comment.body %> </p>
+  <details>
+    <summary class='summary-btn-comment'></summary>
+    <hr class='hr-style'/>
+    <div class='sub-comment-container'>
+      <% comment.subcomments.each do |subcomment| %>
+        <div class='sub-comment'>
+          <div class='subcomment-header'>
+            <p class='subcomment-username'> <%= subcomment.name %> </p>
+            <p class='subcomment-hour'><%= subcomment.hour %></p>
+          </div>
+          <p> <%= subcomment.body %> </p>
+        </div>
+      <% end %>
+    </div>
+    <%= render partial: "comments/post_sub_comment_form", locals: { comment: comment, student: @student}  %>
+  </details>
+<% end %>

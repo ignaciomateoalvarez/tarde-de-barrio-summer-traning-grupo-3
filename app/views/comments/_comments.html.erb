@@ -1,0 +1,6 @@
+<% comments.each do |key,comment_decorator| %>
+  <h3> <%= (key.to_date == Date.today ) ? t('.today') : key %> </h3>
+  <% comment_decorator.each do |comment| %>
+    <%= render partial: "comments/comment", locals: { student: @student, comment: comment, featured: featured } %>
+  <% end %>
+<% end %>

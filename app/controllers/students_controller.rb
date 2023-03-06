@@ -20,13 +20,12 @@ class StudentsController < ApplicationController
   end
 
   def show
-    @comments = @student.comments
-                        .order(created_at: :desc)
-                        .decorate
-
-    @featured = @comments.where(stand_out: true).group_by{ |c| c.created_at.to_date }
-    @not_featured = @comments.where(stand_out: false).group_by{ |c| c.created_at.to_date }
-    
+    @presenter ||= StudentsPresenter.new(params, @student)
+    # @comments = @student.comments
+    #                     .order(created_at: :desc)
+    @presenter.comments.select {|a| 
+    #debugger
+    }
   end
 
   def edit

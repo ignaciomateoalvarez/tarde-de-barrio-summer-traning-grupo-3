@@ -29,13 +29,13 @@
   <div class='comments-container'>
     <%= render partial: "comments/form", locals: { student: @student } %>
     <div class='comments'>
-        <% if @comments.any? %>
-          <h2> Comentarios destacados </h2>
-          <%= render partial: "comments", locals: { comments: @featured, featured: true } %>
-          <h2> Comentarios </h2>
-          <%= render partial: "comments", locals: { comments: @not_featured, featured: false } %>
+        <% if @presenter.comments.any? %>
+          <h2> <%= t('.featured_comments') %> </h2>
+          <%= render partial: "comments/comments", locals: { student: @student, comments: @presenter.grouped_comments(true), featured: true } %>
+          <h2> <%= t('.comments') %> </h2>
+          <%= render partial: "comments/comments", locals: { student: @student , comments: @presenter.grouped_comments(false), featured: false } %>
       <% else %>
-        <p> Sin comentarios. </p>
+        <p> <%= t('.no_comments') %>  </p>
       <% end %>
     <div>
   </div>
