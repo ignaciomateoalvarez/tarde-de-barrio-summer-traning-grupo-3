@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to student_path(@student), notice: 'Comment was successfully created.'
     else
-      render :new, status: :unprocessable_entity
+      redirect_to student_path(@student), notice: 'Comment was not created.'
     end
   end
 
@@ -18,6 +18,6 @@ class CommentsController < ApplicationController
   end
 
   def comment_params
-    params.require(:comment).permit(:body, :stand_out)
+    params.require(:comment).permit(:body, :stand_out, files: [])
   end
 end

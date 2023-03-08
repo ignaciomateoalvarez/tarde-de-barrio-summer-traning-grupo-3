@@ -14,6 +14,11 @@
     </div>
   </div>
   <p> <%= comment.body %> </p>
+  <% if comment.files.attached? %>
+    <% comment.files.each do |file|%>
+      <p class='comment-links'><%= link_to file.filename, rails_blob_path(file, disposition: 'attachment') %></p>
+    <% end %>
+  <% end %>
   <details>
     <summary class='summary-btn-comment'></summary>
     <hr class='hr-style'/>

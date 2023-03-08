@@ -193,3 +193,8 @@ details > summary {
   z-index: 1;
   position: relative;
 }
+
+.files-preview{
+  display:flex;
+  width: 85%;
+}
