@@ -81,14 +81,6 @@
   border: none;
 }
 
-.comment {
-  width: 90%;
-  border: 0.0625rem solid black;
-  border-radius: 0.9375rem;
-  padding: 1.25rem;
-  position: relative;
-}
-
 .featured {
   border-left: 0.625rem solid #d95234;
 }

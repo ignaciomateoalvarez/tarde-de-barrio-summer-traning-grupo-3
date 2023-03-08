@@ -9,13 +9,12 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
   <body>
-    <%= render partial: '/partials/navbar' if logged_in? %>
     <% flash.each do |type, msg| %>
       <%= render '/partials/flash_message' , message: msg, warning_type: type %>
     <% end %>
     <%= turbo_frame_tag "modal", user: @user %>
+    <%= render partial: '/partials/navbar' if (logged_in? && not(current_page?('/login') || current_page?('/register'))) %>
     <%= yield %>
   </body>
 </html>

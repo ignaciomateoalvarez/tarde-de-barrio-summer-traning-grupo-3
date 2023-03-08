@@ -1,0 +1,57 @@
+<section class='section_attendance_complete'>
+  <div class='section_attendance'>
+    <h1 class="title_attendance"><%= t('.attendance') %></h1>
+    <table class="table_attendance">
+      <thead>
+         <tr>
+           <th class='th_attendance_student'><%= t('.student') %></th>
+           <th class='th_td_attendance'><abbr title="Alumnos presentes">P</abbr></th>
+           <th class='th_td_attendance'><abbr title="Alumnos ausentes">A</abbr></th>
+           <th class='th_td_attendance'><abbr title="Alumnos que se retiraron">R</abbr></th>
+         </tr>  
+      </thead>
+      <tbody>
+        <% @presenter.students.each do |student| %>
+          <tr>
+            <td class='td_attendance_nomap'><%= student.full_name %></td>
+            </td>
+            <td class='th_td_attendance'>
+              <input type="radio" name="fav_language" value="">
+            </td>
+            <td class='th_td_attendance'>
+              <input type="radio" name="fav_language" value="">
+            </td>
+            <td class='th_td_attendance'>
+              <input type="radio" name="fav_language" value="">
+            </td>
+          </tr>
+        <% end %>
+     </tbody>
+    </table>
+  </div>
+  <div class='section_attendance_summary'>
+    <table class="table_attendance">
+       <tr>
+         <th><%= t('.attendance') %></th>
+         <td><span class='color_border_blue'>3</span></td>
+         <td><span class='color_border_red'>3</td>
+         <td><span class='color_border_yellow'>3</td>
+       </tr>
+       <tr>
+          <th><%= t('.featured') %></th>
+          <td COLSPAN=3><span class='color_featured'>25</span></td>
+       </tr>
+       <tr>
+          <th><%= t('.equipment') %></th>
+          <td COLSPAN=3>
+            <ul class='list_attandance_equip'>
+              <li>Camila Tisera</li>
+              <li>Gian Lucas</li>
+              <li>Nadia</li>
+              <li>Moshi</li>
+            </ul>
+          </td>
+       </tr>
+    </table>
+  </div>
+</section>

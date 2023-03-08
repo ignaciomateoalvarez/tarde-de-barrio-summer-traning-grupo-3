@@ -1,0 +1,28 @@
+<%= form_with(data: {controller: 'emojipicker'})do |form| %>
+  <div class='comment-input-section' data-controller="files-input">
+    <%= form.label :body, "Novedades" %>
+    <%= form.text_area :body, placeholder: "¿Qué deseas publicar?. Puedes utilizar “@” para mencionar personas.", data: {'emojipicker-target': 'textArea'} %>
+    <div class='buttom-modal-comment'>    
+      <div class='left-bottom-comment'>
+        <%= image_tag("smile.svg",class: 'post-comment-svg',data: {'emojipicker-target': 'button',
+        action: 'click->emojipicker#openPicker'})%>
+        <label>
+           <%= image_tag("image.svg",class: 'post-comment-svg') %>
+           <span class='button-files'>
+           <%= form.file_field :files, multiple: true, accept:  'image/jpg, image/png, application/pdf, application/msword',
+           data: {'files-input-target': 'files'}%>
+           </span>
+        </label>
+        <div class='highlight-comment'>
+          <%= form.check_box :stand_out , class: 'highlight-checkbox' %>
+          <%= form.label 'Destacar publicación', class: 'highlight-text' %>
+        </div>
+        <div class='my-picker-comment' data-emojipicker-target='container'></div>
+      </div>
+        <%= form.submit value: 'Publicar', class: 'post-comment' %>
+    </div>
+    <div class='files-preview'>
+      <ul id='list' data-files-input-target="list"></ul>
+    </div>
+  </div>
+<% end %>

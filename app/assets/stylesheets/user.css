@@ -234,26 +234,11 @@
   color: #0090af;
 }
 
-.header-list {
-  display: flex;
-  justify-content: space-between;
-  background-color: #0090af;
-  align-items: center;
-  padding: 10px;
-}
-
-.header-list * {
-  color: white;
-  font-weight: bold;
-  border: 0.0625rem solid transparent;
-  padding: 0 0.5rem;
-}
-
 .user-header > p {
   border-bottom: 0.0625rem solid transparent;
 }
 
-.users-index .header-list a {
+.users-index a {
   color: white;
 }
 

@@ -1,0 +1,30 @@
+.header-list {
+  display: flex;
+  justify-content: space-between;
+  background-color: #0090af;
+  align-items: center;
+  padding: 10px;
+}
+
+.header-list * {
+  color: white;
+  font-weight: bold;
+  border: 0.0625rem solid transparent;
+  padding: 0 0.5rem;
+}
+
+.header-home {
+  display: flex;
+  justify-items: center;
+}
+
+.header-home p {
+  display: flex;
+  justify-items: center;
+}
+
+.header-home *:hover,
+.header-list a:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}

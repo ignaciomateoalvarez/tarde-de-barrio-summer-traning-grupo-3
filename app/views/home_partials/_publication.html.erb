@@ -1,0 +1,39 @@
+<%= turbo_frame_tag publication, class: true ? 'comment featured' : 'comment' do %>
+  <div class='comment-header'>
+    <div class='coment-header-left'>
+      <p class='comment-username'> <%#= comment.name %> Juan </p>
+      <p class='subcomment-hour'><%#= comment.hour %> 14:31</p>
+    </div>
+    <div class='coment-header-right'>
+      <div class= "likes">
+        <p><%#= comment.likes.count %> 0 </p>
+        <%#= button_to student_comment_likes_toggle_comment_like_path(student, comment), method: :post do%>
+          <%#= image_tag("like.svg", class: comment.liked?(current_user) ? 'dislike-svg' : 'like-svg')%>
+          <%= image_tag("like.svg", class: false ? 'dislike-svg' : 'like-svg')%>
+        <%# end %>
+      </div>
+    </div>
+  </div>
+  <p> <%#= comment.body %> Hoy Ricardo le pego a su maestra </p>
+  <%# if comment.files.attached? %>
+    <%# comment.files.each do |file|%>
+      <p class='comment-links'><%#= link_to file.filename, rails_blob_path(file, disposition: 'attachment') %> foto.png<</p>
+    <%# end %>
+  <%# end %>
+  <details>
+    <summary class='summary-btn-comment'></summary>
+    <hr class='hr-style'/>
+    <div class='sub-comment-container'>
+      <%# comment.subcomments.each do |subcomment| %>
+        <div class='sub-comment'>
+          <div class='subcomment-header'>
+            <p class='subcomment-username'> <%#= subcomment.name %>  Emilio</p>
+            <p class='subcomment-hour'><%#= subcomment.hour %> 18:00</p>
+          </div>
+          <p> <%#= subcomment.body %> Yo aparte a la profesora Luciana de Ricardo</p>
+        </div>
+      <%# end %>
+    </div>
+    <%#= render partial: "home_partials/post_sub_publication_form", locals: { comment: comment, student: @student}  %>
+  </details>
+<% end %>

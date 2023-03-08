@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'user_sessions#new'
+  root 'home#index'
 
   get 'user_sessions/new'
   get 'user_sessions/destroy'
