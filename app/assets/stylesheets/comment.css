@@ -28,11 +28,6 @@
   gap: 20px;
 }
 
-.post-comment-svg {
-  height: 2.1875rem;
-  width: 2.1875rem;
-}
-
 .post-comment {
   display: flex;
   justify-content: center;
@@ -70,11 +65,6 @@
   justify-content: space-around;
   margin-left: 50px;
   gap: 20px;
-}
-
-.post-comment-svg {
-  height: 2.1875rem;
-  width: 2.1875rem;
 }
 
 .login-button-comment {
@@ -116,4 +106,26 @@
 .dislike-svg:hover {
   filter: invert(39%) sepia(91%) saturate(3361%) hue-rotate(339deg) 
   brightness(104%) contrast(100%);
+}
+
+.post-comment-svg {
+  height: 2.1875rem;
+  width: 2.1875rem;
+}
+
+.post-comment-svg:hover {
+  height: 2.1875rem;
+  width: 2.1875rem;
+  filter: invert(37%) sepia(69%) saturate(1410%) hue-rotate(159deg)
+  brightness(93%) contrast(103%);
+  cursor:pointer;
+}
+
+.button-files {
+  display:none;
+}
+
+.comment-links{
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
