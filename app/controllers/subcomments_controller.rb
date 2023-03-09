@@ -5,9 +5,9 @@ class SubcommentsController < ApplicationController
     @subcomment = Subcomment.new(comment_params)
     @subcomment.user = current_user
     if @subcomment.save
-      redirect_to student_path(@student), notice: 'Subcomment create.'
+      redirect_to student_path(@student), notice: t('.notice')
     else
-      redirect_to student_path(@student), notice: 'Subcomment Not create.'
+      redirect_to student_path(@student), warning: t('.warning')
     end
   end
 

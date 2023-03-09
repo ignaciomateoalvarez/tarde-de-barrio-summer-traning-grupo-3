@@ -1,0 +1,5 @@
+en:
+  subcomments:
+    create: 
+      notice: Subcomentario creado
+      warning: Subcomentario no creado

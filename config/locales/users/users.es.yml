@@ -30,5 +30,13 @@ es:
         rol: Rol
         active: Activar
         edit: Editar
-      index:
-        new_user: Nuevo usuario
+    index:
+      new_user: Nuevo usuario
+      warning: No se pudo encontrar ningún usuario
+      notice: No tiene suficientes permisos
+    create:
+      notice: Usuario creado con éxito
+    update:
+      notice: Usuario modificado con exito
+    change_active:
+      notice: Estado modificado

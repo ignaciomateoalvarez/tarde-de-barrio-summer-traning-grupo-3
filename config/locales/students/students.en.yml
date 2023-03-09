@@ -40,3 +40,12 @@ en:
       currently_studying: Currently studying
       radio-yes: "Yes"
       register: Register student
+    create:
+      notice: Created student successfully
+      alert: Could not create student
+    update:
+      notice: Edit Student
+      alert: Could not edit student
+    destroy:
+      notice: Deleted Student
+      alert: Could not delete student

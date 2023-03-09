@@ -1,0 +1,5 @@
+en:
+  comments:
+    create:
+      notice: Comment was successfully created
+      warning: Comment could not be created

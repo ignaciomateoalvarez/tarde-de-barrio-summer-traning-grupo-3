@@ -31,5 +31,13 @@ en:
         rol: Role
         active: Activate
         edit: Edit
-      index:
-        new_user: New user
+    index:
+      new_user: New user
+      warning: Couldn't find any user
+      notice: You don't have enough permissions
+    create:
+      notice: Successfully created user
+    update:
+      notice: User modified successfully
+    change_active:
+      notice: Changed state

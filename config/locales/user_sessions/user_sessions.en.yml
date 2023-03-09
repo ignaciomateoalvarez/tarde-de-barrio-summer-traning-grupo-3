@@ -10,3 +10,8 @@ en:
       login: Login
       forgot-password: I forgot my password
       button-google: Login with Google
+    create: 
+      notice: Logged in
+      error: Incorrect username or password
+    destroy:
+      notice: Logged out

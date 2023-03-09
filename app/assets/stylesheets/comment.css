@@ -97,7 +97,7 @@
 
 .dislike-svg:hover {
   filter: invert(39%) sepia(91%) saturate(3361%) hue-rotate(339deg) 
-  brightness(104%) contrast(100%);
+  brightness(104%) contrast(100%)
 }
 
 .post-comment-svg {

@@ -50,3 +50,12 @@ es:
       currently_studying: Escolarizado?
       radio-yes: Si
       register: Registrar estudiante
+    create:
+      notice: Estudiante creado con éxito
+      alert: No se pudo crear estudiante
+    update:
+      notice: Editar estudiante
+      alert: No se pudo editar estudiante
+    destroy:
+      notice: Estudiante eliminado
+      alert: No se pudo eliminar el estudiante
