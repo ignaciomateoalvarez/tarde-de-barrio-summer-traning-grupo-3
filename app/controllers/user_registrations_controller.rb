@@ -9,7 +9,7 @@ class UserRegistrationsController < ApplicationController
     @user = User.new(register_params)
     if @user.save
       auto_login(@user)
-      redirect_to users_path, notice: 'Welcome'
+      redirect_to users_path, notice: t('.notice')
     else
       redirect_to register_path
     end

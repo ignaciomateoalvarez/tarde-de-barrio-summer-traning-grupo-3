@@ -21,7 +21,6 @@
                 <%= button_to edit_student_path(student), data: { turbo_frame: 'modal' }, method: :get do %>
                   <%= image_tag 'Edit.svg', alt: 'edit button', class: 'user-list-edit-img' %>
                 <% end %>
-              <% end %>
             </div>
           </td>
           <td>
@@ -31,6 +30,7 @@
           <% end %>             
             </div>
           </td>
+          <% end %>
         </tr>
       <% end %>
     </tbody>

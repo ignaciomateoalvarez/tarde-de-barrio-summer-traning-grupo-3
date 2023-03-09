@@ -6,14 +6,13 @@ class UsersController < ApplicationController
     authorize User
     @filter = UserFilter.new(User.all, filter_params)
     @users  = @filter.call.order(:created_at)
-    flash.now[:error] = "Couldn't find any user" if @users.empty?
+    flash.now[:error] = t('.warning') if @users.empty?
     @pagy, @records = pagy(@users)
   end
 
   def edit
     authorize User
   end
-
 
   def new
     if current_user
@@ -27,7 +26,7 @@ class UsersController < ApplicationController
     if current_user
       @user = User.new(user_create_params)
       if @user.save
-        flash[:notice] = 'Successfully created user.'
+        flash[:notice] = t('.notice')
         redirect_to users_path
       else
         flash[:error] = @user.errors.full_messages.to_sentence
@@ -41,11 +40,11 @@ class UsersController < ApplicationController
   def update
     authorize User
     @user.update(user_params)
-    flash[:notice] = if @user.save
-                       'Usuario modificado con exito'
-                     else
-                       @user.errors
-                     end
+    if @user.save
+      flash[:notice] = t('.notice')
+    else
+      @user.errors
+    end
     redirect_to users_path
   end
 
@@ -54,7 +53,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:user_id])
     @user.active = params[:user][:active]
     if @user.save
-      flash[:notice] = 'Estado modificado'
+      flash[:notice] = t('.notice')
     else
       flash[:error] = @user.errors.full_messages.to_sentence
     end

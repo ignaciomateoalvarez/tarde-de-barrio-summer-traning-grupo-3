@@ -5,9 +5,9 @@ class CommentsController < ApplicationController
     @comment = @student.comments.new(comment_params)
     @comment.user = current_user
     if @comment.save
-      redirect_to student_path(@student), notice: 'Comment was successfully created.'
+      redirect_to student_path(@student), notice: t('.notice')
     else
-      redirect_to student_path(@student), notice: 'Comment was not created.'
+      redirect_to student_path(@student), warning: t('.warning')
     end
   end
 

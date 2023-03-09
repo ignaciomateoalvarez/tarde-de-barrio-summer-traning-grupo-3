@@ -11,3 +11,5 @@ en:
       password_confirmation: Password confirmation
       register: Register
       google-login: Register with Google
+    create:
+      notice: Welcome

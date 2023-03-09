@@ -1,0 +1,5 @@
+es:
+  comments:
+    create:
+      notice: El comentario fue creado con éxito
+      warning: No se pudo crear el comentario

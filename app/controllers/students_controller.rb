@@ -13,9 +13,9 @@ class StudentsController < ApplicationController
     @student = Student.new(student_params)
     @student.user = current_user
     if @student.save
-      redirect_to students_path, notice: 'Created student successfully'
+      redirect_to students_path, notice: t('.notice')
     else
-      redirect_to students_path, alert: 'Could not create student'
+      redirect_to students_path, alert: t('.alert')
     end
   end
 
@@ -34,9 +34,9 @@ class StudentsController < ApplicationController
 
   def update
     if @student.update(student_params)
-      flash[:notice] = 'Edit Student'
+      flash[:notice] = t('.notice')
     else
-      flash[:alert] = 'Could not edit student'
+      flash[:alert] = t('.alert')
     end
     redirect_to students_path
   end
@@ -44,9 +44,9 @@ class StudentsController < ApplicationController
   def destroy
     authorize @student
     if @student.destroy
-      flash[:notice] = 'Deleted Student'
+      flash[:notice] = t('.notice')
     else
-      flash[:alert] = 'Could not delete student'
+      flash[:alert] = t('.alert')
     end
     redirect_to students_path
   end

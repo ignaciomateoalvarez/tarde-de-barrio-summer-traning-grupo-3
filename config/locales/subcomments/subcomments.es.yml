@@ -1,0 +1,5 @@
+es:
+  subcomments:
+    create: 
+      notice: Subcomment create
+      warning: Subcomment Not create
