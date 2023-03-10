@@ -10,19 +10,20 @@
       <% end %>
     </div>
     <div class='home-header-right'>
-      <p>CONTENDIO EN HEADER</p>
-      <p>CONTENDIO EN HEADER</p>
+      <p><%= @date %></p>
+      <p><%= @day %></p>
     </div>
     </div>
     <div class='home-body'>
       <div class='home-body-left'>
-        <%= render partial: "home_partials/post_publication_form"%>
+        <%= render partial: "home/post_publication_form"%>
         <div class='publications-container'>
-          <%= render partial: "home_partials/publications"%>
+          <%= render partial: "home/publications", locals: { publications: @stand_out_publication, featured: true }%>
+          <%= render partial: "home/publications", locals: { publications: @not_stand_out_publication, featured: false }%>
         </div>
       </div>
       <div class='home-body-right'>
-        <%= render "home_partials/attendance" %>
+        <%= render "home/attendance" %>
       </div>
     </div>
   </div>

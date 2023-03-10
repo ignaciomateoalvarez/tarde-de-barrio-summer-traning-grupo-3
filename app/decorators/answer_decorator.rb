@@ -1,13 +1,12 @@
-class CommentDecorator <  Draper::Decorator
+class AnswerDecorator <  Draper::Decorator
   delegate_all
   include Draper::LazyHelpers
-  decorates_association :subcomments
   def name
     user.name
   end
 
-  def hour
+  def hour 
     created_at.to_fs(:time)
   end
-
+  
 end

@@ -21,11 +21,6 @@ class StudentsController < ApplicationController
 
   def show
     @presenter ||= StudentsPresenter.new(params, @student)
-    # @comments = @student.comments
-    #                     .order(created_at: :desc)
-    @presenter.comments.select {|a| 
-    #debugger
-    }
   end
 
   def edit

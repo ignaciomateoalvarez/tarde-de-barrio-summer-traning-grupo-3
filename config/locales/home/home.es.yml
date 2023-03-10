@@ -1,6 +1,11 @@
 es:
-  home_partials:
-    attendance: Asistencias
-    student: Alumno
-    featured: Destacados
-    equipment: Equipos
+  home:
+    attendance:
+      attendance: Asistencias
+      student: Alumno
+      featured: Destacados
+      equipment: Equipos
+    post_publication_form:
+      news: Novedades
+      highlight: Destacar
+      post: Publicar
