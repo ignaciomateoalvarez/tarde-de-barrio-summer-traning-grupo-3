@@ -1,0 +1,8 @@
+en:
+  answers:
+    create: 
+      notice: Answer was created
+      warning: Answer was not created
+    create_post: 
+      notice: Answer was created
+      warning: Answer was not created

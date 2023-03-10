@@ -49,3 +49,5 @@ en:
     destroy:
       notice: Deleted Student
       alert: Could not delete student
+    header:
+      logout: Logout

@@ -5,7 +5,11 @@ es:
       student: Alumno
       featured: Destacados
       equipment: Equipos
+      alumn_present: Alumnos presentes
+      alumn_aus: Alumnos ausentes
+      alumn_ret: Alumnos que se retiraron
     post_publication_form:
       news: Novedades
       highlight: Destacar
       post: Publicar
+      publication-post-placeholder: ¿Qué deseas publicar?. Puedes utilizar '@' para mencionar personas.

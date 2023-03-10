@@ -5,30 +5,26 @@
       <thead>
          <tr>
            <th class='th_attendance_student'><%= t('.student') %></th>
-           <th class='th_td_attendance'><abbr title="Alumnos presentes">P</abbr></th>
-           <th class='th_td_attendance'><abbr title="Alumnos ausentes">A</abbr></th>
-           <th class='th_td_attendance'><abbr title="Alumnos que se retiraron">R</abbr></th>
+           <th class='th_td_attendance'><abbr title=<%=t('.alumn_present')%>>P</abbr></th>
+           <th class='th_td_attendance'><abbr title=<%=t('.alumn_aus')%>>A</abbr></th>
+           <th class='th_td_attendance'><abbr title=<%=t('.alumn_ret')%>>R</abbr></th>
          </tr>  
       </thead>
-      <tbody>
-        <% @presenter.students.each do |student| %>
-          <tr>
+     <tbody>
+       <% @presenter.students_all.each do |student| %>
+          <tr data-controller='toggle-attendance' data-toggle-attendance-url-value='<%= student_attendances_path(student) %>'>
             <td class='td_attendance_nomap'><%= student.full_name %></td>
-            </td>
-            <td class='th_td_attendance'>
-              <input type="radio" name="fav_language" value="">
-            </td>
-            <td class='th_td_attendance'>
-              <input type="radio" name="fav_language" value="">
-            </td>
-            <td class='th_td_attendance'>
-              <input type="radio" name="fav_language" value="">
-            </td>
+            <% Attendance.assistants.values.each do |v| %>
+              <td class='th_td_attendance'>
+                <%= radio_button_tag "assistant_#{student.id}", v, false, data: {action: 'click->toggle-attendance#toggleSubmit'} %>
+              </td>
+            <% end %>
           </tr>
-        <% end %>
+       <% end %>
      </tbody>
     </table>
   </div>
+
   <div class='section_attendance_summary'>
     <table class="table_attendance">
        <tr>

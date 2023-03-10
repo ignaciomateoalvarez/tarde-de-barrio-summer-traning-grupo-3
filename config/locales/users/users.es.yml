@@ -4,6 +4,8 @@ es:
       edit_user: Modificar usuario
     new:
       create_user: Nuevo usuario
+    index:
+      notice: "Permiso Denegado"
     partials:
       edit_user_form:
         name: Nombre

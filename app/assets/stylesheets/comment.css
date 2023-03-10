@@ -126,6 +126,19 @@
   cursor:pointer;
 }
 
+.post-comment-svg {
+  height: 2.1875rem;
+  width: 2.1875rem;
+}
+
+.post-comment-svg:hover {
+  height: 2.1875rem;
+  width: 2.1875rem;
+  filter: invert(37%) sepia(69%) saturate(1410%) hue-rotate(159deg)
+  brightness(93%) contrast(103%);
+  cursor:pointer;
+}
+
 .button-files {
   display:none;
 }

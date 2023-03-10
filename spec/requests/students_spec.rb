@@ -95,7 +95,6 @@ RSpec.describe 'Students', type: :request do
       let(:comment) { FactoryBot.create(:comment, body: 'pepito', student_id: student.id, user_id: user.id) }
       it 'show comment have correct show id' do
         get :show, params: { id: comment.student_id.to_param }
-        debugger
         expect(response).to have_http_status(200)
       end
     end

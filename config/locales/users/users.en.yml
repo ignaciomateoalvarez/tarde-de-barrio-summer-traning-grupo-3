@@ -4,6 +4,8 @@ en:
       edit_user: Edit user
     new:
       create_user: New user
+    index:
+      notice: "Permission Denied"
     partials:
       edit_user_form:
         name: Name

@@ -3,3 +3,9 @@ en:
     create:
       notice: Comment was successfully created
       warning: Comment could not be created
+    form:
+      comment-post-placeholder: ¿What would you like to post?. You can use '@' to mention someone
+      post: Post
+      highlight: Highlight
+      comments: Comments
+

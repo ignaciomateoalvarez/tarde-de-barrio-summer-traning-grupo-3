@@ -5,12 +5,15 @@ class UserSessionsController < ApplicationController
 
   def create
     @user = User.find_by(email: params[:email])
-    if @user && @user.active
-      login(params[:email], params[:password])
-      redirect_to users_path, notice: t('.notice')
+    if @user.present?
+      if @user.active?
+        login(params[:email], params[:password], remember_me = params[:remember_me])
+        redirect_back_or_to(root_path, success: "#{t('.welcome')} #{@user.name}")
+      else
+        redirect_to login_path, warning: t('.user_disabled')
+      end
     else
-      flash[:error] = t('.error')
-      render :new, status: :unprocessable_entity
+      redirect_to login_path, warning: t('.incorrect_info')
     end
   end
 

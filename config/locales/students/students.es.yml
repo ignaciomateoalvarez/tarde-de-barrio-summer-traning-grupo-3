@@ -13,7 +13,6 @@ es:
       featured_comments: Comentario destacado
       comments: Comentarios
       no_comment: Sin comentarios
-
     new:
       create-student: Crear estudiante
     edit:
@@ -59,3 +58,5 @@ es:
     destroy:
       notice: Estudiante eliminado
       alert: No se pudo eliminar el estudiante
+    header:
+      logout: Salir

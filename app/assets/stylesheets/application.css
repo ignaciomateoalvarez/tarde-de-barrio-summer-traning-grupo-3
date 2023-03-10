@@ -12,20 +12,29 @@
   padding: 0;
   font-family: "Roboto", sans-serif;
   font-style: normal;
-  /*outline: 1px solid green;*/
+  /* outline: 1px solid green; */
 }
 
 .container a:visited {
   color: inherit;
 }
 
+html {
+  height: 100%;
+}
+
 body {
-  height: 100vh;
+  height: 100%;
+    display: flex;
+    flex-direction: column;
   font-family: "Roboto", sans-serif;
-  /*overflow-x:hidden;
-  overflow-y:hidden;*/
   background-color: #0090af ;
 }
+
+body > div:last-child {
+  flex-grow: 1;
+}
+
 
 .show-container a:visited {
   color: inherit;
@@ -44,7 +53,6 @@ button {
 .container {
   width: 60%;
   height: 80%;
-  padding-bottom: 20px;
   margin: 5% auto;
   align-items: center;
   background: #ffffff;

@@ -1,0 +1,8 @@
+es:
+  answers:
+    create:
+      notice: La respuesta fue creada
+      warning: No se creó la respuesta
+    create_post:
+      notice: La respuesta fue creada
+      warning: No se creó la respuesta

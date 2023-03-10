@@ -6,9 +6,9 @@ class AnswersController < ApplicationController
     @answer = @comment.answers.create(publication_params)
     @answer.user = current_user
     if @answer.save
-      redirect_to student_path(@student), notice: 'Answer was created.'
+      redirect_to student_path(@student), notice: t('.notice')
     else
-      redirect_to student_path(@student), notice: 'Answer was not created.'
+      redirect_to student_path(@student), warning: t('.warning')
     end
   end
 
@@ -17,9 +17,9 @@ class AnswersController < ApplicationController
     @answer = @post.answers.create(publication_params)
     @answer.user = current_user
     if @answer.save
-      redirect_to root_path, notice: 'Answer was created.'
+      redirect_to root_path, notice: t('.notice')
     else
-      redirect_to root_path, notice: 'Answer was not created.'
+      redirect_to root_path, warning: t('.warning')
     end
   end
 

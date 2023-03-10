@@ -1,4 +1,10 @@
 .home-container {
+  display: flex;
+  background-color: white;
+}
+
+.home-content-container {
+  display: flex;
   height: 100%;
   display: flex;
   background-color: white;
@@ -9,13 +15,13 @@
   height: 100%;
   width: 100%;
   flex-direction: column;
-  margin: 20px;
+  padding: 20px;
 }
 
 .home-header {
   display: flex;
   width: 100%;
-  height: 10%;
+  height: 5%;
   justify-content: start;
   flex-direction: row;
   column-gap: 20px;
