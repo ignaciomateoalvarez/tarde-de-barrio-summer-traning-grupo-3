@@ -37,14 +37,14 @@
 .user-edit-modal-form select {
   width: 100%;
   height: 2.3rem;
-  font-size: 15px;
+  font-size: 0.9375rem;
   background: #fafafa;
-  border-radius: 7.06992px;
-  padding: 10px;
+  border-radius: 0.4419rem;
+  padding: 0.625rem;
 }
 
 .user-edit-modal-form select * {
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .user-edit-modal-form select:active {
@@ -52,11 +52,11 @@
 }
 
 .user-edit-title {
-  margin-top: -30px;
+  margin-top: -1.875rem;
 }
 
 .user-edit-modal-form {
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 /*Edit User Class - PARTIALS*/
@@ -64,12 +64,12 @@
 .edit-user-form-field input {
   width: 100%;
   height: 2.3rem;
-  font-size: 15px;
+  font-size: 0.9375rem;
   text-align: left;
   background: #fafafa;
   border: 0.0813rem solid #cccccc;
-  border-radius: 7.0704px;
-  padding: 10px;
+  border-radius: 0.4419rem;
+  padding: 0.625rem;
 }
 
 .edit-user-form-field {
@@ -82,14 +82,14 @@
   display: flex;
   justify-content: center;
   width: 65%;
-  height: 45px;
+  height: 2.8125rem;
   margin: auto;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   border-color: inherit;
   background-color: #0090af;
   color: white;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1rem;
   border: none;
 }
 
@@ -131,13 +131,13 @@
   background-color: #0090af;
   width: 100%;
   margin-top: auto;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 23px;
+  font-size: 1.25rem;
+  line-height: 1.4375rem;
   text-align: center;
 
   color: #ffffff;
@@ -158,14 +158,14 @@
 .user-new-modal-form select {
   width: 100%;
   height: 2.3rem;
-  font-size: 15px;
+  font-size: 0.9375rem;
   background: #fafafa;
-  border-radius: 7.06992px;
-  padding: 10px;
+  border-radius: 0.4419rem;
+  padding: 0.625rem;
 }
 
 .user-new-modal-form select * {
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .user-new-modal-form select:active {
@@ -173,11 +173,11 @@
 }
 
 .user-new-title {
-  margin-top: -30px;
+  margin-top: -1.875rem;
 }
 
 .user-new-modal-form {
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 /*New User Class - PARTIALS*/
@@ -185,12 +185,12 @@
 .new-user-form-field input {
   width: 100%;
   height: 2.3rem;
-  font-size: 15px;
+  font-size: 0.9375rem;
   text-align: left;
   background: #fafafa;
   border: 0.0813rem solid #cccccc;
-  border-radius: 7.0704px;
-  padding: 10px;
+  border-radius: 0.4419rem;
+  padding: 0.625rem;
 }
 
 .new-user-form-field {
@@ -203,14 +203,14 @@
   display: flex;
   justify-content: center;
   width: 65%;
-  height: 45px;
+  height: 2.8125rem;
   margin: auto;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   border-color: inherit;
   background-color: #0090af;
   color: white;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1rem;
   border: none;
 }
 
@@ -244,7 +244,7 @@
 
 .home-link {
   display: flex;
-  gap: 10px;
+  gap: 0.625rem;
 }
 
 .home-link a {
@@ -255,9 +255,9 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 20px;
+  gap: 1.25rem;
   margin-right: 10%;
-  padding-top: 10px;
+  padding-top: 0.625rem;
 }
 
 .user-list-filter-button {
@@ -285,7 +285,7 @@
   text-align: left;
   background: #fafafa;
   border: 0.0813rem solid #cccccc;
-  border-radius: 7.0704px;
+  border-radius: 0.4419rem;
 }
 
 .search-field button {
@@ -313,11 +313,11 @@
 .user-list-search-icon {
   background-image: url("search.png");
   background-repeat: no-repeat;
-  height: 24px;
-  width: 24px;
+  height: 1.5rem;
+  width: 1.5rem;
   position: absolute;
-  right: 350px;
-  margin-top: 10px;
+  right: 21.875rem;
+  margin-top: 0.625rem;
 }
 
 .search-icon:hover {
@@ -330,14 +330,14 @@
 
 .user-list-form form {
   height: 100%;
-  margin: 5px;
+  margin: 0.3125rem;
 }
 
 .new-user-icon {
   background-image: url("new-user-icon.png");
   background-repeat: no-repeat;
-  height: 24px;
-  width: 30px;
+  height: 1.5rem;
+  width: 1.875rem;
 }
 
 .user-list-new-user-button button {
@@ -347,9 +347,9 @@
   height: 2.5rem;
   justify-content: center;
   align-items: center;
-  margin: 5px;
+  margin: 0.3125rem;
   color: white;
-  gap: 10px;
+  gap: 0.625rem;
   border-radius: 0.625rem;
   border: none;
 }
@@ -376,24 +376,24 @@
 
 .user-list-toggle-button label {
   cursor: pointer;
-  text-indent: -9999px;
-  width: 49px;
-  height: 22px;
+  text-indent: -624.9375rem;
+  width: 3.0625rem;
+  height: 1.375rem;
   background: grey;
   display: block;
-  border-radius: 100px;
+  border-radius: 6.25rem;
   position: relative;
 }
 
 .user-list-toggle-button label:after {
   content: "";
   position: absolute;
-  top: 1px;
-  left: 3px;
-  width: 20px;
-  height: 20px;
+  top: 0.0625rem;
+  left: 0.1875rem;
+  width: 1.25rem;
+  height: 1.25rem;
   background: #fff;
-  border-radius: 90px;
+  border-radius: 5.625rem;
   transition: 0.1s;
 }
 
@@ -402,12 +402,12 @@
 }
 
 .user-list-toggle-button input:checked + label:after {
-  left: calc(100% - 1px);
+  left: calc(100% - 0.0625rem);
   transform: translateX(-100%);
 }
 
 .user-list-toggle-button label:active:after {
-  width: 30px;
+  width: 1.875rem;
 }
 
 .user-list-toggle-button {
@@ -420,8 +420,8 @@
 
 .user-session-container {
   width: 50%;
-  height: 650px;
-  padding-bottom: 20px;
+  height: 40.625rem;
+  padding-bottom: 1.25rem;
   margin: 5% auto;
   align-items: center;
   background: #ffffff;
