@@ -35,7 +35,7 @@
         <%= form.check_box :remember %>
         <%= label_tag(:remember, t('.remember')) %>
       </div>
-      <%= form.submit 'Ingresar' , class: 'login-button'%> 
+      <%= form.submit t('.get_into') , class: 'login-button'%> 
       <%= link_to t('.recover-password'),'/#', class:'recover-password' %> 
       <div class="login-google">
         <%= image_tag "logo.png", class:'google-logo' ,alt: "Google logo" %>

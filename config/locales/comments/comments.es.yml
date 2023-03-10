@@ -3,3 +3,8 @@ es:
     create:
       notice: El comentario fue creado con éxito
       warning: No se pudo crear el comentario
+    form:
+      comment-post-placeholder: ¿Qué deseas publicar?. Puedes utilizar '@' para mencionar personas.
+      post: Publicar
+      highlight: Destacar
+      comments: Comentarios

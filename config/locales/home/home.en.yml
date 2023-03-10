@@ -5,7 +5,11 @@ en:
       student: Student
       featured: Featured
       equipment: Equipment
+      alumn_present: Students present
+      alumn_aus: Absent student
+      alumn_ret: Students who withdrew
     post_publication_form:
       news: News
       highlight: Highlight
       post: Post
+      publication-post-placeholder: ¿What would you like to post?. You can use '@' to mention someone

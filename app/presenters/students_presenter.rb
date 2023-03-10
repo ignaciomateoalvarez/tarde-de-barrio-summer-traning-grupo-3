@@ -7,6 +7,10 @@ class StudentsPresenter
     @students = students
   end
 
+  def students_all
+    Student.all.decorate
+  end
+
   def students
     paginate
 

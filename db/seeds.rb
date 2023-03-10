@@ -32,6 +32,6 @@ end
     address: Faker::Address.full_address,
     school_grade: Faker::Number.within(range: 0..2),
     currently_studying: Faker::Boolean.boolean,
-    user: admin
+    user_id: 1
   )
 end

@@ -9,9 +9,10 @@ en:
       remember: Remember me
       login: Login
       forgot-password: I forgot my password
-      button-google: Login with Google
-    create: 
-      notice: Logged in
-      error: Incorrect username or password
-    destroy:
-      notice: Logged out
+      google-login: Register with Google
+      recover-password: Recover password
+      get_into: Get into
+    create:
+      welcome: Welcome
+      incorrect_info: Password or email is incorrect
+      user_disabled: User disabled

@@ -19,7 +19,7 @@ class UserPolicy
   end
 
   def index?
-    @user && @user.administrador?
+    @user.administrador?
   end
 
   def change_active?

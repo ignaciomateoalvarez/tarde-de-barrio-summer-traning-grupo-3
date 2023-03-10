@@ -10,16 +10,16 @@
       <% end %>
     </div>
     <div class='home-header-right'>
-      <p><%= @date %></p>
-      <p><%= @day %></p>
+      <p><%= date %></p>
+      <p><%= day %></p>
     </div>
     </div>
     <div class='home-body'>
       <div class='home-body-left'>
         <%= render partial: "home/post_publication_form"%>
         <div class='publications-container'>
-          <%= render partial: "home/publications", locals: { publications: @stand_out_publication, featured: true }%>
-          <%= render partial: "home/publications", locals: { publications: @not_stand_out_publication, featured: false }%>
+          <%= render partial: "home/publications", locals: { publications: @home_presenter.grouped_publications(true), featured: true }%>
+          <%= render partial: "home/publications", locals: { publications: @home_presenter.grouped_publications(false), featured: false }%>
         </div>
       </div>
       <div class='home-body-right'>

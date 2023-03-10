@@ -1,7 +1,7 @@
 <%= form_with url:posts_path(), scope: :publication, method: :post, data: {controller: 'emojipicker'} do |form| %>
   <div class='comment-input-section' data-controller="files-input">
     <%= form.label :body, t('.news') %>
-    <%= form.text_area :body, placeholder: "¿Qué deseas publicar?. Puedes utilizar “@” para mencionar personas.", data: {'emojipicker-target': 'textArea'} %>
+    <%= form.text_area :body, placeholder: t('.publication-post-placeholder'), data: {'emojipicker-target': 'textArea'} %>
     <div class='buttom-modal-comment'>    
       <div class='left-bottom-comment'>
         <%= image_tag("smile.svg",class: 'post-comment-svg',data: {'emojipicker-target': 'button',

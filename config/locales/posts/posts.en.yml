@@ -1,0 +1,5 @@
+en:
+  posts:
+    create:
+      notice: Publication was successfully created
+      warning: Publication was not created

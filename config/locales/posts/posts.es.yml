@@ -1,0 +1,5 @@
+es:
+  posts:
+    create:
+      notice: La publicación fue creada con éxito
+      warning: No se creó la publicación

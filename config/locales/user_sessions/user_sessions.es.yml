@@ -10,9 +10,11 @@ es:
       remember: Recordarme
       login: Sesion
       forgot-password: Olvidé mi contraseña
-      button-google: Ingresar con Google
-    create: 
-      notice: Conectado
-      error: Usuario o contraseña incorrectos
-    destroy:
-      notice: Desconectado
+      google-login: Registrarme con Google
+      recover-password: Recuperar contraseña
+      get_into: Ingresar
+    create:
+      welcome: Bienvenido/a
+      incorrect_info: Contraseña o email incorrecto
+      user_disabled: Usuario deshabilitado 
+

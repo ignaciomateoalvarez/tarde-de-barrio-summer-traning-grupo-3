@@ -4,9 +4,8 @@ a {
 
 .container-log-in {
   display: flex;
-  gap: 3rem;
-  width: 90%;
-  height: 100%;
+  gap: 2rem;
+  margin-right: 40px;
 }
 
 .image {
@@ -17,7 +16,6 @@ a {
 .log-in-form {
   padding-top: 30px;
   margin-left: 30px;
-  font-size: small;
 }
 
 .title {
@@ -95,17 +93,11 @@ a {
 }
 
 .login-google {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border: 1px solid #0090af;
   border-radius: 5px;
   margin: auto;
-  width: 65%;
-  height: 45px;
   font-weight: bold;
   font-size: 10px;
-  gap: 10px;
 }
 
 .login-google a {

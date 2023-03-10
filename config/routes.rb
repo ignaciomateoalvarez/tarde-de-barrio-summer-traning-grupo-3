@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   post 'register' => 'user_registrations#create'
 
   resources :students do
+    resources :attendances, only: [:create]
     resources :comments, only: [:create] do
       post 'likes/toggle_comment_like'
       resources :answers, only: [:create]
@@ -25,6 +26,6 @@ Rails.application.routes.draw do
 
   resources :posts, only: [:create] do
     post 'likes/toggle_post_like'
-    resources :answers, only: [:create_post]
+    post 'answers/create_post'
   end
 end
