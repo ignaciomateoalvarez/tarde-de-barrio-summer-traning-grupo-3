@@ -1,6 +1,11 @@
 en:
-  home_partials:
-    attendance: Attendance
-    student: Student
-    featured: Featured
-    equipment: Equipment
+  home:
+    attendance:
+      attendance: Attendance
+      student: Student
+      featured: Featured
+      equipment: Equipment
+    post_publication_form:
+      news: News
+      highlight: Highlight
+      post: Post

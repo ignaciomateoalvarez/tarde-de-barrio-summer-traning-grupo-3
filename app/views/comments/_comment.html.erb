@@ -23,13 +23,13 @@
     <summary class='summary-btn-comment'></summary>
     <hr class='hr-style'/>
     <div class='sub-comment-container'>
-      <% comment.subcomments.each do |subcomment| %>
+      <% comment.answers.each do |answer| %>
         <div class='sub-comment'>
           <div class='subcomment-header'>
-            <p class='subcomment-username'> <%= subcomment.name %> </p>
-            <p class='subcomment-hour'><%= subcomment.hour %></p>
+            <p class='subcomment-username'> <%= answer.name %> </p>
+            <p class='subcomment-hour'><%= answer.hour %></p>
           </div>
-          <p> <%= subcomment.body %> </p>
+          <p> <%= answer.body %> </p>
         </div>
       <% end %>
     </div>

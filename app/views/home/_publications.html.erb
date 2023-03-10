@@ -1,0 +1,5 @@
+<% publications.each do |key,publication_decorator| %>
+  <% publication_decorator.each do |publication| %>
+    <%= render partial: "home/publication", locals: { publication: publication, featured: featured } %>
+  <% end %>
+<% end %>

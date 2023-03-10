@@ -1,0 +1,8 @@
+ <%= form_with(scope: :answer, method: :post) do |form| %>
+  <div class='form-subcomment'>
+    <%= form.text_area :body, placeholder: "Escribe tu publicacion. Recuerda que puedes utilizar '@' para mencionar personas." %>
+    <%= button_tag class: 'form-subcomment-button' do %>
+      <%= image_tag 'send.svg', alt:'send-subcomment-img'%>
+    <% end %>
+  </div>
+<% end %>

@@ -1,0 +1,38 @@
+<%= turbo_frame_tag publication, class: featured ? 'comment featured' : 'comment' do %>
+  <div class='comment-header'>
+    <div class='coment-header-left'>
+      <p class='comment-username'> <%= publication.name %></p>
+      <p class='subcomment-hour'><%= publication.hour %></p>
+    </div>
+    <div class='coment-header-right'>
+      <div class= "likes">
+        <p><%= publication.likes.count %></p>
+        <%= button_to  post_likes_toggle_post_like_path(publication), method: :post do%>
+          <%= image_tag("like.svg", class: publication.liked?(current_user) ? 'dislike-svg' : 'like-svg')%>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <p> <%= publication.body %></p>
+  <% if publication.files.attached? %>
+    <% publication.files.each do |file|%>
+      <p class='comment-links'><%= link_to file.filename, rails_blob_path(file, disposition: 'attachment') %></p>
+    <% end %>
+  <% end %>
+  <details>
+    <summary class='summary-btn-comment'></summary>
+    <hr class='hr-style'/>
+    <div class='sub-comment-container'>
+      <% publication.answers.each do |answer| %>
+        <div class='sub-comment'>
+          <div class='subcomment-header'>
+            <p class='subcomment-username'> <%= answer.name %></p>
+            <p class='subcomment-hour'><%= answer.hour %></p>
+          </div>
+          <p> <%= answer.body %></p>
+        </div>
+      <% end %>
+    </div>
+    <%= render partial: "home/post_sub_publication_form", locals: { publication: publication}  %>
+  </details>
+<% end %>

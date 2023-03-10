@@ -9,6 +9,7 @@ export default class extends Controller {
   }
 
   filesList(){
+    this.listTarget.innerHTML= ''
     for (let i=0; i < this.filesTarget.files.length; i++){
       const file = this.filesTarget.files[i]
       const listItem = document.createElement('li')

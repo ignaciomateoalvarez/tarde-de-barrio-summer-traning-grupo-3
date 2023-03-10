@@ -1,7 +1,9 @@
 <div class="header-list">
   <%= link_to "Logout", :logout , data: { turbo_method: "post" } %>
   <div class="header-home">
-    <%= image_tag 'Home.svg', alt: 'home', class: 'home-img' %>
+    <%= link_to root_path do %>
+      <%= image_tag 'Home.svg', alt: 'home', class: 'home-img' %>
+    <% end %>
     <%= link_to students_path do %>
       <p> <%= t('.students') %> </p>
     <% end %>

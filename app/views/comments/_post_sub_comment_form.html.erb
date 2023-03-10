@@ -1,4 +1,4 @@
- <%= form_with(scope: :subcomment, url: student_comment_subcomments_path(@student, comment), method: :post) do |form| %>
+ <%= form_with(scope: :answer, url: student_comment_answers_path(@student, comment), method: :post) do |form| %>
   <div class='form-subcomment'>
     <%= form.text_area :body, placeholder: "Escribe tu comentario. Recuerda que puedes utilizar '@' para mencionar personas." %>
     <%= button_tag class: 'form-subcomment-button' do %>
