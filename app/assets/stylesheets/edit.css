@@ -12,7 +12,7 @@
 .modal-form {
   width: 65%;
   align-items: center;
-  padding: 60px 0 40px 0;
+  padding: 3.75rem 0 2.5rem 0;
 }
 
 .modal-form form {
@@ -24,22 +24,22 @@
 .modal-form select {
   width: 100%;
   height: 2.3rem;
-  font-size: 15px;
+  font-size: 0.9375rem;
   background: #fafafa;
-  border-radius: 7.06992px;
-  padding: 10px;
+  border-radius: 0.4419rem;
+  padding: 0.625rem;
 }
 
 .modal-form select * {
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .modal-form select:active {
-  border: 3px solid #0090af;
+  border: 0.1875rem solid #0090af;
 }
 
 .modal-form .login-button {
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 .edit-img:hover {

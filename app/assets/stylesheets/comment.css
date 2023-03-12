@@ -11,7 +11,7 @@
 .highlight-text {
   font-size: 1rem;
   align-self: center;
-  margin-left: 15px;
+  margin-left: 0.9375rem;
   width: 100%;
 }
 
@@ -24,21 +24,21 @@
 .left-bottom-comment {
   display: flex;
   justify-content: space-around;
-  margin-left: 50px;
-  gap: 20px;
+  margin-left: 3.125rem;
+  gap: 1.25rem;
 }
 
 .post-comment {
   display: flex;
   justify-content: center;
   width: 20%;
-  height: 45px;
-  border-radius: 8px;
+  height: 2.8125rem;
+  border-radius: 0.5rem;
   border-color: inherit;
   background-color: #0090af;
   color: white;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1rem;
   border: none;
 }
 
@@ -63,21 +63,21 @@
 .left-bottom-comment {
   display: flex;
   justify-content: space-around;
-  margin-left: 50px;
-  gap: 20px;
+  margin-left: 3.125rem;
+  gap: 1.25rem;
 }
 
 .login-button-comment {
   display: flex;
   justify-content: center;
   width: 20%;
-  height: 45px;
-  border-radius: 8px;
+  height: 2.8125rem;
+  border-radius: 0.5rem;
   border-color: inherit;
   background-color: #0090af;
   color: white;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1rem;
   border: none;
 }
 
@@ -144,6 +144,6 @@
 }
 
 .comment-links{
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
 }

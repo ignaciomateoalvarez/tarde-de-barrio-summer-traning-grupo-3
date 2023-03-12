@@ -11,13 +11,13 @@
   border-spacing: 0;
   table-layout: fixed;
   display: table;
-  margin-top: 50px;
+  margin-top: 3.125rem;
 }
 
 .table-head * {
   color: #0090af;
   font-weight: bold;
-  padding-bottom: 10px;
+  padding-bottom: 0.625rem;
   text-transform: uppercase;
 }
 
@@ -30,7 +30,7 @@
 
 .table-container{
   width: 100%;
-  padding: 0px 30px 0px 30px;
+  padding: 0rem 1.875rem 0rem 1.875rem;
 }
 
 .tr-row-data:hover {

@@ -12,7 +12,7 @@
   padding: 0;
   font-family: "Roboto", sans-serif;
   font-style: normal;
-  /* outline: 1px solid green; */
+  /* outline: 0.0625rem solid green; */
 }
 
 .container a:visited {
@@ -51,8 +51,6 @@ button {
 }
 
 .container {
-  width: 60%;
-  height: 80%;
   margin: 5% auto;
   align-items: center;
   background: #ffffff;
@@ -84,18 +82,18 @@ button {
 }
 
 .modal-title h1 {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: bold;
   text-align: center;
   margin-bottom: 2rem;
   margin: auto;
-  padding: 20px;
+  padding: 1.25rem;
   color: white;
 }
 .modal-title {
   background-color: #0090af;
   width: 100%;
   margin-top: auto;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }

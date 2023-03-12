@@ -14,17 +14,17 @@
 .notice {
   color: black;
   background-color: white;
-  border: 5px solid black;
+  border: 0.3125rem solid black;
 }
 .warning{
   color: red;
   background-color: white;
-  border: 5px solid red;
+  border: 0.3125rem solid red;
 
 }
 .success{
   color: green;
   background-color: white;
-  border: 5px solid green;
+  border: 0.3125rem solid green;
 }
 
